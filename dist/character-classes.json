@@ -1,0 +1,387 @@
+{
+  "pilot": {
+    "key": "pilot",
+    "name": "Pilot",
+    "also": ["Biker", "Mech Pilot", "Sky Pirate"],
+    "quote": "Within this steel beat the hearts and hopes of all of Minerva IV. The Empire has already lost, they just don't know it yet.",
+    "description": "Be they boastful racers, trained soldiers or elegant chaffeurs, Pilots develop a special bond with a vehicle - in a way, it becomes an extension of their body, which they can rely on for battle and travel. While transports of all sorts are frequently seen in every Fabula Ultima world, a Pilot's vehicle is something unique and irreplaceable: it could be the very mech their mother piloted in battle, a jury-rigged aviobike that shouln't even be able to fly, or some sort of technological marvel",
+    "questions": [
+      "Where did you learn to pilot? Is your teacher still alive?",
+      "How did you obtain your vehicle? Did you build it yourself? Did you inherit it?",
+      "What personal touch makes your vehicle stand out from the rest?",
+      "Who or what would you never allow aboard your vehicle?"
+    ],
+    "freeBenefits": {
+      "hitPointMax": 5,
+      "martialMeleeWeapons": true,
+      "martialRangedWeapons": true
+    },
+    "skills": [
+      "Compression Tech",
+      "Flexible Configuration",
+      "Heart in the Engine",
+      "Personal Vehicle",
+      "Strong Grip"
+    ]
+  },
+  "arcanist": {
+    "key": "arcanist",
+    "name": "Arcanist",
+    "also": ["Avatar", "Chosen", "Summoner"],
+    "quote": "Some fates are not easily avoided.",
+    "description": "Arcanists can fall into a deep trance and temporarily project a considerable portion of their soul outside the body, giving it physical form. Surrounded by this magical shroud, the Arcanist gains a variety of supernatural abilities; these summoned forms are said to be manifestations of the ancestral souls belonging to mythical entities of legend, known as the Arcana. In some worlds, the Arcana are even worshipped as deities.",
+    "questions": [
+      "Where do your powers come from? Are they a gift from your bloodline?",
+      "Have you ever communicated with an Arcanum, or are they silent and distant?",
+      "Do people see you as mysterious, powerful, or otherworldly?",
+      "Are there many practicing your art, or are you the exception?"
+    ],
+    "freeBenefits": {
+      "mindPointMax": 5
+    },
+    "skills": [
+      "Arcane Circle",
+      "Arcane Regeneration",
+      "Bind and Summon",
+      "Emergency Arcanum",
+      "Ritual Arcanism"
+    ]
+  },
+  "chimerist": {
+    "key": "chimerist",
+    "name": "Chimerist",
+    "also": ["Druid", "Shapeshifter", "Wild Mage"],
+    "quote": "Power without harmony will only lead to suffering.",
+    "description": "Chimerists gather their power from the souls of the monsters and beasts they encounter. By manipulating their inner wild energy, these mages may mimic the magical abilities of monsters and have reached a supernatural understanding of feral creatures. Chimerists frequently rely on their toughness and physical prowess in addition to magic; they are often seen traveling the world in search of rare and enchanted creatures.",
+    "questions": [
+      "Who taught you the art of Chimerism? Is your mentor human or monstrous?",
+      "Can people and monsters live in harmony, or are they bound to threaten each other?",
+      "What does your magic look like?",
+      "Are there many practicing your art, or are you the exception?"
+    ],
+    "freeBenefits": {
+      "mindPointMax": 5,
+      "ritualism": true
+    },
+    "skills": [
+      "Consume",
+      "Feral Speech",
+      "Pathogenesis",
+      "Ritual Chimerism",
+      "Spell Mimic"
+    ]
+  },
+  "darkblade": {
+    "key": "darkblade",
+    "name": "Darkblade",
+    "also": ["Avenger", "Black Knight", "Death Knight"],
+    "quote": "Today you shall know the full extent of my suffering.",
+    "description": "Darkblades are somber and powerful warriors who hide a sorrowful past. Due to tragic experiences on the battlefield or in personal life, their souls have developed an affinity for pain and shadow energy. An unlikely hero to say the very least, a Darkblade may now sacrifice their lifeforce to unleash mighty attacks and is able to draw resolve, power and even knowledge from the suffering they experience.",
+    "questions": [
+      "What tragic experience awakened your abilities?",
+      "Many would regard your powers as evil. How do you feel about them?",
+      "What do your weapons and fighting style look like?",
+      "Are there many practicing your art, or are you the exception?"
+    ],
+    "freeBenefits": {
+      "hitPointMax": 5,
+      "martialMeleeWeapons": true,
+      "martialArmor": true
+    },
+    "skills": [
+      "Agony",
+      "Dark Blood",
+      "Heart of Darkness",
+      "Painful Lesson",
+      "Shadow Strike"
+    ]
+  },
+  "elementalist": {
+    "key": "elementalist",
+    "name": "Elementalist",
+    "also": ["Battle Mage", "Geomancer", "Sorcerer"],
+    "quote": "Ignore the warnings of this World at your own risk.",
+    "description": "An Elementalist has learned to channel the souls that flow within the basic elements of creation: Air, Earth, Fire and Water. Some of them develop complex spells to contain the powerful energies of nature; others seek its protection in harmony and communion. Elemental magic can be highly destructive, causing damage and inflicting negative status effects. Due to this, there are many who would covet an Elementalist’s abilities... often for nefarious purposes.",
+    "questions": [
+      "Who trained you in the way of the Elements?",
+      "Your magic can be devastating... are you afraid of yourself?",
+      "Elemental magic is often used in war. Did you serve in the military?",
+      "What does your magic look like?"
+    ],
+    "freeBenefits": {
+      "mindPointMax": 5,
+      "ritualism": true
+    },
+    "skills": [
+      "Cataclysm",
+      "Elemental Magic",
+      "Magical Artillery",
+      "Ritual Elementalism",
+      "Spellblade"
+    ]
+  },
+  "entropist": {
+    "key": "entropist",
+    "name": "Entropist",
+    "also": ["Astromancer", "Chaos Mage", "Gambler"],
+    "quote": "The cold between the stars... it does not frighten me.",
+    "description": "High above the stars, where their lights do not shine, lies a bottomless void where life and souls wither and transform in unfathomable ways. This realm is a non-reality, an endless expanse of chaos impervious to the laws of time, space, and probability. Entropists refer to this realm as the Cosmos, the Heavens, or quite simply as Lady Luck: they are among the few gifted with the ability to channel its reality-bending energies.",
+    "questions": [
+      "Who taught you to channel the reality-bending powers of the Cosmos?",
+      "What do you know of the Cosmos? Are they the end of reality, or a new beginning?",
+      "What does your magic look like?",
+      "Are there many practicing your art, or are you the exception?"
+    ],
+    "freeBenefits": {
+      "mindPointMax": 5,
+      "ritualism": true
+    },
+    "skills": [
+      "Absorb MP",
+      "Entropic Magic",
+      "Lucky Seven",
+      "Ritual Entropism",
+      "Stolen Time"
+    ]
+  },
+  "fury": {
+    "key": "fury",
+    "name": "Fury",
+    "also": ["Beserker", "Brawler", "Viking"],
+    "quote": "I'll just have to become stronger than you!",
+    "description": "Furies never know when to quit. In battle and life they are energetic, determined and often restless. Whatever ideals or desires drive their actions, they will stop at nothing and risk everything in order to achieve them. Some Furies undergo a rigid training in order to control their emotions; others simply see might as the solution to all problems and are constantly on the verge of letting rage get the best of them.",
+    "questions": [
+      "Do you rely on your burning passion, or do you strive to keep it under control?",
+      "There’s that one thing that always makes you lose it. What is it?",
+      "In the past, your lack of control had tragic consequences. What have you lost?",
+      "What do your weapons and fighting style look like?"
+    ],
+    "freeBenefits": {
+      "hitPointMax": 5,
+      "martialMeleeWeapons": true,
+      "martialArmor": true
+    },
+    "skills": [
+      "Adrenaline",
+      "Frenzy",
+      "Indomitable Spirit",
+      "Provoke",
+      "Withstand"
+    ]
+  },
+  "guardian": {
+    "key": "guardian",
+    "name": "Guardian",
+    "also": ["Paladin", "Soldier", "Yōjinbō"],
+    "quote": "Let me be your shield.",
+    "description": "Proud and selfless, Guardians are individuals who know the value of life... and are willing to sacrifice themselves for a person, nation or ideal they have sworn to protect. They are often extraordinary and impressive individuals, such as valiant soldiers or veterans scarred by a thousand battles. While some Guardians may appear loud and boisterous, many are simply masking the tormented memory of those they failed to protect.",
+    "questions": [
+      "Who or what is it you would gladly give your life to protect?",
+      "Are you, or have you ever been, the servant of a Lady or Lord? What were they like?",
+      "What is it you were unable to protect? What have you lost?",
+      "What are you using as your armor and/or shield?"
+    ],
+    "freeBenefits": {
+      "hitPointMax": 5,
+      "martialShields": true,
+      "martialArmor": true
+    },
+    "skills": [
+      "Bodyguard",
+      "Defensive Mastery",
+      "Dual Shieldbearer",
+      "Fortress",
+      "Protect"
+    ]
+  },
+  "loremaster": {
+    "key": "loremaster",
+    "name": "Loremaster",
+    "also": ["Archivist", "Sage", "Scholar"],
+    "quote": "Ah, I knew this was going to happen",
+    "description": "Loremasters are known for their insatiable curiosity and appetite for discovery. They firmly believe that knowledge equates to power, and would often trade all gold in the world for a chance at solving a good mystery. Unfortunately, a majority of Loremasters tend to be aloof and easily distracted, rarely concerning themselves with “pragmatic” matters... to the point of sometimes failing to realize the darker implications of their discoveries.",
+    "questions": [
+      "Who is (or was) your mentor? What is (or was) your relationship with them?",
+      "Did you attend an academy or college? What kind of people did you meet there?",
+      "There is this centuries-old mystery you’re obsessed with. What is it?",
+      "Is it true that some things are better left buried beneath the sands of time?"
+    ],
+    "freeBenefits": {
+      "mindPointMax": 5
+    },
+    "skills": [
+      "Flash of Insight",
+      "Focused",
+      "Knowledge is Power",
+      "Quick Assessment",
+      "Trained Memory"
+    ]
+  },
+  "orator": {
+    "key": "orator",
+    "name": "Orator",
+    "also": ["Ambassador", "Diplomat", "Entertainer"],
+    "quote": "Words are only as good as the actions which follow them.",
+    "description": "Some are graceful and ever- smiling, others are subtle and witty: Orators are as good at reading someone’s heart as they are at rounding up allies for their cause, sometimes unintentionally. The words of an Orator may rekindle spirits or plunge their opponents into despair: over the centuries, some Orators' talents have brought entire nations to ruin... and just as many have granted fallen kingdoms a chance to rise from their very ashes.",
+    "questions": [
+      "Do you think everyone can be persuaded? Is it true that everyone has a price?",
+      "You thought someone was on your side, but they betrayed you. Who are they?",
+      "How do you feel about manipulating people, even if it is for a good cause?",
+      "In the past, your words ended up putting you in trouble. What happened?"
+    ],
+    "freeBenefits": {
+      "mindPointMax": 5
+    },
+    "skills": [
+      "Condemn",
+      "Encourage",
+      "My Trust in You",
+      "Persuasive",
+      "Unexpected Ally"
+    ]
+  },
+  "Rogue": {
+    "key": "rogue",
+    "name": "Rogue",
+    "also": ["Bandit", "Ninja", "Thief"],
+    "quote": "I will find my own justice.",
+    "description": "Be they criminals, rebels or spies, Rogues are more than willing to play dirty in order to get what they want. Rogues are generally quick, witty and elusive: while a few of them are infamous for being mostly concerned with their personal wealth and profit, many see themselves as fighting against injustice, tyranny, or social exclusion. Tragically, it is quite common for Rogues to end up being painted as threats by those same people they fight for.",
+    "questions": [
+      "What drives you? Is it desire, vengeance, or a burning need for freedom?",
+      "Are you part of a criminal gang or guild, or do you work on your own?",
+      "Is there a place you can call home? Or is it true that, in the end, we all die alone?",
+      "What is the most important rule in your personal code?"
+    ],
+    "freeBenefits": {
+      "inventoryPointMax": 2
+    },
+    "skills": [
+      "Cheap Shot",
+      "Dodge",
+      "High Speed",
+      "See You Later",
+      "Soul Steal"
+    ]
+  },
+  "Sharpshooter": {
+    "key": "sharpshooter",
+    "name": "Sharpshooter",
+    "also": ["Archer", "Gunslinger", "Sniper"],
+    "quote": "Flee to the other end of the world; my arrow shall find you.",
+    "description": "A majority of Sharpshooters are exceptionally good at dealing with threats from a carefully calculated distance; others are brave, skilled or reckless enough to engage their foes at point-blank. While many of these skilled snipers are battle-hardened soldiers, some have turned to a life of piracy, bounty hunting or banditry. A few have put their abilities at the service of the people, or use them to protect a sacred or forbidden site from intruders.",
+    "questions": [
+      "Some believe arrows and bullets to be a coward's weapons. What's your opinion?",
+      "When caught unprepared, do you improvise or do you retreat?",
+      "Are you quiet and reserved, confident and cunning, or boisterous and reckless?",
+      "What do your weapons and fighting style look like?"
+    ],
+    "freeBenefits": {
+      "hitPointMax": 5,
+      "martialRangedWeapons": true,
+      "martialShields": true
+    },
+    "skills": [
+      "Barrage",
+      "Crossfire",
+      "Hawkeye",
+      "Ranged Weapon Mastery",
+      "Warning Shot"
+    ]
+  },
+  "Spiritist": {
+    "key": "spiritist",
+    "name": "Spiritist",
+    "also": ["Healer", "Priest", "Witch"],
+    "quote": "Show me the truths of your heart.",
+    "description": "Spiritists have developed a powerful connection with the raw aspects of soul: emotion, energy, life, and death. They wield power both miraculous and frightening, and are quite often affiliated with cults or religions. Several worlds see the powers of Spiritism as gifts from a deity or proof that a person's heart is pure; however, there is no definite proof of these abilities coming from anything but discipline, empathy, and focus.",
+    "questions": [
+      "Where does your magic come from? What are your beliefs concerning life and death?",
+      "How do you feel about manipulating other people’s emotions and vital energy?",
+      "What do you think of religion? Are you part of a specific cult, church or institution?",
+      "What does your magic look like?"
+    ],
+    "freeBenefits": {
+      "mindPointMax": 5,
+      "ritualism": true
+    },
+    "skills": [
+      "Healing Power",
+      "Ritual Spiritism",
+      "Spiritual Magic",
+      "Support Magic",
+      "Vismagus"
+    ]
+  },
+  "Tinkerer": {
+    "key": "tinkerer",
+    "name": "Tinkerer",
+    "also": ["Alchemist", "Magitech Engineer", "Mechanic"],
+    "quote": "I like to think that what we have today was not a gift from the Gods.",
+    "description": "Tinkerers possess exceptional ingenuity and are known for their eccentric and marvelous inventions. They travel the world in an endless search for lost theories and ancient machinery, eyes glimmering whenever they witness the wonders of architecture and engineering. In a way, Tinkerers could be seen as the ultimate dreamers and rebels, challenging the very rules of nature and society in their pursuit of a better future.",
+    "questions": [
+      "Did you learn your craft from someone? What is your relationship with them?",
+      "What have you lost in the pursuit of progress and innovation?",
+      "Is your craft something revolutionary, or is it an established field of work?",
+      "When an item or effect is created through your abilities, what does it look like?"
+    ],
+    "freeBenefits": {
+      "inventoryPointMax": 2,
+      "projects": true
+    },
+    "skills": [
+      "Emergency Item",
+      "Gadgets",
+      "Potion Rain",
+      "Secret Formula",
+      "Visionary"
+    ]
+  },
+  "Wayfarer": {
+    "key": "wayfarer",
+    "name": "Wayfarer",
+    "also": ["Adventurer", "Explorer", "Treasure Hunter"],
+    "quote": "Borders are a trick of the mind.",
+    "description": "Nomads searching for a fabled continent, explorers braving the wilds, grizzled hunters and travelers have one thing in common: they are Wayfarers. While a majority of heroes travel the world during their adventures, Wayfarers live for the journey. They are always eager to visit new places and learn from others. In the eyes of a Wayfarer, the wilderness is neither foe nor an ally, but rather a stern teacher who can reveal many forgotten truths.",
+    "questions": [
+      "What led you to live a life of endless travels? Was it your choice? ...are you tired?",
+      "Is there a place or person that feels like “home” to you?",
+      "You have met many people and visited many places. Is there one you can’t forget?",
+      "You lost something or someone because of your travels. What happened?"
+    ],
+    "freeBenefits": {
+      "inventoryPointMax": 2
+    },
+    "skills": [
+      "Faithful Companion",
+      "Resourceful",
+      "Tavern Talk",
+      "Treasure Hunter",
+      "Well-Traveled"
+    ]
+  },
+  "Weaponmaster": {
+    "key": "weaponmaster",
+    "name": "Weaponmaster",
+    "also": ["Fighter", "Rōnin", "Warrior"],
+    "quote": "The wiser blades remain unsheathed.",
+    "description": "Weaponmasters spend years upon years honing their close combat arts. Most of them display remarkable skill with a variety of weapons; others have trained to become one with a specific armament. Many Weaponmasters follow and protect someone out of love or loyalty, but there are also those who tirelessly wander the world seeking worthy opponents, legendary magical weapons, or capable teachers.",
+    "questions": [
+      "What is your relationship with weapons? Are they mere objects, or something more?",
+      "Is battle something you seek, or something you strive to avoid?",
+      "Are you, or have you ever been, the servant of a Lady or Lord? What were they like?",
+      "What do your weapons and fighting style look like?"
+    ],
+    "freeBenefits": {
+      "hitPointMax": 5,
+      "martialMeleeWeapons": true,
+      "martialShields": true
+    },
+    "skills": [
+      "Bladestorm",
+      "Bone Crusher",
+      "Breach",
+      "Counterattack",
+      "Melee Weapon Mastery"
+    ]
+  }
+}

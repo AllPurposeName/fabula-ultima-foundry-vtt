@@ -1,0 +1,22 @@
+// @ts-nocheck
+{
+	"compilerOptions": {
+		"module": "Node16",
+		"target": "ESNext",
+		"moduleResolution": "Node16",
+		"types": ["@league-of-foundry-developers/foundry-vtt-types", "@types/jquery"],
+		"baseUrl": ".",
+		"paths": {
+			"*": ["./src"],
+			"@utils/*": ["./src/utils/*"],
+			"@actor/*": ["./src/actor/*"],
+			"@item/*": ["./src/item/*"],
+			"@system/*": ["./src/system/*"]
+			// "@journal/*": ["./src/journal/*"],
+			// "@components/*": ["./src/components/*"],
+		}
+	},
+	"include": ["src/**/*.js"],
+	"exclude": ["node_modules/*", "**/node_modules/*", "dist/*"]
+}
+

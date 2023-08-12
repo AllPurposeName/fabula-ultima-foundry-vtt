@@ -1,0 +1,49 @@
+{
+	"private": true,
+	"name": "fabula-ultima",
+	"version": "1.0.0",
+	"type": "module",
+	"description": "A Fabula Ultima Foundry VTT solution.",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/AllPurposeName/fabula-ultima.git"
+	},
+	"bugs": {
+		"url": "https://github.com/AllPurposeName/fabula-ultima/issues"
+	},
+	"contributors": [
+		{
+			"name": "AllPurposeName",
+			"email": "mr.kaitryn.dale@gmail.com"
+		}
+		{
+			"name": "Siggy",
+			"email": "siggy@siggy.siggy"
+		}
+	],
+	"scripts": {
+	},
+	"devDependencies": {
+		"@league-of-foundry-developers/foundry-vtt-types": "9.280.0",
+		"@typhonjs-fvtt/eslint-config-foundry.js": "0.8.0",
+		"chalk": "^5",
+		"esbuild": "^19",
+		"esbuild-sass-plugin": "^2.10",
+		"fs-extra-plus": "0.6.0",
+		"gulp": "^4",
+		"prettier": "2.8.8"
+	},
+	"dependencies": {
+	},
+	"packageManager": "yarn",
+	"pnpm": {
+		"overrides": {
+			"glob-parent@<5.1.2": ">=5.1.2",
+			"minimist@<=1.2.5": "<0.0.0"
+		}
+	},
+	"volta": {
+		"node": "20.5.0"
+	}
+}
