@@ -1,58 +1,58 @@
 {
-	"Actor": {
-		"types": ["character", "monster", "party", "stronghold"],
-		"templates": {
-			"attributes": {
-				"attribute": {
-					"dexterity": {
-						"label": "ATTRIBUTE.DEX",
-						"max": 10,
-						"min": 6,
-						"value": 6
-					},
-					"insight": {
-						"label": "ATTRIBUTE.INS",
-						"max": 10,
-						"min": 6,
-						"value": 6
-					},
-					"might": {
-						"label": "ATTRIBUTE.MIG",
-						"max": 10,
-						"min": 6,
-						"value": 6
-					},
-					"willpower": {
-						"label": "ATTRIBUTE.WLP",
-						"max": 10,
-						"min": 6,
-						"value": 6
-					},
-					"hitPoints": {
-						"label": "ATTRIBUTE.HP",
-						"max": 100,
-						"min": 0,
-						"value": 40
-					},
-					"mindPoints": {
-						"label": "ATTRIBUTE.MP",
-						"max": 100,
-						"min": 0,
-						"value": 30
-					},
-					"inventoryPoints": {
-						"label": "ATTRIBUTE.IP",
-						"max": 20,
-						"min": 0,
-						"value": 6
-					}
-				}
-			},
-			"subtype": {
-				"type": ""
-			}
-		},
-		"character": {
+  "Actor": {
+    "types": ["character", "monster", "party", "stronghold"],
+    "templates": {
+      "attributes": {
+        "attribute": {
+          "dexterity": {
+            "label": "ATTRIBUTE.DEXTERITY",
+            "max": 10,
+            "min": 6,
+            "value": 6
+          },
+          "insight": {
+            "label": "ATTRIBUTE.INSIGHT",
+            "max": 10,
+            "min": 6,
+            "value": 6
+          },
+          "might": {
+            "label": "ATTRIBUTE.MIGHT",
+            "max": 10,
+            "min": 6,
+            "value": 6
+          },
+          "willpower": {
+            "label": "ATTRIBUTE.WILLPOWER",
+            "max": 10,
+            "min": 6,
+            "value": 6
+          },
+          "hitPoints": {
+            "label": "ATTRIBUTE.HITPOINTS",
+            "max": 100,
+            "min": 0,
+            "value": 40
+          },
+          "mindPoints": {
+            "label": "ATTRIBUTE.MINDPOINTS",
+            "max": 100,
+            "min": 0,
+            "value": 30
+          },
+          "inventoryPoints": {
+            "label": "ATTRIBUTE.INVENTORYPOINTS",
+            "max": 20,
+            "min": 0,
+            "value": 6
+          }
+        }
+      },
+      "subtype": {
+        "type": ""
+      }
+    },
+    "character": {
       "templates": ["attributes", "skills", "subtype"],
       "bio": {
         "experience": {
@@ -101,11 +101,11 @@
         },
         "defenses": {
           "defense": {
-            "label": "DEFENCES.DEF",
+            "label": "DEFENSES.PHYSICALDEFENSE",
             "value": 0
           },
           "magicDefense": {
-            "label": "DEFENCES.MDEF",
+            "label": "DEFENSES.MAGICALDEFENSE",
             "value": 0
           }
         },
