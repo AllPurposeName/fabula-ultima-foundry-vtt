@@ -1,0 +1,32 @@
+# OS
+/__MACOSX
+
+# IDE
+/.idea
+/.vs
+*.code-workspace
+.history
+
+# Node Modules
+/node_modules
+npm-debug.log
+
+# Local configuration
+foundryconfig.json
+
+# Distribution files
+/dist
+
+# ESLint
+/.eslintcache
+
+# Junit results
+junit.xml
+
+# filetypes
+.DS_Store
+
+# NPM files
+package-lock.json
+yarn.lock
+yarn-error.log

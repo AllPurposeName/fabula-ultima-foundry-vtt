@@ -1,46 +1,49 @@
 {
-	"private": true,
-	"name": "fabula-ultima",
-	"version": "1.0.0",
-	"type": "module",
-	"description": "A Fabula Ultima Foundry VTT solution.",
-	"license": "MIT",
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/AllPurposeName/fabula-ultima.git"
-	},
-	"bugs": {
-		"url": "https://github.com/AllPurposeName/fabula-ultima/issues"
-	},
-	"contributors": [
-		{
-			"name": "AllPurposeName",
-			"email": "mr.kaitryn.dale@gmail.com"
-		},
-		{
-			"name": "Siggy",
-			"email": "siggy@siggy.siggy"
-		}
-	],
-	"scripts": {
-		"clean": "gulp clean",
-		"dev": "cross-env NODE_ENV=development gulp build",
-		"build": "cross-env NODE_ENV=production gulp build",
-		"link-project": "gulp link"
-	},
-	"devDependencies": {
-		"@league-of-foundry-developers/foundry-vtt-types": "9.280.0",
-		"@typhonjs-fvtt/eslint-config-foundry.js": "0.8.0",
-		"chalk": "^5",
-		"cross-env": "^7",
-		"esbuild": "^19",
-		"esbuild-sass-plugin": "^2.10",
-		"execa": "^7",
-		"fs-extra": "^11",
-		"fs-extra-plus": "^11",
-		"gulp": "^4",
-		"prettier": "2.8.8"
-	},
-	"dependencies": {
-	}
+  "private": true,
+  "name": "fabula-ultima",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A Fabula Ultima Foundry VTT solution.",
+  "engines" : {
+    "node" : "^20.0.0"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AllPurposeName/fabula-ultima.git"
+  },
+  "bugs": {
+    "url": "https://github.com/AllPurposeName/fabula-ultima/issues"
+  },
+  "contributors": [
+    {
+      "name": "AllPurposeName",
+      "email": "mr.kaitryn.dale@gmail.com"
+    },
+    {
+      "name": "Siggy",
+      "email": "siggy@siggy.siggy"
+    }
+  ],
+  "scripts": {
+    "clean": "gulp clean",
+    "dev": "cross-env NODE_ENV=development gulp build",
+    "build": "cross-env NODE_ENV=production gulp build",
+    "link-project": "gulp link"
+  },
+  "devDependencies": {
+    "@league-of-foundry-developers/foundry-vtt-types": "9.280.0",
+    "@typhonjs-fvtt/eslint-config-foundry.js": "0.8.0",
+    "chalk": "^5",
+    "cross-env": "^7",
+    "esbuild": "^19",
+    "esbuild-sass-plugin": "^2.10",
+    "execa": "^7",
+    "fs-extra": "^11",
+    "fs-extra-plus": "^11",
+    "gulp": "^4",
+    "prettier": "2.8.8"
+  },
+  "dependencies": {
+  }
 }
