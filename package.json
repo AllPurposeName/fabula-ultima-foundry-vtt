@@ -28,6 +28,7 @@
   "scripts": {
     "clean": "gulp clean",
     "dev": "cross-env NODE_ENV=development gulp build",
+    "dev:watch": "cross-env NODE_ENV=development gulp watch",
     "build": "cross-env NODE_ENV=production gulp build",
     "link-project": "gulp link"
   },
