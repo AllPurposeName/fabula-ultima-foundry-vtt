@@ -1,7 +1,7 @@
 export default function localizeString(string) {
 	if (!string) console.log(`No string passed`);
 	try {
-		const dict = CONFIG.fbl.i18n;
+		const dict = CONFIG.fabulaUltima.i18n;
 		let localeString = dict[string];
 		if (!localeString) localeString = string;
 

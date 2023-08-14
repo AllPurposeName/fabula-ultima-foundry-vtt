@@ -2,9 +2,9 @@
  * @description This acts as a configuration utility for the system. Everything that doesn't need to go in template.json, but is still referenced throughout the system is gathered here.
  */
 
-const FU = {};
+const FabulaUltima = {};
 
-// FU.activeEffects = {
+// FabulaUltima.activeEffects = {
 // 	cold: {
 // 		"flags.core.statusId": "cold",
 // 		icon: "icons/svg/frozen.svg",
@@ -23,31 +23,31 @@ const FU = {};
 // 	},
 // };
 
-// FU.adventureSites = {
+// FabulaUltima.adventureSites = {
 // 	tables: {},
 // 	transformers: {},
 // 	types: {},
 // 	utilities: {},
 // };
 
-FU.attributes = ["dexterity", "insight", "might", "willpower"];
+FabulaUltima.attributes = ["dexterity", "insight", "might", "willpower"];
 
-// FU.carriedStates = ["equipped", "carried"];
+// FabulaUltima.carriedStates = ["equipped", "carried"];
 
-// FU.carriedItemTypes = ["armor", "gear", "rawMaterial", "weapon"];
+// FabulaUltima.carriedItemTypes = ["armor", "gear", "rawMaterial", "weapon"];
 
-FU.characterSubtype = { pc: "ACTOR.SUBTYPE.PC", npc: "ACTOR.SUBTYPE.NPC" };
+FabulaUltima.characterSubtype = { pc: "ACTOR.SUBTYPE.PC", npc: "ACTOR.SUBTYPE.NPC" };
 
-FU.attributeDice = {
+FabulaUltima.attributeDice = {
 	1: "1d6",
 	2: "1d8",
 	3: "1d10",
 	4: "1d12",
 };
 
-FU.conditions = ["dazed", "enraged", "poisoned", "shaken", "slow", "weak"];
+FabulaUltima.conditions = ["dazed", "enraged", "poisoned", "shaken", "slow", "weak"];
 
-FU.dataSetConfig = {
+FabulaUltima.dataSetConfig = {
 	en: "dataset-en",
 };
 // 	"pt-BR": "dataset-pt-br",
@@ -57,11 +57,16 @@ FU.dataSetConfig = {
 // };
 
 
-// FU.enrichedActorFields = ["note", "pride", "face", "body", "clothing", "darkSecret"];
+// FabulaUltima.enrichedActorFields = ["note", "pride", "face", "body", "clothing", "darkSecret"];
 
-// FU.enrichedItemFields = ["description", "effect", "drawback", "appearance", "tools", "features.others"];
+// FabulaUltima.enrichedItemFields = ["description", "effect", "drawback", "appearance", "tools", "features.others"];
 
-// FU.i18n = {
+FabulaUltima.i18n = {
+  dexterity: "ATTRIBUTE.DEXTERITY",
+  insight: "ATTRIBUTE.WILLPOWER",
+  might: "ATTRIBUTE.MIGHT",
+  willpower: "ATTRIBUTE.INSIGHT",
+};
 // 	armor: "ITEM.TypeArmor",
 // 	gear: "ITEM.TypeGear",
 // 	weapon: "ITEM.TypeWeapon",
@@ -72,7 +77,6 @@ FU.dataSetConfig = {
 // 	criticalInjury: "ITEM.TypeCriticalinjury",
 // 	building: "ITEM.TypeBuilding",
 // 	hireling: "ITEM.TypeHireling",
-// 	agility: "ATTRIBUTE.AGILITY",
 // 	empathy: "ATTRIBUTE.EMPATHY",
 // 	strength: "ATTRIBUTE.STRENGTH",
 // 	wits: "ATTRIBUTE.WITS",
@@ -143,7 +147,7 @@ FU.dataSetConfig = {
 // 	firelands: "BIOME.FIRELANDS",
 // };
 
-FU.itemTypes = [
+FabulaUltima.itemTypes = [
         "armor",
         "artifact",
         "helper",
@@ -158,7 +162,7 @@ FU.itemTypes = [
         "weapon"
 ];
 
-// FU.encounterTables = [
+// FabulaUltima.encounterTables = [
 // 	"dark-forest",
 // 	"forest",
 // 	"hills",
@@ -179,9 +183,9 @@ FU.itemTypes = [
 // 	"ashlands",
 // ];
 
-// FU.otherTables = ["travel-find-prey"];
+// FabulaUltima.otherTables = ["travel-find-prey"];
 
-// FU.skillAttributeMap = {
+// FabulaUltima.skillAttributeMap = {
 // 	"animal-handling": "empathy",
 // 	crafting: "strength",
 // 	endurance: "strength",
@@ -200,15 +204,15 @@ FU.itemTypes = [
 // 	survival: "wits",
 // };
 
-// FU.weaponFeatures = ["blunt", "edged", "hook", "parrying", "shield", "pointed", "slowReload"];
+// FabulaUltima.weaponFeatures = ["blunt", "edged", "hook", "parrying", "shield", "pointed", "slowReload"];
 
 // export const modifyConfig = () => {
 // 	const settings = ["maxInit"];
 // 	for (const setting of settings) {
 // 		const value = game.settings.get("fabula-ultima", setting);
 // 		if (value) {
-// 			FU[setting] = value;
+// 			FabulaUltima[setting] = value;
 // 		}
 // 	}
 // };
-export default FU;
+export default FabulaUltima;
