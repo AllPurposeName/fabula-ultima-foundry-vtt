@@ -21,11 +21,10 @@ Hooks.once("init", () => {
 		config: FabulaConfig,
 	};
   CONFIG.Actor.documentClass = FabulaUltimaActor;
-	CONFIG.Item.documentClass = FabulaUltimaItem;
-	CONFIG.JournalEntry.documentClass = FabulaUltimaJournalEntry;
 	CONFIG.fabula = FabulaConfig;
 	CONFIG.Item.documentClass = FabulaUltimaItem;
-	CONFIG.Combat.documentClass = FabulaUltimaCombat;
+	// CONFIG.JournalEntry.documentClass = FabulaUltimaJournalEntry;
+	// CONFIG.Combat.documentClass = FabulaUltimaCombat;
 	registerSheets();
 	initializeHandlebars();
 	initializeEditorEnrichers();
