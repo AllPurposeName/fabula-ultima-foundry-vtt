@@ -1,27 +1,34 @@
 {
   "id": "fabula-ultima",
-	"name": "fabula-ultima",
+  "name": "fabula-ultima",
   "title": "Fabula Ultima",
   "description": "The Fabula Ultima system for FoundryVTT!",
-	"version": "11.1.3",
-	"minimumCoreVersion": 10,
+  "version": "11.1.3",
+  "minimumCoreVersion": 10,
   "compatibility": {
-	  "minimum": "9",
-	  "verified": "11",
-	  "maximum": "11"
+    "minimum": "9",
+    "verified": "11",
+    "maximum": "11"
   },
-	"allowBugReporter": true,
+  "allowBugReporter": true,
   "authors": [
-	  {
-	    "name": "AllPurposeName",
-	    "email": "mr.kaitryn.dale@gmail.com",
-	    "discord": "@allpurposename"
-	  },
-	  {
-	    "name": "Siggy",
-	    "email": "siggy@siggy.siggy",
-	    "discord": "@_siggy"
-	  }
+    {
+      "name": "AllPurposeName",
+      "email": "mr.kaitryn.dale@gmail.com",
+      "discord": "@allpurposename"
+    },
+    {
+      "name": "Siggy",
+      "email": "siggy@siggy.siggy",
+      "discord": "@_siggy"
+    }
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
   ],
   "esmodules": ["fabula-ultima.js"],
   "styles": ["fabula-ultima.css"],
