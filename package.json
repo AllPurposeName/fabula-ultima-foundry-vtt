@@ -30,7 +30,8 @@
     "dev": "cross-env NODE_ENV=development gulp build",
     "dev:watch": "cross-env NODE_ENV=development gulp watch",
     "build": "cross-env NODE_ENV=production gulp build",
-    "link-project": "gulp link"
+    "link-project": "gulp link",
+    "unlink-project" : "rm $(grep -o 'dataPath\": \".*' foundryconfig.json | awk '{print $2}' | tr -d '\"')/systems/fabula-ultima && rm -rf dist"
   },
   "devDependencies": {
     "@league-of-foundry-developers/foundry-vtt-types": "9.280.0",
