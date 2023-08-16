@@ -8,7 +8,29 @@ export class FabulaUltimaActor extends Actor {
 	get attributes() {
 		return this.actorProperties.attribute;
 	}
-}
+
+  get dexterity() {
+    return this.modifiedAttribute("dexterity", ["slow", "enraged"]);
+  }
+
+  get insight() {
+    return this.modifiedAttribute("insight", ["dazed", "enraged"]);
+  }
+
+  get might() {
+    return this.modifiedAttribute("might", ["weak", "poisoned"]);
+  }
+
+  get willpower() {
+    return this.modifiedAttribute("willpower", ["shaken", "poisoned"]);
+  }
+
+  modifiedAttribute(attribute, possibleStatusEffects) {
+    const baseValue = this.actorProperties.attribute[attribute].value;
+    const activeStatusEffects = possibleStatusEffects.filter((effect) => this.actorProperties.condition[effect].value).length;
+    return Math.max(6, baseValue - (2 * activeStatusEffects));
+  }
+
 // 	get conditions() {
 // 		return this.actorProperties.condition;
 // 	}
@@ -184,3 +206,4 @@ export class FabulaUltimaActor extends Actor {
 // 	}
 // }
 //
+}
