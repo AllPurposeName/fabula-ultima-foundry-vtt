@@ -25,9 +25,9 @@ export class FabulaUltimaActor extends Actor {
     return this.modifiedAttribute(attribute: "willpower", possibleStatusEffects: ["shaken", "poisoned"]);
   }
 
-  modifiedAttribute(params) {
-    const baseValue = this.actorProperties.attribute[params.attribute].value;
-    const activeStatusEffects = params.possibleStatusEffects.filter((effect) => this.actorProperties.condition[effect].value).length;
+  modifiedAttribute({attribute, possibleStatusEffects}) {
+    const baseValue = this.actorProperties.attribute[attribute].value;
+    const activeStatusEffects = possibleStatusEffects.filter((effect) => this.actorProperties.condition[effect].value).length;
     return Math.max(6, baseValue - (2 * activeStatusEffects));
   }
 
