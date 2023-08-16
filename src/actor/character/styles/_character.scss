@@ -11,6 +11,12 @@
   transform: rotate(90deg);
   font-size: var(--font-size-16);
 }
+#calculated-attribute-value {
+  position:relative;
+  left: 20px;
+  bottom: 6px;
+  font-size: large;
+}
 
 .character {
   background: white;
@@ -171,6 +177,9 @@
   &:hover {
     box-shadow: 0 5px 0 -4px currentColor;
   }
+}
+.attribute-stats > .attribute {
+  width:0;
 }
 
 .attributes-and-status-effects > .dexterity {
