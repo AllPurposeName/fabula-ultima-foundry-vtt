@@ -58,38 +58,38 @@
         "experience": {
           "label": "BIO.EXPERIENCE",
           "value": 0
+        }
+      },
+      "condition": {
+        "dazed": {
+          "label": "CONDITION.DAZED",
+          "value": false
         },
-        "condition": {
-          "dazed": {
-            "label": "CONDITION.DAZED",
-            "value": false
-          },
-          "enraged": {
-            "label": "CONDITION.ENRAGED",
-            "value": false
-          },
-          "poisoned": {
-            "label": "CONDITION.POISONED",
-            "value": false
-          },
-          "shaken": {
-            "label": "CONDITION.SHAKEN",
-            "value": false
-          },
-          "slow": {
-            "label": "CONDITION.SLOW",
-            "value": false
-          },
-          "weak": {
-            "label": "CONDITION.WEAK",
-            "value": false
-          }
+        "enraged": {
+          "label": "CONDITION.ENRAGED",
+          "value": false
         },
-        "currency": {
-          "zenit": {
-            "label": "CURRENCY.ZENIT",
-            "value": 0
-          }
+        "poisoned": {
+          "label": "CONDITION.POISONED",
+          "value": false
+        },
+        "shaken": {
+          "label": "CONDITION.SHAKEN",
+          "value": false
+        },
+        "slow": {
+          "label": "CONDITION.SLOW",
+          "value": false
+        },
+        "weak": {
+          "label": "CONDITION.WEAK",
+          "value": false
+        }
+      },
+      "currency": {
+        "zenit": {
+          "label": "CURRENCY.ZENIT",
+          "value": 0
         }
       },
       "monster": {
