@@ -35,19 +35,20 @@
           <i class="fas fa-slash rotated"></i>
           <p> d{{this.actor.dexterity}} </p>
           <div>
-            {{!-- <input type="checkbox" id="slow" data-dtype="Boolean" name="system.condition.slow.value" {{checked this.actor.conditions.slow.value}} /><label for="slow">Slow</label> --}}
-            <input type="checkbox" id="slow" data-dtype="Boolean" name="system.condition.slow.value"/><label for="slow">Slow</label>
+            <input type="checkbox" id="slow" data-dtype="Boolean" name="system.condition.slow.value" {{checked this.actor.conditions.slow.value}} />
+            <label for="slow">Slow</label>
           </div>
         </div>
         <div class="attribute-stats insight">
           <p class="attribute">Insight</p>
           <div>
-            <input id="number-input" type="number" name="system.attribute.insight.value" value="{{this.actor.attributes.insight.value}}"  />
+            <input id="number-input" type="number" name="system.attribute.insight.value" value="{{this.actor.attributes.insight.value}}" />
           </div>
           <i class="fas fa-slash rotated"></i>
           <p> d{{this.actor.insight}} </p>
           <div>
-            <input type="checkbox" id="dazed" name="system.condition.dazed.value"> <label>Dazed</label></input>
+            <input type="checkbox" id="dazed" data-dtype="Boolean" name="system.condition.dazed.value" {{checked this.actor.conditions.dazed.value}} />
+            <label for="dazed">Dazed</label>
           </div>
         </div>
         <div class="attribute-stats might">
@@ -58,7 +59,8 @@
           <i class="fas fa-slash rotated"></i>
           <p> d{{this.actor.might}}</p>
           <div>
-            <input type="checkbox" id="weak" name="system.condition.weak.value" {{#if this.actor.conditions.weak.value}}checked{{else}}{{/if}} > <label>Weak</label></input>
+            <input type="checkbox" id="weak" data-dtype="Boolean" name="system.condition.weak.value" {{checked this.actor.conditions.weak.value}} />
+            <label for="weak">Weak</label>
           </div>
         </div>
         <div class="attribute-stats willpower">
@@ -69,14 +71,17 @@
           <i class="fas fa-slash rotated"></i>
           <p> d{{this.actor.willpower}} </p>
           <div>
-            <input type="checkbox" id="shaken" name="system.condition.shaken.value" {{#if this.actor.conditions.shaken.value}}checked{{else}}{{/if}} > <label> Shaken</label> </input>
+            <input type="checkbox" id="shaken" data-dtype="Boolean" name="system.condition.shaken.value" {{checked this.actor.conditions.shaken.value}} />
+            <label for="shaken"> Shaken</label>
           </div>
         </div>
         <div class="attribute-stats enraged">
-          <input type="checkbox" id="enraged" name="system.condition.enraged.value" {{#if this.actor.conditions.enraged.value}}checked{{else}}{{/if}}> <label> Enraged</label></input>
+          <input type="checkbox" id="enraged" data-dtype="Boolean" name="system.condition.enraged.value" {{checked this.actor.conditions.enraged.value}} />
+          <label for="enraged"> Enraged</label>
         </div>
         <div class="attribute-stats poisoned">
-          <input type="checkbox" id="poisoned" name="system.condition.poisoned.value" {{#if this.actor.conditions.poisoned.value}}checked{{else}}{{/if}}><label> Poisoned</label></input>
+          <input type="checkbox" id="poisoned" data-dtype="Boolean" name="system.condition.poisoned.value" {{checked this.actor.conditions.poisoned.value}} />
+          <label for="poisoned"> Poisoned</label>
         </div>
       </div>
 

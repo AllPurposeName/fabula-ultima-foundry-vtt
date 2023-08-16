@@ -31,9 +31,9 @@ export class FabulaUltimaActor extends Actor {
     return Math.max(6, baseValue - (2 * activeStatusEffects));
   }
 
-// 	get conditions() {
-// 		return this.actorProperties.condition;
-// 	}
+	get conditions() {
+		return this.actorProperties.condition;
+	}
 //
 // 	get consumables() {
 // 		return this.actorProperties.consumable;
