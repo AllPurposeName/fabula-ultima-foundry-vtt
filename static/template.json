@@ -2,45 +2,45 @@
   "Actor": {
     "types": ["character", "monster", "party", "stronghold"],
     "templates": {
-      "attributes": {
-        "attribute": {
-          "dexterity": {
+      "baseAttributes": {
+        "baseAttribute": {
+          "baseDexterity": {
             "label": "ATTRIBUTE.DEXTERITY",
             "max": 12,
             "min": 6,
             "value": 6
           },
-          "insight": {
+          "baseInsight": {
             "label": "ATTRIBUTE.INSIGHT",
             "max": 12,
             "min": 6,
             "value": 6
           },
-          "might": {
+          "baseMight": {
             "label": "ATTRIBUTE.MIGHT",
             "max": 12,
             "min": 6,
             "value": 6
           },
-          "willpower": {
+          "baseWillpower": {
             "label": "ATTRIBUTE.WILLPOWER",
             "max": 12,
             "min": 6,
             "value": 6
           },
-          "hitPoints": {
+          "baseHitPoints": {
             "label": "ATTRIBUTE.HITPOINTS",
             "max": 100,
             "min": 0,
             "value": 40
           },
-          "mindPoints": {
+          "baseMindPoints": {
             "label": "ATTRIBUTE.MINDPOINTS",
             "max": 100,
             "min": 0,
             "value": 30
           },
-          "inventoryPoints": {
+          "baseInventoryPoints": {
             "label": "ATTRIBUTE.INVENTORYPOINTS",
             "max": 20,
             "min": 0,
@@ -81,7 +81,7 @@
       }
     },
     "character": {
-      "templates": ["attributes", "conditions", "skills", "subtype"],
+      "templates": ["baseAttributes", "conditions", "skills", "subtype"],
       "bio": {
         "experience": {
           "label": "BIO.EXPERIENCE",
@@ -95,7 +95,7 @@
         }
       },
       "monster": {
-        "templates": ["attributes", "conditions", "skills", "subtype"],
+        "templates": ["baseAttributes", "conditions", "skills", "subtype"],
         "initiative": {
           "max": 14,
           "min": 5,

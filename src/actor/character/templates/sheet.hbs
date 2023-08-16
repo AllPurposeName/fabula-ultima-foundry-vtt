@@ -32,7 +32,7 @@
           <p id="calculated-attribute-value"> d{{this.actor.dexterity}} </p>
           <i class="fas fa-slash rotated"></i>
           <div>
-            <input id="number-input" type="number" step=2 min=6 max=12 name="system.attribute.dexterity.value" value="{{this.actor.attributes.dexterity.value}}" />
+            <input id="number-input" type="number" step=2 min=6 max=12 name="system.baseAttribute.baseDexterity.value" value="{{this.actor.attributes.baseDexterity.value}}" />
           </div>
           <div>
             <input type="checkbox" id="slow" data-dtype="Boolean" name="system.condition.slow.value" {{checked this.actor.conditions.slow.value}} />
@@ -44,7 +44,7 @@
           <p id="calculated-attribute-value"> d{{this.actor.insight}} </p>
           <i class="fas fa-slash rotated"></i>
           <div>
-            <input id="number-input" type="number" step=2 min=6 max=12 name="system.attribute.insight.value" value="{{this.actor.attributes.insight.value}}" />
+            <input id="number-input" type="number" step=2 min=6 max=12 name="system.baseAttribute.baseInsight.value" value="{{this.actor.attributes.baseInsight.value}}" />
           </div>
           <div>
             <input type="checkbox" id="dazed" data-dtype="Boolean" name="system.condition.dazed.value" {{checked this.actor.conditions.dazed.value}} />
@@ -56,7 +56,7 @@
           <p id="calculated-attribute-value"> d{{this.actor.might}}</p>
           <i class="fas fa-slash rotated"></i>
           <div>
-            <input id="number-input" type="number" step=2 min=6 max=12 name="system.attribute.might.value" value="{{this.actor.attributes.might.value}}" />
+            <input id="number-input" type="number" step=2 min=6 max=12 name="system.baseAttribute.baseMight.value" value="{{this.actor.attributes.baseMight.value}}" />
           </div>
           <div>
             <input type="checkbox" id="weak" data-dtype="Boolean" name="system.condition.weak.value" {{checked this.actor.conditions.weak.value}} />
@@ -68,7 +68,7 @@
           <p id="calculated-attribute-value"> d{{this.actor.willpower}} </p>
           <i class="fas fa-slash rotated"></i>
           <div>
-            <input id="number-input" type="number" step=2 min=6 max=12 name="system.attribute.willpower.value" value="{{this.actor.attributes.willpower.value}}" />
+            <input id="number-input" type="number" step=2 min=6 max=12 name="system.baseAttribute.baseWillpower.value" value="{{this.actor.attributes.baseWillpower.value}}" />
           </div>
           <div>
             <input type="checkbox" id="shaken" data-dtype="Boolean" name="system.condition.shaken.value" {{checked this.actor.conditions.shaken.value}} />
