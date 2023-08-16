@@ -6,37 +6,37 @@
         "attribute": {
           "dexterity": {
             "label": "ATTRIBUTE.DEXTERITY",
-            "max": 10,
+            "max": 12,
             "min": 6,
             "value": 6
           },
           "insight": {
             "label": "ATTRIBUTE.INSIGHT",
-            "max": 10,
+            "max": 12,
             "min": 6,
             "value": 6
           },
           "might": {
             "label": "ATTRIBUTE.MIGHT",
-            "max": 10,
+            "max": 12,
             "min": 6,
             "value": 6
           },
           "willpower": {
             "label": "ATTRIBUTE.WILLPOWER",
-            "max": 10,
+            "max": 12,
             "min": 6,
             "value": 6
           },
           "hitPoints": {
             "label": "ATTRIBUTE.HITPOINTS",
-            "max": 100,
+            "max": 12,
             "min": 0,
             "value": 40
           },
           "mindPoints": {
             "label": "ATTRIBUTE.MINDPOINTS",
-            "max": 100,
+            "max": 12,
             "min": 0,
             "value": 30
           },
