@@ -1,144 +1,194 @@
 <form class="{{cssClass}}" autocomplete="off">
   <div class="character">
-
-    <h1>Attributez: {{localize this.actor.attributes.dexterity.label}}</h1>
-    <div class="sheet-tabs tabs flex row" data-group="primary">
-      <b class="tab-item" data-tab="main">MAIN</b>
-    </div>
-    <div class="sheet-body">
-      <div class="tab" data-group="primary" data-tab="main">
-        <!-- prettier-ignore -->
-        {{! prettier-ignore }}
-        {{> systems/fabula-ultima/templates/actor/character/sheet-tabs/main-tab.hbs}}
+    <header class="header">
+      <h1> <input id="dark-text" name="name" type="text" value="{{this.actor.name}}" /> </h1>
+    </header>
+    <main class="main-content">
+      <div class="pronouns">
+        <h3> Pronouns:
+          <input
+              id="dark-text"
+              style="width: 100px"
+              name="pronouns"
+              type="text"
+              {{!-- value="{{this.actor.pronouns}}" --}}
+                    value="she/her"
+                    />
+        </h3>
       </div>
-    </div>
+
+      <div class="points hit-points">
+        <h4> Hit Points: <input id="number-input" type="number" name="hit-points" value="{{this.actor.hitPoints}}" /> / <input id="number-input" type="number" name="hit-points-max" value="{{this.actor.hitPointsMax}}" /> </h4>
+      </div>
+
+      <div class="points mind-points">
+        <h4> Mind Points: <input id="number-input" type="number" name="mind-points" value="{{this.actor.mindPoints}}" /> / <input id="number-input" type="number" name="mind-points-max" value="{{this.actor.mindPointsMax}}" /> </h4>
+      </div>
+
+      <div class="attributes-and-status-effects">
+        <h3 class="header"> Attributes and Status Effects <i class="fas fa-hand-fist"></i></h3>
+        <div class="attribute-stats dexterity">
+          <p class="attribute">Dexterity</p>
+          <input id="number-input" type="number" name="{{this.actor.attributes.dexterity.value}}" value="6" />
+          <p> d6 </p>
+          <p> <input type="checkbox" name="slow" /> Slow</p>
+        </div>
+        <div class="attribute-stats insight">
+          <p class="attribute">Insight</p>
+          <input id="number-input" type="number" name="{{this.actor.attributes.insight.value}}" value="10"  />
+          <p> d10 </p>
+          <p> <input type="checkbox" name="dazed" /> Dazed</p>
+        </div>
+        <div class="attribute-stats might">
+          <p class="attribute">Might</p>
+          <input id="number-input" type="number" name="{{this.actor.attributes.might.value}}" value="8" />
+          <p> d8 </p>
+          <p> <input type="checkbox" name="weak" /> Weak</p>
+        </div>
+        <div class="attribute-stats willpower">
+          <p class="attribute">Willpower</p>
+          <input id="number-input" type="number" name="{{this.actor.attributes.willpower.value}}" value="8" />
+          <p> d8 </p>
+          <input type="checkbox" name="shaken"  />
+          <p> Shaken </p>
+        </div>
+        <div class="attribute-stats enraged">
+          <p> <input type="checkbox" name="enraged"  /> Enraged </p>
+        </div>
+        <div class="attribute-stats poisoned">
+          <p> <input type="checkbox" name="poisoned" /> Poisoned </p>
+        </div>
+      </div>
+
+      <div class="traits-section">
+        <h3>Traits <i class="fas fa-fingerprint"></i> </h3>
+        <div class="traits">
+          <div class="trait-with-answer">
+            <h4>Identity:
+              <input name="identity" type="text" value="{{this.actor.identity}}" />
+            </h4>
+          </div>
+          <div class="trait-with-answer">
+            <h4>Theme:
+              <input name="duty" type="text" value="{{this.actor.duty}}" />
+            </h4>
+            <h4>Origin:
+              <input name="origin" type="text" value="{{this.actor.origin}}" />
+            </h4>
+          </div>
+          <div class="trait-with-answer">
+            <p>
+            <input
+                style='font-weight: bold; font-style: italic; color: gray'
+                name="quote"
+                type="text"
+                {{!-- value="{{this.actor.quote}}" --}}
+                      value="There is something I must do."
+                      />
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <section class="right-sidebar">
+      <img class="profile-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROo-89Ylv98984xHOU5ROn8j0fgF346XHoWbbMK-SUV36IuVByqSnNZn0fk3NW1WY3Yb8&usqp=CAU" title="{{name}}" />
+      {{!-- data-edit="img" --}}
+    </section>
+
+    <footer class="footer">
+
+      <div class="bond-section">
+        <h3>Bonds <i class="fas fa-link"></i> </h3>
+        <div class="bonds">
+          <div class="bond">
+            <input class="bond-name" name="bond-name1" type="text" value="Montblanc" />
+            <div class="bond-feels">
+              <p> <input type="checkbox" name="admiration" /> Admiration</p>
+              <p> <input type="checkbox" name="inferiority" /> Inferiority</p>
+            </div>
+            <div class="bond-feels">
+              <p> <input type="checkbox" name="loyalty" /> Loyalty</p>
+              <p> <input type="checkbox" name="mistrust" /> Mistrust</p>
+            </div>
+            <div class="bond-feels">
+              <p> <input type="checkbox" name="affection" /> Affection</p>
+              <p> <input type="checkbox" name="hatred" /> Hatred</p>
+            </div>
+          </div>
+          <div class="bond">
+            <input class="bond-name" name="bond-name2" type="text" value="Samuel" />
+            <div class="bond-feels">
+              <p> <input type="checkbox" name="admiration" /> Admiration</p>
+              <p> <input type="checkbox" name="inferiority" /> Inferiority</p>
+            </div>
+            <div class="bond-feels">
+              <p> <input type="checkbox" name="loyalty" /> Loyalty</p>
+              <p> <input type="checkbox" name="mistrust" /> Mistrust</p>
+            </div>
+            <div class="bond-feels">
+              <p> <input type="checkbox" name="affection" /> Affection</p>
+              <p> <input type="checkbox" name="hatred" /> Hatred</p>
+            </div>
+          </div>
+          <div class="bond">
+            <input class="bond-name" name="bond-name3" type="text" value="Gobrio" />
+            <div class="bond-feels">
+              <p> <input type="checkbox" name="admiration" /> Admiration</p>
+              <p> <input type="checkbox" name="inferiority" /> Inferiority</p>
+            </div>
+            <div class="bond-feels">
+              <p> <input type="checkbox" name="loyalty" /> Loyalty</p>
+              <p> <input type="checkbox" name="mistrust" /> Mistrust</p>
+            </div>
+            <div class="bond-feels">
+              <p> <input type="checkbox" name="affection" /> Affection</p>
+              <p> <input type="checkbox" name="hatred" /> Hatred</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="fabula-points">
+        <h3>Fabula Points <i class="fas fa-meteor"></i> </h3>
+        <input id="number-input" type="number" name="fabula-points" />
+        <p>Gain 1 Fabula Point whenever you roll a fumble, whenever a villain appears, or whenever instructed by the scene.
+      </div>
+
+      <div class="inventory-points">
+        <h3>Inventory Points <i class="fas fa-sack-xmark"></i> </h3>
+        <div class="inventory-points-fields">
+          <p class="inventory-points-header">IP</p>
+          <p>Max</p>
+          <input id="number-input" type="number" name="inventory-points-max" />
+          <p>Current</p>
+          <input id="number-input" type="number" name="inventory-points-current" />
+        </div>
+        <div class="inventory-li">
+          <p> <img src="systems/fabula-ultima/assets/assorted/redpot.png" width="20" height="20" style="border: none" /> Remedy (3 IP): One creature recovers 50 HP.</p>
+        </div>
+        <div class="inventory-li">
+          <p> <img src="systems/fabula-ultima/assets/assorted/bluepot.png" width="20" height="20" style="border: none" /> Elixir (3 IP): One creature recovers 50 MP.</p>
+        </div>
+        <div class="inventory-li">
+          <p> <img src="systems/fabula-ultima/assets/assorted/yellowpot.webp" width="20" height="20" style="border: none" /> Tonic (2 IP): One creature recovers from one status effect.</p>
+        </div>
+      </div>
+      <div class="glossary">
+        <h3>Glossary <i class="fas fa-book-bookmark"></i> </h3>
+        <ul>
+          <li>HR (High Roll): The highest of the two numbers shown by the dice in a Check.</li>
+          <li>Fumble: A check where both dice rolled a 1.</li>
+          <li>Critical Success: A check where both dice rolled the same number, and that number is 6 or higher.</li>
+          <li>Die Size: The number of faces on a die. Ranked from minimum to maximum: d6, d8, d10, d12</li>
+          <li>Vulnerability: HP loss is doubled.</li>
+          <li>Resistance: HP loss is halved (round down).</li>
+        </ul>
+      </div>
+      <div class="zenit">
+        <h3>Zenit <i class="fas fa-coins"></i> </h3>
+        <input id="number-input" name="zenit" type="number" value="{{zenit}}" />
+      </div>
+    </footer>
   </div>
 </form>
-{{!--  --}}
-{{!-- 			</div> --}}
-{{!-- <form class="{{cssClass}}" autocomplete="off"> --}}
-  {{!-- 	<div class="character"> --}}
-    {{!-- 		<div class="bio border"> --}}
-      {{!-- 			<div class="flex row align-center space-between"> --}}
-        {{!-- 				<div class="avatar"> --}}
-          {{!-- 					<img class="profile-img" src="{{img}}" data-edit="img" title="{{name}}" /> --}}
-          {{!-- 				</div> --}}
-        {{!-- 				<table> --}}
-          {{!-- 					<tr> --}}
-            {{!-- 						<td> --}}
-              {{!-- 							<label>{{localize "BIO.NAME"}}:</label> --}}
-              {{!-- 						</td> --}}
-            {{!-- 						<td colspan="3"> --}}
-              {{!-- 							<input class="name" name="name" type="text" value="{{name}}" /> --}}
-              {{!-- 						</td> --}}
-            {{!-- 						<td> --}}
-              {{!-- 							<label>{{localize system.bio.kin.label}}:</label> --}}
-              {{!-- 						</td> --}}
-            {{!-- 						<td> --}}
-              {{!-- 							<input class="kin" name="system.bio.kin.value" type="text" value="{{system.bio.kin.value}}" /> --}}
-              {{!-- 						</td> --}}
-            {{!-- 					</tr> --}}
-          {{!-- 					<tr> --}}
-            {{!-- 						<td> --}}
-              {{!-- 							<label>{{localize system.bio.age.label}}:</label> --}}
-              {{!-- 						</td> --}}
-            {{!-- 						<td> --}}
-              {{!-- 							<input name="system.bio.age.value" type="number" value="{{system.bio.age.value}}" --}}
-              {{!-- 								data-dtype="Number" /> --}}
-              {{!-- 						</td> --}}
-            {{!-- 						<td> --}}
-              {{!-- 							{{#if system.bio.reputation.value}} --}}
-                {{!-- 							<button type="button" class="roll-reputation flex row align-center" data-tooltip="{{localize "DICE.ROLL"}} {{localize system.bio.reputation.label}}"> --}}
-                  {{!-- 								<i class="fas fa-dice"></i> --}}
-                  {{!-- 								<label style="margin-left: 0px;">{{localize system.bio.reputation.label}}:</label> --}}
-                  {{!-- 							</button> --}}
-                {{!-- 							{{else}} --}}
-                {{!-- 							<label>{{localize system.bio.reputation.label}}:</label> --}}
-                {{!-- 							{{/if}} </td> --}}
-              {{!-- 						<td> --}}
-                {{!-- 							<input name="system.bio.reputation.value" type="number" value="{{system.bio.reputation.value}}" --}}
-                {{!-- 								data-dtype="Number" /> --}}
-                {{!-- 						</td> --}}
-              {{!-- 						<td> --}}
-                {{!-- 							<label>{{localize system.bio.profession.label}}:</label> --}}
-                {{!-- 						</td> --}}
-              {{!-- 						<td> --}}
-                {{!-- 							<input class="profession" name="system.bio.profession.value" type="text" --}}
-                {{!-- 								value="{{system.bio.profession.value}}" /> --}}
-                {{!-- 						</td> --}}
-              {{!-- 					</tr> --}}
-            {{!-- 					<tr> --}}
-              {{!-- 						<td> --}}
-                {{!-- 							<label>{{localize system.bio.experience.label}}:</label> --}}
-                {{!-- 						</td> --}}
-              {{!-- 						<td> --}}
-                {{!-- 							<input name="system.bio.experience.value" type="number" value="{{system.bio.experience.value}}" --}}
-                {{!-- 								data-dtype="Number" /> --}}
-                {{!-- 						</td> --}}
-              {{!-- 						<td> --}}
-                {{!-- 							<label>{{localize system.bio.willpower.label}}:</label> --}}
-                {{!-- 						</td> --}}
-              {{!-- 						<td> --}}
-                {{!-- 							<input name="system.bio.willpower.value" type="number" value="{{system.bio.willpower.value}}" --}}
-                {{!-- 								min="{{system.bio.willpower.min}}" max="{{system.bio.willpower.max}}" data-dtype="Number" /> --}}
-                {{!-- 						</td> --}}
-              {{!-- 						<td colspan="2"> --}}
-                {{!-- 							<div --}}
-                  {{!-- 								class="skulls willpower {{#unless system.bio.willpower.value }}broken{{/unless}} flex row align-center"> --}}
-                  {{!-- 								<a class="change-willpower"> --}}
-                    {{!-- 									{{#skulls system.bio.willpower.value system.bio.willpower.max}} --}}
-                      {{!-- 									<i --}}
-                        {{!-- 										class="skull {{#if @damaged}}far fa-circle{{else}}{{#if alternativeSkulls}} fas fa-circle {{else}} far fa-times-circle{{/if}}{{/if}}"></i> --}}
-                      {{!-- 									{{/skulls}} --}}
-                      {{!-- 								</a> --}}
-                    {{!-- 							</div> --}}
-                  {{!-- 						</td> --}}
-                {{!-- 					</tr> --}}
-              {{!-- 				</table> --}}
-            {{!-- 			</div> --}}
-          {{!-- 		</div> --}}
-        {{!--  --}}
-        {{!-- 		<div class="sheet-tabs tabs flex row" data-group="primary"> --}}
-          {{!-- 			<b class="tab-item" data-tab="main">{{localize "TAB.MAIN"}}</b> --}}
-          {{!-- 			<b class="tab-item" data-tab="combat">{{localize "TAB.COMBAT"}}</b> --}}
-          {{!-- 			<b class="tab-item" data-tab="talent">{{localize "TAB.TALENT"}}</b> --}}
-          {{!-- 			<b class="tab-item" data-tab="gear">{{localize "TAB.GEAR"}}</b> --}}
-          {{!-- 			<b class="tab-item" data-tab="bio">{{localize "TAB.BIO"}}</b> --}}
-          {{!-- 			<b class="tab-item" data-tab="note">{{localize "TAB.NOTE"}}</b> --}}
-          {{!-- 		</div> --}}
-        {{!--  --}}
-        {{!-- 		<div class="sheet-body"> --}}
-          {{!-- 			<div class="tab" data-group="primary" data-tab="main"> --}}
-            {{!-- <!-- prettier-ignore --> --}}
-            {{!-- {{! prettier-ignore }} --}}
-            {{!-- {{> systems/forbidden-lands/templates/actor/character/sheet-tabs/main-tab.hbs}} --}}
-            {{!-- 			</div> --}}
-          {{!-- 			<div class="tab" data-group="primary" data-tab="combat"> --}}
-            {{!-- <!-- prettier-ignore --> --}}
-            {{!-- {{! prettier-ignore }} --}}
-            {{!-- {{> systems/forbidden-lands/templates/actor/character/sheet-tabs/combat-tab.hbs}} --}}
-            {{!-- 			</div> --}}
-          {{!-- 			<div class="tab" data-group="primary" data-tab="talent"> --}}
-            {{!-- <!-- prettier-ignore --> --}}
-            {{!-- {{! prettier-ignore }} --}}
-            {{!-- {{> systems/forbidden-lands/templates/actor/character/sheet-tabs/talent-tab.hbs}} --}}
-            {{!-- 			</div> --}}
-          {{!-- 			<div class="tab" data-group="primary" data-tab="gear"> --}}
-            {{!-- <!-- prettier-ignore --> --}}
-            {{!-- {{! prettier-ignore }} --}}
-            {{!-- {{> systems/forbidden-lands/templates/actor/_shared-template-tabs/gear-tab.hbs}} --}}
-            {{!-- 			</div> --}}
-          {{!-- 			<div class="tab" data-group="primary" data-tab="bio"> --}}
-            {{!-- <!-- prettier-ignore --> --}}
-            {{!-- {{! prettier-ignore }} --}}
-            {{!-- {{> systems/forbidden-lands/templates/actor/character/sheet-tabs/bio-tab.hbs}} --}}
-            {{!-- 			</div> --}}
-          {{!-- 			<div class="tab note" data-group="primary" data-tab="note"> --}}
-            {{!-- <!-- prettier-ignore --> --}}
-            {{!-- {{! prettier-ignore }} --}}
-            {{!-- {{editor system.bio.note.value target="system.bio.note.value" button=true owner=owner --}}
-            {{!-- editable=true}} --}}
-            {{!-- 			</div> --}}
-          {{!-- 		</div> --}}
-        {{!-- 	</div> --}}
-      {{!-- </form> --}}
