@@ -30,13 +30,13 @@
           },
           "hitPoints": {
             "label": "ATTRIBUTE.HITPOINTS",
-            "max": 12,
+            "max": 100,
             "min": 0,
             "value": 40
           },
           "mindPoints": {
             "label": "ATTRIBUTE.MINDPOINTS",
-            "max": 12,
+            "max": 100,
             "min": 0,
             "value": 30
           },
