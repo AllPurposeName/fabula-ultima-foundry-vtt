@@ -10,19 +10,19 @@ export class FabulaUltimaActor extends Actor {
 	}
 
   get dexterity() {
-    return this.modifiedAttribute(attribute: "dexterity", possibleStatusEffects: ["slow", "enraged"]);
+    return this.modifiedAttribute({attribute: "dexterity", possibleStatusEffects: ["slow", "enraged"]});
   }
 
   get insight() {
-    return this.modifiedAttribute(attribute: "insight", possibleStatusEffects: ["dazed", "enraged"]);
+    return this.modifiedAttribute({attribute: "insight", possibleStatusEffects: ["dazed", "enraged"]});
   }
 
   get might() {
-    return this.modifiedAttribute(attribute: "might", possibleStatusEffects: ["weak", "poisoned"]);
+    return this.modifiedAttribute({attribute: "might", possibleStatusEffects: ["weak", "poisoned"]});
   }
 
   get willpower() {
-    return this.modifiedAttribute(attribute: "willpower", possibleStatusEffects: ["shaken", "poisoned"]);
+    return this.modifiedAttribute({attribute: "willpower", possibleStatusEffects: ["shaken", "poisoned"]});
   }
 
   modifiedAttribute({attribute, possibleStatusEffects}) {

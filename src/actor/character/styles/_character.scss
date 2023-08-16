@@ -7,12 +7,14 @@
   width: 40px;
   transition: box-shadow .33s ease-out;
   text-align: center;
-  &:hover {
-    box-shadow: 0 5px 0 -4px currentColor;
-  }
+}
+.rotated {
+  transform: rotate(90deg);
+  font-size: var(--font-size-16);
 }
 
 .character {
+  background: white;
   display:grid;
   grid-template-columns:repeat(3, 1fr);
   grid-template-areas:
@@ -59,9 +61,6 @@
   grid-area:pronouns;
   position: relative;
   bottom: 35px;
-  align-self: right;
-  display: inline-block;
-  text-align-last: right;
 }
 
 .main-content > .points {
@@ -93,10 +92,15 @@
 
 .main-content > .attributes-and-status-effects {
   grid-area:attributes-and-status-effects;
+  border-bottom: 1px solid grey;
+  border-left: 1px solid grey;
+  border-top: 1px solid grey;
+  border-radius: 10px 0 0 10px;
+  background-image: linear-gradient(to right, #e5f3e5, white);
   margin-bottom: 15px;
   display: grid;
-  grid-template-rows: 10px 20px 15px 20px 10px 20px 15px 20px;
-  grid-gap: 5px;
+  grid-template-rows: 0px 20px 20px 20px 20px 20px 20px 20px 20px;
+  grid-gap: 2px 0px;
   grid-template-areas:
   'h3 . . '
   'dexterity dexterity .'
@@ -105,26 +109,63 @@
   '. . .'
   'might might .'
   '. . poisoned'
-  'willpower willpower .';
+  'willpower willpower .'
+  '. . .';
 }
 .attributes-and-status-effects > .attribute-stats {
+  padding: 10px;
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
+  // @include flex-container-wrap-items(300px)
+}
+.attribute-stats > * {
+  position:relative;
+  flex: 1 1 0px;
+}
+.attributes-and-status-effects > .attribute-stats:nth-child(2) {
+  bottom: 5px;
+}
+.attributes-and-status-effects > .attribute-stats:nth-child(5) {
+  bottom: 5px;
+}
+.attributes-and-status-effects > .attribute-stats:nth-child(6) {
+  position: relative;
+  bottom: 11px;
+}
+.attributes-and-status-effects > .attribute-stats:nth-child(7) {
+  position: relative;
+  bottom: 11px;
 }
 .attributes-and-status-effects > .attribute-stats:nth-child(n+3):not(:nth-last-child(-n+2)) {
   border-top: 1px dotted grey;
+}
+.attributes-and-status-effects > .attribute-stats > i {
+  position: relative;
+  top: 30px;
 }
 .attributes-and-status-effects > .header {
   width: 300px;
   height: 20px;
   position: relative;
-  bottom: 15px;
+  bottom: 20px;
+  border: none;
 }
 
 .attribute-stats > .attribute {
   color: darkblue;
 }
-.attribute-stats > input {
+.attribute-stats > div {
+  width: 0;
+}
+.attribute-stats > div > input[type=checkbox] {
+  position: absolute;
+}
+.attribute-stats > div > input[type=checkbox] ~ label {
+    padding-left:30px;
+    padding-top:5px;
+    display:inline-block;
+}
+.attribute-stats > div > input[type=number] {
   width: 30px;
   border: none;
   transition: box-shadow .33s ease-out;
@@ -231,7 +272,7 @@
   grid-template-areas:
   'bonds bonds bonds bonds bonds'
   'fabula-points fabula-points inventory-points inventory-points inventory-points'
-  'glossary glossary inventory-points inventory-points inventory-points'
+  'glossary glossary experience experience experience'
   'glossary glossary zenit zenit zenit';
 }
 
@@ -251,9 +292,6 @@
 .inventory-points-fields > input {
   width: 30px;
   transition: box-shadow .33s ease-out;
-  &:hover {
-    box-shadow: 0 5px 0 -4px currentColor;
-  }
 }
 .inventory-points-fields {
   display: flex;
@@ -268,6 +306,30 @@
 }
 .footer > .glossary {
   grid-area:glossary;
+}
+.footer > .experience {
+  grid-area:experience;
+}
+.experience > .experience-fields {
+  display: flex;
+  flex-direction: column;
+}
+.experience-fields > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  text-align: left;
+  line-height: 26px;
+  margin-bottom: 10px;
+}
+.experience-fields > div > label {
+  font-size: large;
+  flex: 1 0 220px;
+}
+.experience-fields > div > label > input {
+  flex: 0 0 50px;
+  margin-left: 10px;
+  font-size: small;
 }
 .footer > .zenit {
   grid-area:zenit;
