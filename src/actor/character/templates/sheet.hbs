@@ -29,34 +29,33 @@
         <h3 class="header"> Attributes and Status Effects <i class="fas fa-hand-fist"></i></h3>
         <div class="attribute-stats dexterity">
           <p class="attribute">Dexterity</p>
-          <input id="number-input" type="number" name="{{this.actor.attributes.dexterity.value}}" value="6" />
-          <p> d6 </p>
-          <p> <input type="checkbox" name="slow" /> Slow</p>
+          <input id="number-input" type="number" name="system.attribute.dexterity.value" value="{{this.actor.attributes.dexterity.value}}" />
+          <p> d{{this.actor.dexterity}} </p>
+          <p> <input type="checkbox" name="system.condition.slow.value" {{#if this.actor.conditions.slow.value}}checked{{else}}{{/if}} /> Slow</p>
         </div>
         <div class="attribute-stats insight">
           <p class="attribute">Insight</p>
-          <input id="number-input" type="number" name="{{this.actor.attributes.insight.value}}" value="10"  />
-          <p> d10 </p>
-          <p> <input type="checkbox" name="dazed" /> Dazed</p>
+          <input id="number-input" type="number" name="system.attribute.insight.value" value="{{this.actor.attributes.insight.value}}"  />
+          <p> d{{this.actor.insight}} </p>
+          <p> <input type="checkbox" name="system.condition.dazed.value" {{#if this.actor.conditions.dazed.value}}checked{{else}}{{/if}} /> Dazed</p>
         </div>
         <div class="attribute-stats might">
           <p class="attribute">Might</p>
-          <input id="number-input" type="number" name="{{this.actor.attributes.might.value}}" value="8" />
-          <p> d8 </p>
-          <p> <input type="checkbox" name="weak" /> Weak</p>
+          <input id="number-input" type="number" name="system.attribute.might.value" value="{{this.actor.attributes.might.value}}" />
+          <p> d{{this.actor.might}}</p>
+          <p> <input type="checkbox" name="system.condition.weak.value" {{#if this.actor.conditions.weak.value}}checked{{else}}{{/if}} /> Weak</p>
         </div>
         <div class="attribute-stats willpower">
           <p class="attribute">Willpower</p>
-          <input id="number-input" type="number" name="{{this.actor.attributes.willpower.value}}" value="8" />
-          <p> d8 </p>
-          <input type="checkbox" name="shaken"  />
-          <p> Shaken </p>
+          <input id="number-input" type="number" name="system.attribute.willpower.value" value="{{this.actor.attributes.willpower.value}}" />
+          <p> d{{this.actor.willpower}} </p>
+          <p> <input type="checkbox" name="system.condition.shaken.value" {{#if this.actor.conditions.shaken.value}}checked{{else}}{{/if}} /> Shaken</p>
         </div>
         <div class="attribute-stats enraged">
-          <p> <input type="checkbox" name="enraged"  /> Enraged </p>
+          <p> <input type="checkbox" name="system.condition.enraged.value" {{#if this.actor.conditions.enraged.value}}checked{{else}}{{/if}} /> Enraged</p>
         </div>
         <div class="attribute-stats poisoned">
-          <p> <input type="checkbox" name="poisoned" /> Poisoned </p>
+          <p> <input type="checkbox" name="system.condition.poisoned.value" {{#if this.actor.conditions.poisoned.value}}checked{{else}}{{/if}} /> Poisoned</p>
         </div>
       </div>
 
@@ -191,7 +190,4 @@
       </div>
     </footer>
   </div>
-  <button type="submit">
-    <i class="far fa-save"></i> Save Changes
-  </button>
 </form>
