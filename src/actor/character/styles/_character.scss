@@ -104,10 +104,10 @@
   background-image: linear-gradient(to right, #e5f3e5, white);
   margin-bottom: 15px;
   display: grid;
-  grid-template-rows: 0px 20px 20px 20px 20px 20px 20px 20px 20px;
+  grid-template-rows: 0px repeat(8, 20px);
   grid-gap: 2px 0px;
   grid-template-areas:
-  'h3 . . '
+  'header . . '
   'dexterity dexterity .'
   '. . enraged'
   'insight insight .'
@@ -149,6 +149,7 @@
   top: 30px;
 }
 .attributes-and-status-effects > .header {
+  grid-area:header;
   width: 300px;
   height: 20px;
   position: relative;
