@@ -34,6 +34,10 @@ export class FabulaUltimaActor extends Actor {
 	get conditions() {
 		return this.actorProperties.condition;
 	}
+
+  get bio() {
+    return this.actorProperties.bio;
+  }
 //
 // 	get consumables() {
 // 		return this.actorProperties.consumable;

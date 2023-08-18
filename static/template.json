@@ -83,6 +83,10 @@
     "character": {
       "templates": ["baseAttributes", "conditions", "skills", "subtype"],
       "bio": {
+        "pronouns": {
+          "label": "BIO.PRONOUNS",
+          "value": ""
+        },
         "experience": {
           "label": "BIO.EXPERIENCE",
           "value": 0
