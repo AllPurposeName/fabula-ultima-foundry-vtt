@@ -87,6 +87,22 @@
           "label": "BIO.PRONOUNS",
           "value": ""
         },
+        "identity": {
+          "label": "BIO.IDENTITY",
+          "value": ""
+        },
+        "theme": {
+          "label": "BIO.THEME",
+          "value": ""
+        },
+        "origin": {
+          "label": "BIO.ORIGIN",
+          "value": ""
+        },
+        "quote": {
+          "label": "BIO.QUOTE",
+          "value": ""
+        },
         "experience": {
           "label": "BIO.EXPERIENCE",
           "value": 0

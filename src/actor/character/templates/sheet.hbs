@@ -83,26 +83,25 @@
         <div class="traits">
           <div class="trait-with-answer">
             <h4>Identity:
-              <input name="identity" type="text" value="{{this.actor.identity}}" />
+              <input name="system.bio.identity.value" type="text" value="{{this.actor.bio.identity.value}}" />
             </h4>
           </div>
           <div class="trait-with-answer">
             <h4>Theme:
-              <input name="duty" type="text" value="{{this.actor.duty}}" />
+              <input name="system.bio.theme.value" type="text" value="{{this.actor.bio.theme.value}}" />
             </h4>
             <h4>Origin:
-              <input name="origin" type="text" value="{{this.actor.origin}}" />
+              <input name="system.bio.origin.value" type="text" value="{{this.actor.bio.origin.value}}" />
             </h4>
           </div>
           <div class="trait-with-answer">
             <p>
             <input
                 style='font-weight: bold; font-style: italic; color: gray'
-                name="quote"
+                name="system.bio.quote.value"
                 type="text"
-                {{!-- value="{{this.actor.quote}}" --}}
-                      value="There is something I must do."
-                      />
+                value="{{this.actor.bio.quote.value}}"
+                placeholder="There is something I must do" />
             </p>
           </div>
         </div>
