@@ -6,27 +6,27 @@ export class FabulaUltimaActor extends Actor {
 	}
 
 	get attributes() {
-		return this.actorProperties.attribute;
+		return this.actorProperties.baseAttribute;
 	}
 
   get dexterity() {
-    return this.modifiedAttribute({attribute: "dexterity", possibleStatusEffects: ["slow", "enraged"]});
+    return this.modifiedAttribute({baseAttribute: "baseDexterity", possibleStatusEffects: ["slow", "enraged"]});
   }
 
   get insight() {
-    return this.modifiedAttribute({attribute: "insight", possibleStatusEffects: ["dazed", "enraged"]});
+    return this.modifiedAttribute({baseAttribute: "baseInsight", possibleStatusEffects: ["dazed", "enraged"]});
   }
 
   get might() {
-    return this.modifiedAttribute({attribute: "might", possibleStatusEffects: ["weak", "poisoned"]});
+    return this.modifiedAttribute({baseAttribute: "baseMight", possibleStatusEffects: ["weak", "poisoned"]});
   }
 
   get willpower() {
-    return this.modifiedAttribute({attribute: "willpower", possibleStatusEffects: ["shaken", "poisoned"]});
+    return this.modifiedAttribute({baseAttribute: "baseWillpower", possibleStatusEffects: ["shaken", "poisoned"]});
   }
 
-  modifiedAttribute({attribute, possibleStatusEffects}) {
-    const baseValue = this.actorProperties.attribute[attribute].value;
+  modifiedAttribute({baseAttribute, possibleStatusEffects}) {
+    const baseValue = this.actorProperties.baseAttribute[baseAttribute].value;
     const activeStatusEffects = possibleStatusEffects.filter((effect) => this.actorProperties.condition[effect].value).length;
     return Math.max(6, baseValue - (2 * activeStatusEffects));
   }
