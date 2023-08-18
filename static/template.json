@@ -103,9 +103,21 @@
           "label": "BIO.QUOTE",
           "value": ""
         },
+        "fabulaPoints": {
+          "label": "BIO.FABULA_POINTS",
+          "value": ""
+        },
         "experience": {
           "label": "BIO.EXPERIENCE",
           "value": 0
+        },
+        "level": {
+          "label": "BIO.LEVEL",
+          "value": ""
+        },
+        "zenit": {
+          "label": "BIO.ZENIT",
+          "value": ""
         }
       },
       "currency": {

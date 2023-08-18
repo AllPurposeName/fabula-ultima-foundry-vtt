@@ -168,7 +168,7 @@
       </div>
       <div class="fabula-points">
         <h3>Fabula Points <i class="fas fa-meteor"></i> </h3>
-        <input id="number-input" type="number" name="fabula-points" />
+        <input id="number-input" type="number" name="system.bio.fabulaPoints.value" value="{{this.actor.bio.fabulaPoints.value}}" />
         <p>Gain 1 Fabula Point whenever you roll a fumble, whenever a villain appears, or whenever instructed by the scene.
       </div>
 
@@ -176,10 +176,9 @@
         <h3>Inventory Points <i class="fas fa-sack-xmark"></i> </h3>
         <div class="inventory-points-fields">
           <p class="inventory-points-header">IP</p>
-          <p>Max</p>
-          <input id="number-input" type="number" name="inventory-points-max" />
-          <p>Current</p>
-          <input id="number-input" type="number" name="inventory-points-current" />
+          <input id="number-input" type="number" name="system.baseAttribute.baseInventoryPoints.value" value="{{this.actor.attributes.baseInventoryPoints.value}}" />
+          <i class="fas fa-slash rotated"></i>
+          <input id="number-input" type="number" name="system.baseAttribute.baseInventoryPoints.max" value="{{this.actor.attributes.baseInventoryPoints.max}}" />
         </div>
         <div class="inventory-li">
           <p> <img src="systems/fabula-ultima/assets/assorted/redpot.png" width="20" height="20" style="border: none" /> Remedy (3 IP): One creature recovers 50 HP.</p>
@@ -188,7 +187,7 @@
           <p> <img src="systems/fabula-ultima/assets/assorted/bluepot.png" width="20" height="20" style="border: none" /> Elixir (3 IP): One creature recovers 50 MP.</p>
         </div>
         <div class="inventory-li">
-          <p> <img src="systems/fabula-ultima/assets/assorted/yellowpot.webp" width="20" height="20" style="border: none" /> Tonic (2 IP): One creature recovers from one status effect.</p>
+          <p> <img src="systems/fabula-ultima/assets/assorted/yellowpot.png" width="20" height="20" style="border: none" /> Tonic (2 IP): One creature recovers from one status effect.</p>
         </div>
       </div>
       <div class="glossary">
@@ -205,13 +204,13 @@
       <div class="experience">
         <h3>Experience & Level<i class="fas fa-seedling"></i> </h3>
         <div class="experience-fields" >
-          <div><label>Level<input id="number-input" name="level" type="number" value="{{level}}"></input></label></div>
-          <div><label>Experience<input id="number-input" name="experience" type="number" value="{{experience}}"></input> </label></div>
+          <div><label>Level<input id="number-input" name="system.bio.level.value" type="number" value="{{this.actor.bio.level.value}}"></input></label></div>
+          <div><label>Experience<input id="number-input" name="system.bio.experience.value" type="number" value="{{this.actor.bio.experience.value}}"></input> </label></div>
         </div>
       </div>
       <div class="zenit">
         <h3>Zenit <i class="fas fa-coins"></i> </h3>
-        <input id="number-input" name="zenit" type="number" value="{{zenit}}" />
+        <input id="number-input" name="system.bio.zenit.value" type="number" value="{{this.actor.bio.zenit.value}}" />
       </div>
     </footer>
   </div>
