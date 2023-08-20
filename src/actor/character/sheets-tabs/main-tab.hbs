@@ -1,0 +1,220 @@
+<div class="main-tab">
+  <div class="left-content">
+    <div class="pronouns">
+      <h3> Pronouns:
+        <input
+            id="dark-text"
+            style="width: 100px"
+            name="pronouns"
+            type="text"
+            {{!-- value="{{this.actor.pronouns}}" --}}
+                  value="she/her"
+                  />
+      </h3>
+    </div>
+
+    <div class="points hit-points">
+      <h4> Hit Points: <input id="number-input" type="number" name="hit-points" value="{{this.actor.hitPoints}}" /> / <input id="number-input" type="number" name="hit-points-max" value="{{this.actor.hitPointsMax}}" /> </h4>
+    </div>
+
+    <div class="points mind-points">
+      <h4> Mind Points: <input id="number-input" type="number" name="mind-points" value="{{this.actor.mindPoints}}" /> / <input id="number-input" type="number" name="mind-points-max" value="{{this.actor.mindPointsMax}}" /> </h4>
+    </div>
+
+    <div class="attributes-and-status-effects">
+      <h3 class="header"> Attributes and Status Effects <i class="fas fa-hand-fist"></i></h3>
+      <div class="attribute-stats dexterity">
+        <p class="attribute">Dexterity</p>
+        <p id="calculated-attribute-value"> d{{this.actor.dexterity}} </p>
+        <i class="fas fa-slash rotated"></i>
+        <div>
+          <input id="number-input" type="number" step=2 min=6 max=12 name="system.baseAttribute.baseDexterity.value" value="{{this.actor.attributes.baseDexterity.value}}" />
+        </div>
+        <div>
+          <input type="checkbox" id="slow" data-dtype="Boolean" name="system.condition.slow.value" {{checked this.actor.conditions.slow.value}} />
+          <label for="slow">Slow</label>
+        </div>
+      </div>
+      <div class="attribute-stats insight">
+        <p class="attribute">Insight</p>
+        <p id="calculated-attribute-value"> d{{this.actor.insight}} </p>
+        <i class="fas fa-slash rotated"></i>
+        <div>
+          <input id="number-input" type="number" step=2 min=6 max=12 name="system.baseAttribute.baseInsight.value" value="{{this.actor.attributes.baseInsight.value}}" />
+        </div>
+        <div>
+          <input type="checkbox" id="dazed" data-dtype="Boolean" name="system.condition.dazed.value" {{checked this.actor.conditions.dazed.value}} />
+          <label for="dazed">Dazed</label>
+        </div>
+      </div>
+      <div class="attribute-stats might">
+        <p class="attribute">Might</p>
+        <p id="calculated-attribute-value"> d{{this.actor.might}}</p>
+        <i class="fas fa-slash rotated"></i>
+        <div>
+          <input id="number-input" type="number" step=2 min=6 max=12 name="system.baseAttribute.baseMight.value" value="{{this.actor.attributes.baseMight.value}}" />
+        </div>
+        <div>
+          <input type="checkbox" id="weak" data-dtype="Boolean" name="system.condition.weak.value" {{checked this.actor.conditions.weak.value}} />
+          <label for="weak">Weak</label>
+        </div>
+      </div>
+      <div class="attribute-stats willpower">
+        <p class="attribute">Willpower</p>
+        <p id="calculated-attribute-value"> d{{this.actor.willpower}} </p>
+        <i class="fas fa-slash rotated"></i>
+        <div>
+          <input id="number-input" type="number" step=2 min=6 max=12 name="system.baseAttribute.baseWillpower.value" value="{{this.actor.attributes.baseWillpower.value}}" />
+        </div>
+        <div>
+          <input type="checkbox" id="shaken" data-dtype="Boolean" name="system.condition.shaken.value" {{checked this.actor.conditions.shaken.value}} />
+          <label for="shaken"> Shaken</label>
+        </div>
+      </div>
+      <div class="attribute-stats enraged">
+        <input type="checkbox" id="enraged" data-dtype="Boolean" name="system.condition.enraged.value" {{checked this.actor.conditions.enraged.value}} />
+        <label for="enraged"> Enraged</label>
+      </div>
+      <div class="attribute-stats poisoned">
+        <input type="checkbox" id="poisoned" data-dtype="Boolean" name="system.condition.poisoned.value" {{checked this.actor.conditions.poisoned.value}} />
+        <label for="poisoned"> Poisoned</label>
+      </div>
+    </div>
+
+    <div class="traits-section">
+      <h3>Traits <i class="fas fa-fingerprint"></i> </h3>
+      <div class="traits">
+        <div class="trait-with-answer">
+          <h4>Identity:
+            <input name="identity" type="text" value="{{this.actor.identity}}" />
+          </h4>
+        </div>
+        <div class="trait-with-answer">
+          <h4>Theme:
+            <input name="duty" type="text" value="{{this.actor.duty}}" />
+          </h4>
+          <h4>Origin:
+            <input name="origin" type="text" value="{{this.actor.origin}}" />
+          </h4>
+        </div>
+        <div class="trait-with-answer">
+          <p>
+          <input
+              style='font-weight: bold; font-style: italic; color: gray'
+              name="quote"
+              type="text"
+              {{!-- value="{{this.actor.quote}}" --}}
+                    value="There is something I must do."
+                    />
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="right-sidebar">
+    <img class="profile-img" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROo-89Ylv98984xHOU5ROn8j0fgF346XHoWbbMK-SUV36IuVByqSnNZn0fk3NW1WY3Yb8&usqp=CAU" title="{{name}}" />
+    {{!-- data-edit="img" --}}
+  </section>
+
+  <footer class="footer">
+
+    <div class="bond-section">
+      <h3>Bonds <i class="fas fa-link"></i> </h3>
+      <div class="bonds">
+        <div class="bond">
+          <input class="bond-name" name="bond-name1" type="text" value="Montblanc" />
+          <div class="bond-feels">
+            <p> <input type="checkbox" name="admiration" /> Admiration</p>
+            <p> <input type="checkbox" name="inferiority" /> Inferiority</p>
+          </div>
+          <div class="bond-feels">
+            <p> <input type="checkbox" name="loyalty" /> Loyalty</p>
+            <p> <input type="checkbox" name="mistrust" /> Mistrust</p>
+          </div>
+          <div class="bond-feels">
+            <p> <input type="checkbox" name="affection" /> Affection</p>
+            <p> <input type="checkbox" name="hatred" /> Hatred</p>
+          </div>
+        </div>
+        <div class="bond">
+          <input class="bond-name" name="bond-name2" type="text" value="Samuel" />
+          <div class="bond-feels">
+            <p> <input type="checkbox" name="admiration" /> Admiration</p>
+            <p> <input type="checkbox" name="inferiority" /> Inferiority</p>
+          </div>
+          <div class="bond-feels">
+            <p> <input type="checkbox" name="loyalty" /> Loyalty</p>
+            <p> <input type="checkbox" name="mistrust" /> Mistrust</p>
+          </div>
+          <div class="bond-feels">
+            <p> <input type="checkbox" name="affection" /> Affection</p>
+            <p> <input type="checkbox" name="hatred" /> Hatred</p>
+          </div>
+        </div>
+        <div class="bond">
+          <input class="bond-name" name="bond-name3" type="text" value="Gobrio" />
+          <div class="bond-feels">
+            <p> <input type="checkbox" name="admiration" /> Admiration</p>
+            <p> <input type="checkbox" name="inferiority" /> Inferiority</p>
+          </div>
+          <div class="bond-feels">
+            <p> <input type="checkbox" name="loyalty" /> Loyalty</p>
+            <p> <input type="checkbox" name="mistrust" /> Mistrust</p>
+          </div>
+          <div class="bond-feels">
+            <p> <input type="checkbox" name="affection" /> Affection</p>
+            <p> <input type="checkbox" name="hatred" /> Hatred</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="fabula-points">
+      <h3>Fabula Points <i class="fas fa-meteor"></i> </h3>
+      <input id="number-input" type="number" name="fabula-points" />
+      <p>Gain 1 Fabula Point whenever you roll a fumble, whenever a villain appears, or whenever instructed by the scene.
+    </div>
+
+    <div class="inventory-points">
+      <h3>Inventory Points <i class="fas fa-sack-xmark"></i> </h3>
+      <div class="inventory-points-fields">
+        <p class="inventory-points-header">IP</p>
+        <p>Max</p>
+        <input id="number-input" type="number" name="inventory-points-max" />
+        <p>Current</p>
+        <input id="number-input" type="number" name="inventory-points-current" />
+      </div>
+      <div class="inventory-li">
+        <p> <img src="systems/fabula-ultima/assets/assorted/redpot.png" width="20" height="20" style="border: none" /> Remedy (3 IP): One creature recovers 50 HP.</p>
+      </div>
+      <div class="inventory-li">
+        <p> <img src="systems/fabula-ultima/assets/assorted/bluepot.png" width="20" height="20" style="border: none" /> Elixir (3 IP): One creature recovers 50 MP.</p>
+      </div>
+      <div class="inventory-li">
+        <p> <img src="systems/fabula-ultima/assets/assorted/yellowpot.webp" width="20" height="20" style="border: none" /> Tonic (2 IP): One creature recovers from one status effect.</p>
+      </div>
+    </div>
+    <div class="glossary">
+      <h3>Glossary <i class="fas fa-book-bookmark"></i> </h3>
+      <ul>
+        <li>HR (High Roll): The highest of the two numbers shown by the dice in a Check.</li>
+        <li>Fumble: A check where both dice rolled a 1.</li>
+        <li>Critical Success: A check where both dice rolled the same number, and that number is 6 or higher.</li>
+        <li>Die Size: The number of faces on a die. Ranked from minimum to maximum: d6, d8, d10, d12</li>
+        <li>Vulnerability: HP loss is doubled.</li>
+        <li>Resistance: HP loss is halved (round down).</li>
+      </ul>
+    </div>
+    <div class="experience">
+      <h3>Experience & Level<i class="fas fa-seedling"></i> </h3>
+      <div class="experience-fields" >
+        <div><label>Level<input id="number-input" name="level" type="number" value="{{level}}"></input></label></div>
+        <div><label>Experience<input id="number-input" name="experience" type="number" value="{{experience}}"></input> </label></div>
+      </div>
+    </div>
+    <div class="zenit">
+      <h3>Zenit <i class="fas fa-coins"></i> </h3>
+      <input id="number-input" name="zenit" type="number" value="{{zenit}}" />
+    </div>
+  </footer>
+</div>
