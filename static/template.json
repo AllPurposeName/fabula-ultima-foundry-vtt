@@ -30,21 +30,21 @@
           },
           "baseHitPoints": {
             "label": "ATTRIBUTE.HITPOINTS",
-            "max": 100,
+            "max": 0,
             "min": 0,
-            "value": 40
+            "value": 0
           },
           "baseMindPoints": {
             "label": "ATTRIBUTE.MINDPOINTS",
-            "max": 100,
+            "max": 0,
             "min": 0,
-            "value": 30
+            "value": 0
           },
           "baseInventoryPoints": {
             "label": "ATTRIBUTE.INVENTORYPOINTS",
-            "max": 20,
+            "max": 0,
             "min": 0,
-            "value": 6
+            "value": 0
           }
         }
       },
@@ -83,9 +83,41 @@
     "character": {
       "templates": ["baseAttributes", "conditions", "skills", "subtype"],
       "bio": {
+        "pronouns": {
+          "label": "BIO.PRONOUNS",
+          "value": ""
+        },
+        "identity": {
+          "label": "BIO.IDENTITY",
+          "value": ""
+        },
+        "theme": {
+          "label": "BIO.THEME",
+          "value": ""
+        },
+        "origin": {
+          "label": "BIO.ORIGIN",
+          "value": ""
+        },
+        "quote": {
+          "label": "BIO.QUOTE",
+          "value": ""
+        },
+        "fabulaPoints": {
+          "label": "BIO.FABULA_POINTS",
+          "value": ""
+        },
         "experience": {
           "label": "BIO.EXPERIENCE",
           "value": 0
+        },
+        "level": {
+          "label": "BIO.LEVEL",
+          "value": ""
+        },
+        "zenit": {
+          "label": "BIO.ZENIT",
+          "value": ""
         }
       },
       "currency": {
