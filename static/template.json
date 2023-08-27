@@ -159,141 +159,26 @@
         "location": "",
         "troops": []
       }
-    },
-    "Item": {
-      "types": [
-        "armor",
-        "artifact",
-        "helper",
-        "heroicSkill",
-        "quirk",
-        "monsterSkill",
-        "project",
-        "rawMaterial",
-        "shield",
-        "skill",
-        "spell",
-        "weapon"
-      ],
-      "templates": {
-        "cost": {
-        },
-        "check": {
-          "bonus": 0,
-          "firstSkill": "",
-          "secondSkill": ""
-        },
-        "bonus": {
-          "bonus": {
-            "max": 1,
-            "value": 1
-          }
-        },
-        "craftable": {
-          "clockSize": "",
-          "rawMaterials": ""
-        },
-        "trade": {
-          "quantity": 1
-        },
-        "rollModifiers": {
-          "rollModifiers": {}
-        },
-        "artifact": {
-          "appearance": "",
-          "description": "",
-          "drawback": "",
-          "effect": ""
-        }
+    }
+  },
+  "Item": {
+    "types": ["bond", "class"],
+    "class": {
+      "key": "",
+      "also": [],
+      "quote": "",
+      "description": "",
+      "questions": [],
+      "freeBenefits": {
+        "hitPointMax": 0,
+        "inventoryPointMax": 0,
+        "martialMeleeWeapons": false,
+        "martialRangedWeapons": false,
+        "mindPointMax": 0,
+        "projects": false,
+        "ritualism": false
       },
-      "weapon": {
-        "templates": ["bonus", "craftable", "rollModifiers", "artifact", "trade"],
-        "category": "melee",
-        "ammo": "other",
-        "skillBonus": "",
-        "damage": 1,
-        "features": {
-          "edged": false,
-          "pointed": false,
-          "blunt": false,
-          "parrying": false,
-          "hook": false,
-          "shield": false,
-          "slowReload": false,
-          "others": ""
-        },
-        "grip": "1h",
-        "range": "arm",
-        "cost": "",
-        "supply": "",
-        "weight": "regular"
-      },
-      "armor": {
-        "templates": ["bonus", "craftable", "rollModifiers", "artifact", "trade"],
-        "cost": 0,
-        "part": "body",
-        "features": "",
-        "supply": "",
-        "weight": "regular"
-      },
-      "spell": {
-        "spellType": "SPELL.SPELL",
-        "rank": 1,
-        "range": "",
-        "duration": "",
-        "ingredient": "",
-        "description": ""
-      },
-      "talent": {
-        "templates": ["rollModifiers"],
-        "category": "general",
-        "rank": 1,
-        "description": ""
-      },
-      "criticalInjury": {
-        "templates": ["rollModifiers"],
-        "lethal": "No",
-        "limit": "",
-        "effect": "",
-        "healingTime": ""
-      },
-      "gear": {
-        "templates": ["bonus", "craftable", "rollModifiers", "artifact", "trade"],
-        "cost": "",
-        "supply": "",
-        "weight": "regular"
-      },
-      "rawMaterial": {
-        "templates": ["bonus", "craftable", "trade"],
-        "cost": "",
-        "shelfLife": ""
-      },
-      "monsterAttack": {
-        "description": "",
-        "usingStrength": false,
-        "dice": 0,
-        "damage": 0,
-        "damageType": "",
-        "range": ""
-      },
-      "building": {
-        "description": "",
-        "requirement": "",
-        "rawMaterials": "",
-        "tools": "",
-        "time": "",
-        "effect": "",
-        "reputation": "",
-        "number": 0,
-        "quantity": 1
-      },
-      "hireling": {
-        "description": "",
-        "salary": "",
-        "supply": "",
-        "number": 0,
-        "quantity": 1
-      }
+      "skills": []
     }
   }
 }
