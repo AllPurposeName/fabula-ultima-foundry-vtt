@@ -38,7 +38,7 @@
   "socket": true,
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "mind points",
-  "url": "https://github.com/AllPurposeName/fabula-ultima-foundry-vtt/",
+  "url": "https://github.com/AllPurposeName/fabula-ultima-foundry-vtt",
   "manifest": "https://raw.githubusercontent.com/AllPurposeName/fabula-ultima-foundry-vtt/main/static/system.json",
   "license": "LICENSE.txt"
 }
