@@ -1,0 +1,33 @@
+<h3> {{localize "FABULAULTIMA.Bonds"}} <i class="fas fa-link"></i> </h3>
+<ol class="items-list items bonds">
+  <li class="item flexrow items-header">
+    <div class="item-name">{{localize "FABULAULTIMA.Who"}}</div>
+    <div class="item-name">{{localize "FABULAULTIMA.Feelings"}}</div>
+    <div class="item-controls">
+      <a class="item-control item-create" title="Create item" data-type="bond"><i class="fas fa-plus"></i> {{localize "FABULAULTIMA.AddBond"}}</a>
+    </div>
+  </li>
+  {{#each bonds as |bond id|}}
+    <li class="item flexrow bond" data-item-id="{{bond._id}}">
+      <div class="item-name">
+        <h4><input class="bond.name" name="bond.who" type="text" value="{{bond.data.who}}" placeholder="Name"/></h4>
+      </div>
+      <div class="item-name">
+        <div class="flexcol">
+          <div class="flexrow bond-feels">
+            {{ bond.respect }}
+            <input type="checkbox" name="admiration" class="feeling-checkbox" data-dtype="Boolean" {{ checked eq bond.data.respect "admiration" }} data-prop="respect" />
+            <label for="feelings.admiration" class="resource-label feeling flexlarge align-left" data-label="{{localize 'FABULAULTIMA.Admiration'}}">{{localize 'FABULAULTIMA.Admiration'}}</label>
+          </div>
+          <div class="flexrow bond-feels">
+            <input type="checkbox" name="bond.feelings.inferiority" class="feeling-checkbox" data-dtype="Boolean" {{ checked eq bond.respect "inferiority" }} data-prop="respect" />
+            <label for="feelings.inferiority" class="resource-label feeling flexlarge align-left" data-label="{{localize 'FABULAULTIMA.Inferiority'}}">{{localize 'FABULAULTIMA.Inferiority'}}</label>
+          </div>
+        </div>
+      </div>
+      <div class="item-controls">
+        <a class="item-control item-delete" title="{{localize 'FABULAULTIMA.DeleteBond'}}"><i class="fas fa-trash"></i></a>
+      </div>
+    </li>
+  {{/each}}
+</ol>
