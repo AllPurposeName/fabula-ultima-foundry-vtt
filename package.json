@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "fabula-ultima",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "A Fabula Ultima Foundry VTT solution.",
   "engines" : {
@@ -31,6 +31,7 @@
     "dev:watch": "cross-env NODE_ENV=development gulp watch",
     "build": "cross-env NODE_ENV=production gulp build",
     "link-project": "gulp link",
+    "release": "gulp release",
     "unlink-project" : "rm $(grep -o 'dataPath\": \".*' foundryconfig.json | awk '{print $2}' | tr -d '\"')/systems/fabula-ultima && rm -rf dist"
   },
   "devDependencies": {
