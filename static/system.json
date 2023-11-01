@@ -30,7 +30,7 @@
       "path": "lang/en.json"
     }
   ],
-  "esmodules": ["fabula-ultima.js"],
+  "scripts": ["fabula-ultima.js"],
   "styles": ["fabula-ultima.css"],
   "packs": [],
   "gridDistance": 1,
