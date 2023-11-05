@@ -14,6 +14,7 @@ export class FabulaUltimaCharacterSheet extends FabulaUltimaActorSheet {
       resizable: false,
       scrollY: [
         ".armors .item-list .items",
+        ".bonds .item-list .items",
         ".critical-injuries .item-list .items",
         ".gears .item-list .items",
         ".spells .item-list .items",
@@ -45,12 +46,100 @@ export class FabulaUltimaCharacterSheet extends FabulaUltimaActorSheet {
 		// actorData = this.computeSkills(actorData);
 		// actorData = this.computeEncumbrance(actorData);
 
-		return actorData;
-	}
+    if (actorData.actor.type == 'character') {
+      this._prepareItems(actorData);
+    }
+    return actorData;
+  }
 
-}
-// 	activateListeners(html) {
-// 		super.activateListeners(html);
+  /**
+   * Handle creating a new Owned Item for the actor using initial data defined in the HTML dataset
+   * @param {Event} event   The originating click event
+   * @private
+   */
+  async _onItemCreate(event) {
+    event.preventDefault();
+    const header = event.currentTarget;
+    const type = header.dataset.type;
+    const data = duplicate(header.dataset);
+    const name = `New ${type.capitalize()}`;
+    const itemData = {
+      name: name,
+      type: type,
+      data: data
+    }
+    // Remove the type from the dataset since it's in the itemData.type prop.
+    delete itemData.data["type"];
+
+    // Finally, create the item!
+    return await Item.create(itemData, {parent: this.actor});
+  }
+
+  /**
+   * Organize and classify Items for Character sheets.
+   *
+   * @param {Object} actorData The actor to prepare.
+   *
+   * @return {undefined}
+   */
+  _prepareItems(context) {
+    // Initialize containers.
+    const bonds = [];
+
+    // Iterate through items, allocating to containers
+    for (let i of context.items) {
+      i.img = i.img || DEFAULT_TOKEN;
+      // Append to gear.
+      if (i.type === 'bond') {
+        bonds.push(i);
+      }
+    }
+
+    // Assign and return
+    context.bonds = bonds;
+  }
+  /** override **/
+  activateListeners(html) {
+    super.activateListeners(html);
+
+    html.find('.item-create').click(this._onItemCreate.bind(this));
+
+    html.find(".item-delete").click((ev) => {
+      const div = $(ev.currentTarget).parents(".item");
+      this.actor.deleteEmbeddedDocuments("Item", [div.data("itemId")]);
+      div.slideUp(200, () => this.render(false));
+    });
+
+    html.find('[name="bond.who"]').change(async ev => {
+      ev.preventDefault();
+      const li = $(ev.currentTarget).parents(".item");
+      const item = this.actor.items.get(li.data("itemId"));
+
+      await item.update({
+          "system.who": $(ev.currentTarget).val()
+      });
+    });
+
+    html.find('.feeling-checkbox').click(async ev => {
+      ev.preventDefault();
+      const li = $(ev.currentTarget).parents(".item");
+      const item = this.actor.items.get(li.data("itemId"));
+      const checkbox = $(ev.currentTarget);
+
+      const prop = "system." + ev.currentTarget.dataset.prop;
+      const feeling = checkbox.attr('name');
+
+      $("[data-prop='" + ev.currentTarget.dataset.prop + "']").not("[name='" + feeling + "']")[0].checked = false;
+
+      const values = {};
+
+      if (checkbox[0].checked)
+        values[prop] = feeling;
+      else
+        values[prop] = "";
+
+      await item.update(values);
+    });
 //
 // 		html.find(".condition").click(async (ev) => {
 // 			const conditionName = $(ev.currentTarget).data("condition");
@@ -103,7 +192,7 @@ export class FabulaUltimaCharacterSheet extends FabulaUltimaActorSheet {
 // 				});
 // 			}
 // 		});
-// 	}
+	}
 //
 // 	/************************************************/
 // 	/***        Character Specific Rolls          ***/
@@ -229,3 +318,4 @@ export class FabulaUltimaCharacterSheet extends FabulaUltimaActorSheet {
 // 	}
 // }
 //
+}

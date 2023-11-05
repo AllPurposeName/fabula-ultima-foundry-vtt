@@ -193,6 +193,20 @@ function registerHandlebarsHelpers() {
     return new Handlebars.SafeString(value.replace(/(<([^>]+)>)/gi, "").replace(/(?:\r\n|\r|\n)/g, "<br/>"));
   });
 
+  Handlebars.registerHelper("feelingChoice", function (current_selection, axis, choice) {
+    var uppercased = Handlebars.helpers.toUpperCase(choice);
+    var translation = game.i18n.localize(`BOND.${uppercased}`);
+    var is_checked = Handlebars.helpers.checked(current_selection === choice);
+
+    return `
+      <div class="flexrow bond-feels">
+        <input type="checkbox" name="${choice}" class="feeling-checkbox" data-dtype="Boolean" ${is_checked} data-prop="${axis}" />
+        <label for="feelings.${choice}" class="resource-label feeling flexlarge align-left" data-label="${translation}">${translation}</l>
+
+      </div>
+    `
+  });
+
   Handlebars.registerHelper("toUpperCase", function (str) {
     return str.toUpperCase();
   });
