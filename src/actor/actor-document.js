@@ -142,7 +142,7 @@ export class FabulaUltimaActor extends Actor {
         default:
           data.img = `systems/fabula-ultima/assets/fbl-${data.type}.webp`;
           break;
-        }
+      }
     }
     super.create(data, options);
   }
