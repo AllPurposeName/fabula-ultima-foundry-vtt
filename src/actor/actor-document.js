@@ -135,7 +135,14 @@ export class FabulaUltimaActor extends Actor {
 //   */
   static async create(data, options) {
     if (!data.img) {
-      data.img = "https://www.toonsmag.com/wp-content/uploads/2023/04/Homer-Simpson-cartoon-538x1024.jpg";
+      switch (data.type) {
+        case "party":
+          data.img = "systems/fabula-ultima/assets/fbl-sun.webp";
+          break;
+        default:
+          data.img = `systems/fabula-ultima/assets/fbl-${data.type}.webp`;
+          break;
+        }
     }
     super.create(data, options);
   }
