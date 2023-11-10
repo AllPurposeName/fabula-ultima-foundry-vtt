@@ -150,6 +150,7 @@ FabulaUltima.i18n = {
 FabulaUltima.itemTypes = [
         "armor",
         "artifact",
+        "bond",
         "helper",
         "heroicSkill",
         "quirk",
