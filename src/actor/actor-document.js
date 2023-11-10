@@ -128,24 +128,24 @@ export class FabulaUltimaActor extends Actor {
 // 		return super.createEmbeddedDocuments(embeddedName, newData, options);
 // 	}
 //
-// 	/**
-// 	 * Override initializing a character to set default portraits.
-// 	 * @param {object} data object of an initialized character.
-// 	 * @param {object?} options optional object of options.
-// 	 */
-// 	static async create(data, options) {
-// 		if (!data.img) {
-// 			switch (data.type) {
-// 				case "party":
-// 					data.img = "systems/fabula-ultima/assets/fbl-sun.webp";
-// 					break;
-// 				default:
-// 					data.img = `systems/fabula-ultima/assets/fbl-${data.type}.webp`;
-// 					break;
-// 			}
-// 		}
-// 		super.create(data, options);
-// 	}
+//  /**
+//   * Override initializing a character to set default portraits.
+//   * @param {object} data object of an initialized character.
+//   * @param {object?} options optional object of options.
+//   */
+  static async create(data, options) {
+    if (!data.img) {
+      switch (data.type) {
+        case "party":
+          data.img = "systems/fabula-ultima/assets/fbl-sun.webp";
+          break;
+        default:
+          data.img = `systems/fabula-ultima/assets/fbl-${data.type}.webp`;
+          break;
+      }
+    }
+    super.create(data, options);
+  }
 //
 // 	toggleCondition(conditionName) {
 // 		const conditionValue = this.conditions[conditionName].value;
