@@ -32,7 +32,8 @@
     "build": "cross-env NODE_ENV=production gulp build",
     "link-project": "gulp link",
     "release": "gulp release",
-    "unlink-project" : "rm $(grep -o 'dataPath\": \".*' foundryconfig.json | awk '{print $2}' | tr -d '\"')/systems/fabula-ultima && rm -rf dist"
+    "unlink-project" : "rm $(grep -o 'dataPath\": \".*' foundryconfig.json | awk '{print $2}' | tr -d '\"')/systems/fabula-ultima && rm -rf dist",
+    "relink-project": "yarn unlink-project && yarn build && yarn link-project"
   },
   "devDependencies": {
     "@league-of-foundry-developers/foundry-vtt-types": "9.280.0",
