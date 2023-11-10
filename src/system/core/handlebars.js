@@ -202,7 +202,6 @@ function registerHandlebarsHelpers() {
       <div class="flexrow bond-feels">
         <input type="checkbox" name="${choice}" class="feeling-checkbox" data-dtype="Boolean" ${is_checked} data-prop="${axis}" />
         <label for="feelings.${choice}" class="resource-label feeling flexlarge align-left" data-label="${translation}">${translation}</l>
-
       </div>
     `
   });
