@@ -4,7 +4,6 @@ import { FabulaUltimaActor } from "@actor/actor-document.js";
 import { FabulaUltimaItem } from "@item/item-document.js";
 import { initializeHandlebars } from "@system/core/handlebars.js";
 import { registerSheets } from "@system/core/sheets.js";
-// import { populateclasses } from "@compontents/classes-importer.js";
 
 /**
  * We use this label to remove the debug option in production builds.
@@ -18,15 +17,16 @@ import { registerSheets } from "@system/core/sheets.js";
 })();
 
 Hooks.once("init", () => {
-  game.fbl = {
-    config: FabulaConfig,
-  };
+	game.fbl = {
+		config: FabulaConfig,
+	};
   CONFIG.Actor.documentClass = FabulaUltimaActor;
-  CONFIG.fabula = FabulaConfig;
-  CONFIG.Item.documentClass = FabulaUltimaItem;
-  // CONFIG.JournalEntry.documentClass = FabulaUltimaJournalEntry;
-  // CONFIG.Combat.documentClass = FabulaUltimaCombat;
-  registerSheets();
-  initializeHandlebars();
-  // populateClasses();
+	CONFIG.fabula = FabulaConfig;
+	CONFIG.Item.documentClass = FabulaUltimaItem;
+	// CONFIG.JournalEntry.documentClass = FabulaUltimaJournalEntry;
+	// CONFIG.Combat.documentClass = FabulaUltimaCombat;
+	registerSheets();
+	initializeHandlebars();
+	initializeEditorEnrichers();
+	modifyConfig();
 })
