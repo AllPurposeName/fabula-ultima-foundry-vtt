@@ -1,13 +1,25 @@
 import localize from "@utils/localize-string.js";
 
 export class FabulaUltimaActor extends Actor {
-	get actorProperties() {
-		return this.system;
-	}
+  get actorProperties() {
+    return this.system;
+  }
 
-	get attributes() {
-		return this.actorProperties.baseAttribute;
-	}
+  get attributes() {
+    return this.actorProperties.baseAttribute;
+  }
+
+  get hp() {
+    return this.attributes.baseHitPoints.value
+  }
+
+  get mp() {
+    return this.attributes.baseMindPoints.value
+  }
+
+  get ip() {
+    return this.attributes.baseInventoryPoints.value
+  }
 
   get dexterity() {
     return this.modifiedAttribute({baseAttribute: "baseDexterity", possibleStatusEffects: ["slow", "enraged"]});
@@ -31,9 +43,9 @@ export class FabulaUltimaActor extends Actor {
     return Math.max(6, baseValue - (2 * activeStatusEffects));
   }
 
-	get conditions() {
-		return this.actorProperties.condition;
-	}
+  get conditions() {
+    return this.actorProperties.condition;
+  }
 
   get bio() {
     return this.actorProperties.bio;
@@ -61,19 +73,23 @@ export class FabulaUltimaActor extends Actor {
 // 	get unlimitedPush() {
 // 		return this.getFlag("fabula-ultima", "unlimitedPush") ?? false;
 // 	}
-//
-// 	/* Override */
-// 	getRollData() {
-// 		return {
-// 			alias: this.token?.name || this.name,
-// 			actorId: this.id,
-// 			actorType: this.type,
-// 			canAct: this.canAct,
-// 			sceneId: this.token?.parent.id,
-// 			tokenId: this.token?.id,
-// 			unlimitedPush: this.unlimitedPush,
-// 		};
-// 	}
+  //
+  /* Override */
+  getRollData() {
+    return {
+      dexterity: this.dexterity,
+      insight: this.insight,
+      might: this.might,
+      willpower: this.willpower,
+      dex: `1d${this.dexterity}`,
+      ins: `1d${this.insight}`,
+      mig: `1d${this.might}`,
+      wlp: `1d${this.willpower}`,
+      hp: this.hitPoints,
+      mp: this.mindPoints,
+      ip: this.inventoryPoints,
+    }
+  }
 //
 // 	getRollModifierOptions(...rollIdentifiers) {
 // 		if (!rollIdentifiers.length) return [];
