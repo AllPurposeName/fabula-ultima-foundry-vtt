@@ -40,7 +40,7 @@
   "secondaryTokenAttribute": "mind points",
   "url": "https://github.com/AllPurposeName/fabula-ultima-foundry-vtt",
   "manifest": "https://raw.githubusercontent.com/AllPurposeName/fabula-ultima-foundry-vtt/main/static/system.json",
-  "download": "https://github.com/AllPurposeName/fabula-ultima-foundry-vtt/archive/refs/tags/v1.0.2.zip",
+  "download": "https://github.com/AllPurposeName/fabula-ultima-foundry-vtt/releases/download/v1.0.2/dist.zip",
   "license": "LICENSE.txt"
 }
 
