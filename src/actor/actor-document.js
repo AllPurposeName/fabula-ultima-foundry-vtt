@@ -18,7 +18,6 @@ export class FabulaUltimaActor extends Actor {
   }
 
   get ip() {
-    return this
     return this.attributes.baseInventoryPoints.value
   }
 
@@ -91,16 +90,6 @@ export class FabulaUltimaActor extends Actor {
       ip: this.inventoryPoints,
     }
   }
-// 		return {
-// 			alias: this.token?.name || this.name,
-// 			actorId: this.id,
-// 			actorType: this.type,
-// 			canAct: this.canAct,
-// 			sceneId: this.token?.parent.id,
-// 			tokenId: this.token?.id,
-// 			unlimitedPush: this.unlimitedPush,
-// 		};
-// 	}
 //
 // 	getRollModifierOptions(...rollIdentifiers) {
 // 		if (!rollIdentifiers.length) return [];
