@@ -5,14 +5,14 @@
   "BOND.ADMIRATION": "Admiration",
   "BOND.AFFECTION": "Affection",
   "BOND.DELETE": "Delete Bond",
+  "BOND.DISPOSITION": "Disposition",
   "BOND.FEELINGS": "Feelings",
   "BOND.HATRED": "Hatred",
   "BOND.INFERIORITY": "Inferiority",
-  "BOND.LIKING": "Liking",
   "BOND.LOYALTY": "Loyalty",
   "BOND.MISTRUST": "Mistrust",
   "BOND.PLURAL": "Bonds",
+  "BOND.RELIANCE": "Reliance",
   "BOND.RESPECT": "Respect",
-  "BOND.TARGET": "Who",
-  "BOND.TRUST": "Trust"
+  "BOND.TARGET": "Who"
 }

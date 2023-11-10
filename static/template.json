@@ -241,8 +241,8 @@
     "bond": {
       "who": "",
       "respect": "",
-      "trust": "",
-      "liking": ""
+      "reliance": "",
+      "disposition": ""
     },
     "spell": {
       "spellType": "SPELL.SPELL",

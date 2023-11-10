@@ -3,8 +3,8 @@
   <li class="item flexrow items-header">
     <div class="item-name">{{localize "BOND.TARGET"}}</div>
     <div class="item-name">{{localize "BOND.RESPECT"}}</div>
-    <div class="item-name">{{localize "BOND.TRUST"}}</div>
-    <div class="item-name">{{localize "BOND.LIKING"}}</div>
+    <div class="item-name">{{localize "BOND.RELIANCE"}}</div>
+    <div class="item-name">{{localize "BOND.DISPOSITION"}}</div>
     <div class="item-controls">
       <a class="item-control item-create" title="Create item" data-type="bond"><i class="fas fa-plus"></i> {{localize "BOND.ADD"}}</a>
     </div>
@@ -21,13 +21,13 @@
       </div>
 
       <div class="flexcol">
-        {{{ feelingChoice bond.system.trust "trust" "loyalty" }}}
-        {{{ feelingChoice bond.system.trust "trust" "mistrust" }}}
+        {{{ feelingChoice bond.system.reliance "reliance" "loyalty" }}}
+        {{{ feelingChoice bond.system.reliance "reliance" "mistrust" }}}
       </div>
 
       <div class="flexcol">
-        {{{ feelingChoice bond.system.liking "liking" "affection" }}}
-        {{{ feelingChoice bond.system.liking "liking" "hatred" }}}
+        {{{ feelingChoice bond.system.disposition "disposition" "affection" }}}
+        {{{ feelingChoice bond.system.disposition "disposition" "hatred" }}}
       </div>
 
       <div class="item-controls">
