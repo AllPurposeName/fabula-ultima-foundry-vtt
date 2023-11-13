@@ -1,7 +1,7 @@
 export default class Logger {
-	static init() {
-		Hooks.once("error", (error) => {
-			console.log(error);
-		});
-	}
+  static init() {
+    Hooks.once("error", (error) => {
+      console.log(error);
+    });
+  }
 }

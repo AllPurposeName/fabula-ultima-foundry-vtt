@@ -15,34 +15,33 @@ import { FabulaUltimaCharacterSheet } from "@actor/character/sheet.js";
 // import { AdventureSitesSheet } from "@journal/adventure-sites/adventure-site-sheet.js";
 
 export function registerSheets() {
-	Actors.unregisterSheet("core", ActorSheet);
-	Actors.registerSheet("fabula-ultima", FabulaUltimaCharacterSheet, { types: ["character"], makeDefault: true });
+  Actors.unregisterSheet("core", ActorSheet);
+  Actors.registerSheet("fabula-ultima", FabulaUltimaCharacterSheet, { types: ["character"], makeDefault: true });
+  // Actors.registerSheet("fabula-ultima", FabulaUltimaMonsterSheet, { types: ["monster"], makeDefault: true });
+  // Actors.registerSheet("fabula-ultima", FabulaUltimaStrongholdSheet, {
+  //   types: ["stronghold"],
+  //   makeDefault: true,
+  // });
+  // Actors.registerSheet("fabula-ultima", FabulaUltimaPartySheet, { types: ["party"], makeDefault: true });
+  // Items.unregisterSheet("core", ItemSheet);
+  // Items.registerSheet("fabula-ultima", FabulaUltimaWeaponSheet, { types: ["weapon"], makeDefault: true });
+  // Items.registerSheet("fabula-ultima", FabulaUltimaArmorSheet, { types: ["armor"], makeDefault: true });
+  // Items.registerSheet("fabula-ultima", FabulaUltimaGearSheet, { types: ["gear"], makeDefault: true });
+  // Items.registerSheet("fabula-ultima", FabulaUltimaRawMaterialSheet, {
+  //   types: ["rawMaterial"],
+  //   makeDefault: true,
+  // });
+  // Items.registerSheet("fabula-ultima", FabulaUltimaSpellSheet, { types: ["spell"], makeDefault: true });
+  // Items.registerSheet("fabula-ultima", FabulaUltimaTalentSheet, { types: ["talent"], makeDefault: true });
+  // Items.registerSheet("fabula-ultima", FabulaUltimaCriticalInjurySheet, {
+  //   types: ["criticalInjury"],
+  //   makeDefault: true,
+  // });
+  // Items.registerSheet("fabula-ultima", FabulaUltimaMonsterAttackSheet, {
+  //   types: ["monsterAttack"],
+  //   makeDefault: true,
+  // });
+  // Items.registerSheet("fabula-ultima", FabulaUltimaBuildingSheet, { types: ["building"], makeDefault: true });
+  // Items.registerSheet("fabula-ultima", FabulaUltimaHirelingSheet, { types: ["hireling"], makeDefault: true });
+  // CONFIG.fbl.adventureSites.sheetClass = AdventureSitesSheet;
 }
-// 	Actors.registerSheet("fabula-ultima", FabulaUltimaMonsterSheet, { types: ["monster"], makeDefault: true });
-// 	Actors.registerSheet("fabula-ultima", FabulaUltimaStrongholdSheet, {
-// 		types: ["stronghold"],
-// 		makeDefault: true,
-// 	});
-// 	Actors.registerSheet("fabula-ultima", FabulaUltimaPartySheet, { types: ["party"], makeDefault: true });
-// 	Items.unregisterSheet("core", ItemSheet);
-// 	Items.registerSheet("fabula-ultima", FabulaUltimaWeaponSheet, { types: ["weapon"], makeDefault: true });
-// 	Items.registerSheet("fabula-ultima", FabulaUltimaArmorSheet, { types: ["armor"], makeDefault: true });
-// 	Items.registerSheet("fabula-ultima", FabulaUltimaGearSheet, { types: ["gear"], makeDefault: true });
-// 	Items.registerSheet("fabula-ultima", FabulaUltimaRawMaterialSheet, {
-// 		types: ["rawMaterial"],
-// 		makeDefault: true,
-// 	});
-// 	Items.registerSheet("fabula-ultima", FabulaUltimaSpellSheet, { types: ["spell"], makeDefault: true });
-// 	Items.registerSheet("fabula-ultima", FabulaUltimaTalentSheet, { types: ["talent"], makeDefault: true });
-// 	Items.registerSheet("fabula-ultima", FabulaUltimaCriticalInjurySheet, {
-// 		types: ["criticalInjury"],
-// 		makeDefault: true,
-// 	});
-// 	Items.registerSheet("fabula-ultima", FabulaUltimaMonsterAttackSheet, {
-// 		types: ["monsterAttack"],
-// 		makeDefault: true,
-// 	});
-// 	Items.registerSheet("fabula-ultima", FabulaUltimaBuildingSheet, { types: ["building"], makeDefault: true });
-// 	Items.registerSheet("fabula-ultima", FabulaUltimaHirelingSheet, { types: ["hireling"], makeDefault: true });
-// 	CONFIG.fbl.adventureSites.sheetClass = AdventureSitesSheet;
-// }

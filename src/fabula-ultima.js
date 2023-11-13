@@ -17,16 +17,16 @@ import { registerSheets } from "@system/core/sheets.js";
 })();
 
 Hooks.once("init", () => {
-	game.fbl = {
-		config: FabulaConfig,
-	};
+  game.fbl = {
+    config: FabulaConfig,
+  };
   CONFIG.Actor.documentClass = FabulaUltimaActor;
-	CONFIG.fabula = FabulaConfig;
-	CONFIG.Item.documentClass = FabulaUltimaItem;
-	// CONFIG.JournalEntry.documentClass = FabulaUltimaJournalEntry;
-	// CONFIG.Combat.documentClass = FabulaUltimaCombat;
-	registerSheets();
-	initializeHandlebars();
-	initializeEditorEnrichers();
-	modifyConfig();
+  CONFIG.fabula = FabulaConfig;
+  CONFIG.Item.documentClass = FabulaUltimaItem;
+  // CONFIG.JournalEntry.documentClass = FabulaUltimaJournalEntry;
+  // CONFIG.Combat.documentClass = FabulaUltimaCombat;
+  registerSheets();
+  initializeHandlebars();
+  initializeEditorEnrichers();
+  modifyConfig();
 })
