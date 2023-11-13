@@ -1,46 +1,49 @@
 {
-  "id": "fabula-ultima",
-  "name": "fabula-ultima",
-  "title": "Fabula Ultima",
-  "description": "The Fabula Ultima system for FoundryVTT!",
-  "version": "1.0.3",
-  "minimumCoreVersion": 10,
-  "compatibility": {
-    "minimum": "10",
-    "verified": "11",
-    "maximum": "11"
-  },
-  "allowBugReporter": true,
-  "authors": [
-    {
-      "name": "AllPurposeName",
-      "email": "mr.kaitryn.dale@gmail.com",
-      "discord": "@allpurposename"
-    },
-    {
-      "name": "Siggy",
-      "email": "siggymcfried@gmail.com",
-      "discord": "@siggy_"
-    }
-  ],
-  "languages": [
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "lang/en.json"
-    }
-  ],
-  "esmodules": ["fabula-ultima.js"],
-  "styles": ["fabula-ultima.css"],
-  "packs": [],
-  "gridDistance": 1,
-  "gridUnits": "m",
-  "socket": true,
-  "primaryTokenAttribute": "health",
-  "secondaryTokenAttribute": "mind points",
-  "url": "https://github.com/AllPurposeName/fabula-ultima-foundry-vtt",
-  "manifest": "https://raw.githubusercontent.com/AllPurposeName/fabula-ultima-foundry-vtt/main/static/system.json",
-  "download": "https://github.com/AllPurposeName/fabula-ultima-foundry-vtt/releases/download/v1.0.3/dist.zip",
-  "license": "LICENSE.txt"
+	"id": "fabula-ultima",
+	"name": "fabula-ultima",
+	"title": "Fabula Ultima",
+	"description": "The Fabula Ultima system for FoundryVTT!",
+	"version": "1.0.3",
+	"minimumCoreVersion": 10,
+	"compatibility": {
+		"minimum": "10",
+		"verified": "11",
+		"maximum": "11"
+	},
+	"allowBugReporter": true,
+	"authors": [
+		{
+			"name": "AllPurposeName",
+			"email": "mr.kaitryn.dale@gmail.com",
+			"discord": "@allpurposename"
+		},
+		{
+			"name": "Siggy",
+			"email": "siggymcfried@gmail.com",
+			"discord": "@siggy_"
+		}
+	],
+	"languages": [
+		{
+			"lang": "en",
+			"name": "English",
+			"path": "lang/en.json"
+		}
+	],
+	"esmodules": [
+		"fabula-ultima.js"
+	],
+	"styles": [
+		"fabula-ultima.css"
+	],
+	"packs": [],
+	"gridDistance": 1,
+	"gridUnits": "m",
+	"socket": true,
+	"primaryTokenAttribute": "health",
+	"secondaryTokenAttribute": "mind points",
+	"url": "https://github.com/AllPurposeName/fabula-ultima-foundry-vtt",
+	"manifest": "https://raw.githubusercontent.com/AllPurposeName/fabula-ultima-foundry-vtt/main/static/system.json",
+	"download": "https://github.com/AllPurposeName/fabula-ultima-foundry-vtt/releases/download/v1.0.3/dist.zip",
+	"license": "LICENSE.txt"
 }
-
