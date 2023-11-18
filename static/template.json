@@ -262,6 +262,36 @@
       },
       "skills": []
     },
+    "weapon": {
+      "templates": ["bonus", "craftable", "rollModifiers", "artifact", "trade"],
+      "category": "melee",
+      "ammo": "other",
+      "skillBonus": "",
+      "damage": 1,
+      "features": {
+        "edged": false,
+        "pointed": false,
+        "blunt": false,
+        "parrying": false,
+        "hook": false,
+        "shield": false,
+        "slowReload": false,
+        "others": ""
+      },
+      "grip": "1h",
+      "range": "arm",
+      "cost": "",
+      "supply": "",
+      "weight": "regular"
+    },
+    "armor": {
+      "templates": ["bonus", "craftable", "rollModifiers", "artifact", "trade"],
+      "cost": 0,
+      "part": "body",
+      "features": "",
+      "supply": "",
+      "weight": "regular"
+    },
     "spell": {
       "spellType": "SPELL.SPELL",
       "rank": 1,
