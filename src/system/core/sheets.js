@@ -17,6 +17,7 @@ import { FabulaUltimaClassSheet } from "@item/class/sheet.js";
 export function registerSheets() {
   Actors.unregisterSheet("core", ActorSheet);
   Actors.registerSheet("fabula-ultima", FabulaUltimaCharacterSheet, { types: ["character"], makeDefault: true });
+  Items.registerSheet("fabula-ultima", FabulaUltimaClassSheet, { types: ["class"], makeDefault: true });
   // Actors.registerSheet("fabula-ultima", FabulaUltimaMonsterSheet, { types: ["monster"], makeDefault: true });
   // Actors.registerSheet("fabula-ultima", FabulaUltimaStrongholdSheet, {
   //   types: ["stronghold"],
