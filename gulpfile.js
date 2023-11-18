@@ -7,6 +7,8 @@ import path from "path";
 import { execa } from "execa";
 import semver from "semver";
 import esBuild from "./esbuild.config.js";
+import yargs from 'yargs'
+import { hideBin } from 'yargs/helpers'
 
 /********************/
 /*  CONFIGURATION   */
@@ -17,10 +19,11 @@ const sourceDirectory = "./src";
 const distDirectory = "./dist";
 const stdio = "inherit";
 const templateExt = "hbs";
-// const getDownloadURL = (tag) =>
-//   `https://github.com/fvtt-fria-ligan/fabula-ultima/releases/download/v${tag}/-fvtt_v${tag}.zip`;
+const getDownloadURL = (tag) =>
+  `https://github.com/AllPurposeName/fabula-ultima-foundry-vtt/releases/download/v${tag}/dist.zip`;
 const packageJson = JSON.parse(readFileSync("package.json"));
 const { version } = packageJson;
+const argv = yargs(hideBin(process.argv)).argv
 const staticFiles = readdirSync(`./static`).map((file) => `static/${file}`);
 staticFiles.push("README.md", "LICENSE", "static/system.json");
 
@@ -157,45 +160,45 @@ async function commitTagPush() {
 /**
  * Update version and download URL.
  */
-// async function bumpVersion(cb) {
-//   try {
-//     // eslint-disable-next-line no-shadow
-//     const release = argv.release || argv.r;
-//
-//     if (!release) {
-//       return cb(Error("Missing release type"));
-//     }
-//
-//     const currentVersion = version;
-//
-//     const targetVersion = getTargetVersion(currentVersion, release);
-//
-//     if (!targetVersion) {
-//       return cb(new Error(chalk.red("Error: Incorrect version arguments")));
-//     }
-//
-//     if (targetVersion === currentVersion) {
-//       return cb(new Error(chalk.red("Error: Target version is identical to current version")));
-//     }
-//
-//     const systemManifest = JSON.parse(readFileSync("static/system.json"));
-//
-//     if (!systemManifest) cb(Error(chalk.red("Manifest JSON not found")));
-//
-//     console.log(`Updating version number to '${targetVersion}'`);
-//
-//     packageJson.version = targetVersion;
-//     writeFileSync("package.json", JSON.stringify(packageJson, null, "\t"));
-//
-//     systemManifest.version = targetVersion;
-//     systemManifest.download = getDownloadURL(targetVersion);
-//     writeFileSync("static/system.json", JSON.stringify(systemManifest, null, "\t"));
-//
-//     return cb();
-//   } catch (err) {
-//     cb(err);
-//   }
-// }
+ async function bumpVersion(cb) {
+   try {
+     // eslint-disable-next-line no-shadow
+     const release = argv.release || argv.r;
+
+     if (!release) {
+       return cb(Error("Missing release type"));
+     }
+
+     const currentVersion = version;
+
+     const targetVersion = getTargetVersion(currentVersion, release);
+
+     if (!targetVersion) {
+       return cb(new Error(chalk.red("Error: Incorrect version arguments")));
+     }
+
+     if (targetVersion === currentVersion) {
+       return cb(new Error(chalk.red("Error: Target version is identical to current version")));
+     }
+
+     const systemManifest = JSON.parse(readFileSync("static/system.json"));
+
+     if (!systemManifest) cb(Error(chalk.red("Manifest JSON not found")));
+
+     console.log(`Updating version number to '${targetVersion}'`);
+
+     packageJson.version = targetVersion;
+     writeFileSync("package.json", JSON.stringify(packageJson, null, "\t"));
+
+     systemManifest.version = targetVersion;
+     systemManifest.download = getDownloadURL(targetVersion);
+     writeFileSync("static/system.json", JSON.stringify(systemManifest, null, "\t"));
+
+     return cb();
+   } catch (err) {
+     cb(err);
+   }
+ }
 
 const execBuild = gulp.parallel(buildSource, pipeTemplates, pipeStatics);
 
@@ -204,6 +207,5 @@ export const build = gulp.series(clean, execBuild);
 
 export const watch = gulp.series(buildWatch);
 export const link = linkUserData;
-// export const bump = gulp.series(bumpVersion, changelog, clean, execBuild);
-export const bump = gulp.series(changelog, clean, execBuild);
+export const bump = gulp.series(bumpVersion, changelog, clean, execBuild);
 export const release = commitTagPush;
