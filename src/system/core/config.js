@@ -145,21 +145,10 @@ FabulaUltima.i18n = {
 };
 
 FabulaUltima.itemTypes = [
-  "armor",
-  "artifact",
   "bond",
   "class",
-  "helper",
-  "heroicSkill",
-  "monsterSkill",
-  "quirk",
-  "project",
-  "quirk",
-  "rawMaterial",
-  "shield",
   "skill",
   "spell",
-  "weapon"
 ];
 
 // FabulaUltima.encounterTables = [
