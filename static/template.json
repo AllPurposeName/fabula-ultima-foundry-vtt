@@ -162,6 +162,7 @@
     }
   },
   "Item": {
+    <<<<<<< HEAD
     "types": [
       "armor",
       "artifact",
@@ -297,6 +298,23 @@
       "respect": "",
       "trust": "",
       "liking": ""
+    },
+    "class": {
+      "key": "",
+      "also": [],
+      "quote": "",
+      "description": "",
+      "questions": [],
+      "freeBenefits": {
+        "hitPointMax": 0,
+        "inventoryPointMax": 0,
+        "martialMeleeWeapons": false,
+        "martialRangedWeapons": false,
+        "mindPointMax": 0,
+        "projects": false,
+        "ritualism": false
+      },
+      "skills": []
     },
     "spell": {
       "spellType": "SPELL.SPELL",

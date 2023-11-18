@@ -152,6 +152,7 @@ FabulaUltima.itemTypes = [
   "helper",
   "heroicSkill",
   "monsterSkill",
+  "quirk",
   "project",
   "quirk",
   "rawMaterial",
