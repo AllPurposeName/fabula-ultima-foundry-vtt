@@ -292,6 +292,12 @@
       "supply": "",
       "weight": "regular"
     },
+    "bond": {
+      "who": "",
+      "respect": "",
+      "trust": "",
+      "liking": ""
+    },
     "spell": {
       "spellType": "SPELL.SPELL",
       "rank": 1,

@@ -148,11 +148,12 @@ FabulaUltima.itemTypes = [
   "armor",
   "artifact",
   "bond",
+  "class"
   "helper",
   "heroicSkill",
-  "quirk",
   "monsterSkill",
   "project",
+  "quirk",
   "rawMaterial",
   "shield",
   "skill",
