@@ -166,6 +166,7 @@
       "armor",
       "artifact",
       "bond",
+      "class",
       "helper",
       "heroicSkill",
       "quirk",
@@ -243,6 +244,23 @@
       "respect": "",
       "reliance": "",
       "disposition": ""
+    },
+    "class": {
+      "key": "",
+      "also": [],
+      "quote": "",
+      "description": "",
+      "questions": [],
+      "freeBenefits": {
+        "hitPointMax": 0,
+        "inventoryPointMax": 0,
+        "martialMeleeWeapons": false,
+        "martialRangedWeapons": false,
+        "mindPointMax": 0,
+        "projects": false,
+        "ritualism": false
+      },
+      "skills": []
     },
     "spell": {
       "spellType": "SPELL.SPELL",
