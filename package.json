@@ -1,53 +1,53 @@
 {
-  "private": true,
-  "name": "fabula-ultima",
-  "version": "1.0.1",
-  "type": "module",
-  "description": "A Fabula Ultima Foundry VTT solution.",
-  "engines" : {
-    "node" : "^20.0.0"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/AllPurposeName/fabula-ultima-foundry-vtt.git"
-  },
-  "bugs": {
-    "url": "https://github.com/AllPurposeName/fabula-ultima-foundry-vtt/issues"
-  },
-  "contributors": [
-    {
-      "name": "AllPurposeName",
-      "email": "mr.kaitryn.dale@gmail.com"
-    },
-    {
-      "name": "Siggy",
-      "email": "siggymcfried@gmail.com"
-    }
-  ],
-  "scripts": {
-    "clean": "gulp clean",
-    "dev": "cross-env NODE_ENV=development gulp build",
-    "dev:watch": "cross-env NODE_ENV=development gulp watch",
-    "build": "cross-env NODE_ENV=production gulp build",
-    "link-project": "gulp link",
-    "release": "gulp release",
-    "unlink-project" : "rm $(grep -o 'dataPath\": \".*' foundryconfig.json | awk '{print $2}' | tr -d '\"')/systems/fabula-ultima && rm -rf dist",
-    "relink-project": "yarn unlink-project && yarn build && yarn link-project"
-  },
-  "devDependencies": {
-    "@league-of-foundry-developers/foundry-vtt-types": "9.280.0",
-    "@typhonjs-fvtt/eslint-config-foundry.js": "0.8.0",
-    "chalk": "^5",
-    "cross-env": "^7",
-    "esbuild": "^19",
-    "esbuild-sass-plugin": "^2.10",
-    "execa": "^7",
-    "fs-extra": "^11",
-    "fs-extra-plus": "^0.6.0",
-    "gulp": "^4",
-    "prettier": "2.8.8"
-  },
-  "dependencies": {
-  }
+	"private": true,
+	"name": "fabula-ultima",
+	"version": "1.0.3",
+	"type": "module",
+	"description": "A Fabula Ultima Foundry VTT solution.",
+	"engines": {
+		"node": "^20.0.0"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/AllPurposeName/fabula-ultima-foundry-vtt.git"
+	},
+	"bugs": {
+		"url": "https://github.com/AllPurposeName/fabula-ultima-foundry-vtt/issues"
+	},
+	"contributors": [
+		{
+			"name": "AllPurposeName",
+			"email": "mr.kaitryn.dale@gmail.com"
+		},
+		{
+			"name": "Siggy",
+			"email": "siggymcfried@gmail.com"
+		}
+	],
+	"scripts": {
+		"clean": "gulp clean",
+		"dev": "cross-env NODE_ENV=development gulp build",
+		"dev:watch": "cross-env NODE_ENV=development gulp watch",
+		"build": "cross-env NODE_ENV=production gulp build",
+		"link-project": "gulp link",
+		"bump": "gulp bump",
+		"release": "gulp release",
+		"unlink-project": "rm $(grep -o 'dataPath\": \".*' foundryconfig.json | awk '{print $2}' | tr -d '\"')/systems/fabula-ultima && rm -rf dist",
+		"relink-project": "yarn unlink-project && yarn build && yarn link-project"
+	},
+	"devDependencies": {
+		"@league-of-foundry-developers/foundry-vtt-types": "9.280.0",
+		"@typhonjs-fvtt/eslint-config-foundry.js": "0.8.0",
+		"chalk": "^5",
+		"cross-env": "^7",
+		"esbuild": "^0.19",
+		"esbuild-sass-plugin": "^2.10",
+		"execa": "^7",
+		"fs-extra": "^11",
+		"fs-extra-plus": "^0.6.0",
+		"gulp": "^4",
+		"prettier": "2.8.8",
+		"yargs": "^17.7.2"
+	}
 }
