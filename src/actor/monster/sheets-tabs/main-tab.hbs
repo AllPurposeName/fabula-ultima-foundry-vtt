@@ -1,12 +1,5 @@
 <div class="main-tab">
-  <div class="left-content">
-    <div class="pronouns">
-      <h3>
-        {{localize "BIO.PRONOUNS"}}
-        <input id="dark-text" style="width: 100px" name="system.bio.pronouns.value" type="text" value="{{this.actor.bio.pronouns.value}}" />
-      </h3>
-    </div>
-
+  <div class="left-content" style="margin-top: 30px;">
     <div class="points hit-points">
       <h4>
         {{localize "BIO.HIT_POINTS"}}
@@ -24,7 +17,7 @@
     <div class="attributes-and-status-effects">
       <h3 class="header">{{localize "BIO.ATTRIBUTES_AND_STATUS_EFFECTS"}}<i class="fas fa-hand-fist"></i></h3>
       <div class="attribute-stats dexterity">
-        {{!-- <p class="attribute">{{localize "ATTRIBUTE.DEXTERITY"}}</p> --}}
+        <p class="attribute">{{localize "ATTRIBUTE.DEXTERITY"}}</p>
         <p id="calculated-attribute-value"> d{{this.actor.dexterity}} </p>
         <i class="fas fa-slash rotated"></i>
         <div>
@@ -85,16 +78,9 @@
       <h3>{{localize "BIO.TRAITS"}}<i class="fas fa-fingerprint"></i> </h3>
       <div class="traits">
         <div class="trait-with-answer">
-          <h4>{{localize "BIO.IDENTITY"}}
-            <input name="system.bio.identity.value" type="text" value="{{this.actor.bio.identity.value}}" />
-          </h4>
-        </div>
-        <div class="trait-with-answer">
-          <h4>{{localize "BIO.THEME"}}
-            <input name="system.bio.theme.value" type="text" value="{{this.actor.bio.theme.value}}" />
-          </h4>
-          <h4>{{localize "BIO.ORIGIN"}}
-            <input name="system.bio.origin.value" type="text" value="{{this.actor.bio.origin.value}}" />
+          <h4>
+            {{localize "BIO.TYPICAL_TRAITS"}}
+            <input id="typicalTraits" name="system.bio.identity.value" type="text" value="{{this.actor.bio.identity.value}}" />
           </h4>
         </div>
         <div class="trait-with-answer">
@@ -112,78 +98,15 @@
   </div>
 
   <section class="right-sidebar">
+    <div class="experience">
+      <div class="experience-fields" >
+        <div><label id="monsterLevel">{{localize "BIO.LEVEL"}}<input id="number-input" name="system.bio.level.value" type="number" value="{{this.actor.bio.level.value}}"></input></label></div>
+      </div>
+    </div>
     <img class="profile-img" src="{{this.actor.img}}" data-edit="img" />
   </section>
 
   <footer class="footer">
-    <div class="bond-section">
-      {{> "systems/fabula-ultima/templates/actor/character/parts/bonds.hbs" }}
-    </div>
-    <div class="fabula-points">
-      <h3 title="{{localize "FABULA_POINTS.GAIN"}}">{{localize "BIO.FABULA_POINTS"}}<i class="fas fa-meteor"></i> </h3>
-      <input id="number-input" type="number" name="system.bio.fabulaPoints.value" value="{{this.actor.bio.fabulaPoints.value}}" />
-      <div class="fabula-li">
-        <i class="fas fa-file-pen"></i>
-        {{localize "FABULA_POINTS.ALTER_STORY"}}
-      </div>
-      <div class="fabula-li">
-        <i class="fas fa-user-group"></i>
-        {{localize "FABULA_POINTS.INVOKE_BOND"}}
-      </div>
-      <div class="fabula-li">
-        <i class="fas fa-camera-rotate"></i>
-        {{localize "FABULA_POINTS.INVOKE_TRAIT"}}
-      </div>
-      <div class="fabula-li">
-        <i class="fas fa-person-running"></i>
-        {{localize "FABULA_POINTS.USE_SKILL"}}
-      </div>
-    </div>
-
-    <div class="inventory-points">
-      <h3 title="{{localize "INVENTORY.GAIN"}}">{{localize "BIO.INVENTORY_POINTS"}}<i class="fas fa-sack-xmark"></i> </h3>
-      <div class="inventory-points-fields">
-        <p class="inventory-points-header">{{localize "BIO.IP"}}</p>
-        <input id="number-input" type="number" name="system.baseAttribute.baseInventoryPoints.value" value="{{this.actor.attributes.baseInventoryPoints.value}}" />
-        <i class="fas fa-slash rotated"></i>
-        <input id="number-input" type="number" name="system.baseAttribute.baseInventoryPoints.max" value="{{this.actor.attributes.baseInventoryPoints.max}}" />
-      </div>
-      <div class="inventory-li">
-        <p> <img src="systems/fabula-ultima/assets/assorted/redpot.png" width="20" height="20" style="border: none" />{{localize "INVENTORY.REMEDY"}}</p>
-      </div>
-      <div class="inventory-li">
-        <p> <img src="systems/fabula-ultima/assets/assorted/bluepot.png" width="20" height="20" style="border: none" />{{localize "INVENTORY.ELIXIR"}}</p>
-      </div>
-      <div class="inventory-li">
-        <p> <img src="systems/fabula-ultima/assets/assorted/yellowpot.png" width="20" height="20" style="border: none" />{{localize "INVENTORY.TONIC"}}</p>
-      </div>
-      <div class="inventory-li">
-        <i class="fas fa-bolt"></i>
-        {{localize "INVENTORY.ELEMENTAL_SHARD"}}
-      </div>
-      <div class="inventory-li">
-        <i class="fas fa-tent"></i>
-        {{localize "INVENTORY.MAGIC_TENT"}}
-      </div>
-    </div>
-    <div class="glossary">
-      <h3>{{localize "DESCRIPTION.GLOSSARY"}}<i class="fas fa-book-bookmark"></i> </h3>
-      <ul>
-        <li>{{localize "DESCRIPTION.HIGH_ROLL"}}</li>
-        <li>{{localize "DESCRIPTION.FUMBLE"}}</li>
-        <li>{{localize "DESCRIPTION.CRIT"}}</li>
-        <li>{{localize "DESCRIPTION.DIE_SIZE"}}</li>
-        <li>{{localize "DESCRIPTION.VULNERABILITY"}}</li>
-        <li>{{localize "DESCRIPTION.RESISTANCE"}}</li>
-      </ul>
-    </div>
-    <div class="experience">
-      <h3>{{localize "BIO.EXPERIENCE_AND_LEVEL"}}<i class="fas fa-seedling"></i> </h3>
-      <div class="experience-fields" >
-        <div><label>{{localize "BIO.LEVEL"}}<input id="number-input" name="system.bio.level.value" type="number" value="{{this.actor.bio.level.value}}"></input></label></div>
-        <div><label>{{localize "BIO.EXPERIENCE"}}<input id="number-input" name="system.bio.experience.value" type="number" value="{{this.actor.bio.experience.value}}"></input> </label></div>
-      </div>
-    </div>
     <div class="zenit">
       <h3>{{localize "BIO.ZENIT"}}<i class="fas fa-coins"></i> </h3>
       <input id="number-input" name="system.bio.zenit.value" type="number" value="{{this.actor.bio.zenit.value}}" />
