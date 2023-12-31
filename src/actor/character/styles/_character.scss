@@ -32,16 +32,18 @@
 
 .tab-section > .tabs {
   display: flex;
-  width: 200px;
   justify-content: space-around;
   align-content: space-evenly;
   flex-wrap: wrap;
   flex-direction: row;
-  height: 0;
   margin-top: 10px;
 }
 .tabs > .tab-item {
   padding: 10px;
   background: rgba(0, 0, 0, 0.05);
   z-index: 1;
+  &:hover {
+    background: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
 }

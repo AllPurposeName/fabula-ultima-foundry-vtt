@@ -1,0 +1,10 @@
+.cheat-sheet-item {
+  display: flex;
+  margin-bottom: 0.25em;
+  & > i {
+    margin: 0.22em 0.5em;
+    width: 1em;
+    display: flex;
+    justify-content: center;
+  }
+}
