@@ -2,6 +2,19 @@
   width: calc(100% - 87px);
 }
 
-#monsterLevel {
-  text-align: center;
+#monsterExperienceFields {
+  flex-direction: row;
+}
+
+.monster-main-fields {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin: 0 5px 0 15px;
+  &:first-child {
+    z-index: 1;
+  }
+  & > p {
+    font-size: medium;
+  }
 }
