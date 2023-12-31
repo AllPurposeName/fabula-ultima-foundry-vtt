@@ -11,10 +11,11 @@
   justify-content: right;
   align-items: center;
   margin: 0 5px 0 15px;
-  &:first-child {
-    z-index: 1;
-  }
   & > p {
     font-size: medium;
   }
+}
+
+#monsterLevel {
+  z-index: 1;
 }
