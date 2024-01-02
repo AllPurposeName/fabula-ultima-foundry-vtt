@@ -120,7 +120,11 @@
       {{> "systems/fabula-ultima/templates/actor/character/parts/bonds.hbs" }}
     </div>
     <div class="fabula-points">
-      <h3 title="{{localize "FABULA_POINTS.GAIN"}}">{{localize "BIO.FABULA_POINTS"}}<i class="fas fa-meteor"></i> </h3>
+      <h3 class="tooltip-right">
+        {{localize "BIO.FABULA_POINTS"}}
+        <i class="fas fa-meteor"></i>
+        <span class="tooltip-text">{{localize "FABULA_POINTS.GAIN"}}</span>
+      </h3>
       <input id="number-input" type="number" name="system.bio.fabulaPoints.value" value="{{this.actor.bio.fabulaPoints.value}}" />
       <div class="fabula-li">
         <i class="fas fa-file-pen"></i>
@@ -141,7 +145,11 @@
     </div>
 
     <div class="inventory-points">
-      <h3 title="{{localize "INVENTORY.GAIN"}}">{{localize "BIO.INVENTORY_POINTS"}}<i class="fas fa-sack-xmark"></i> </h3>
+      <h3 class="tooltip-left">
+        {{localize "BIO.INVENTORY_POINTS"}}
+        <i class="fas fa-sack-xmark"></i>
+        <span class="tooltip-text">{{localize "INVENTORY.GAIN"}}</span>
+      </h3>
       <div class="inventory-points-fields">
         <p class="inventory-points-header">{{localize "BIO.IP"}}</p>
         <input id="number-input" type="number" name="system.baseAttribute.baseInventoryPoints.value" value="{{this.actor.attributes.baseInventoryPoints.value}}" />
