@@ -19,3 +19,11 @@
 #monsterLevel {
   z-index: 1;
 }
+
+#monsterPointsAndDefences {
+  display: flex;
+  width: 400px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 9px 0 25px;
+}
