@@ -25,5 +25,18 @@
   width: 400px;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 9px 0 25px;
+  margin: 9px 0 5px;
+}
+
+#monsterAffinities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  & > h3 {
+    width: 400px;
+  }
+  & > h4 > input {
+    width: 150px;
+  }
 }

@@ -30,6 +30,26 @@
       </div>
     </section>
 
+    <section class='affinities' id="monsterAffinities">
+      <h3>{{localize "BIO.AFFINITIES"}} <i class="fas fa-sparkles"></i></h3>
+      <h4>
+        {{localize "BIO.VULNERABILE"}}
+        <input name="system.bio.vulnerabilities.value" type="text" value="{{this.actor.bio.vulnerabilities.value}}"></textarea>
+      </h4>
+      <h4>
+        {{localize "BIO.RESISTANT"}}
+        <input name="system.bio.resistances.value" type="text" value="{{this.actor.bio.resistances.value}}"></textarea>
+      </h4>
+      <h4>
+        {{localize "BIO.IMMUNE"}}
+        <input name="system.bio.immunities.value" type="text" value="{{this.actor.bio.immunities.value}}"></textarea>
+      </h4>
+      <h4>
+        {{localize "BIO.ABSORBS"}}
+        <input name="system.bio.absorbs.value" type="text" value="{{this.actor.bio.absorbs.value}}"></textarea>
+      </h4>
+    </section>
+
     <div class="attributes-and-status-effects">
       <h3 class="header">{{localize "BIO.ATTRIBUTES_AND_STATUS_EFFECTS"}}<i class="fas fa-hand-fist"></i></h3>
       <div class="attribute-stats dexterity">
@@ -138,11 +158,4 @@
     </div>
     <img class="profile-img" src="{{this.actor.img}}" data-edit="img" />
   </section>
-
-  <footer class="footer">
-    <div class="zenit">
-      <h3>{{localize "BIO.ZENIT"}}<i class="fas fa-coins"></i> </h3>
-      <input id="number-input" name="system.bio.zenit.value" type="number" value="{{this.actor.bio.zenit.value}}" />
-    </div>
-  </footer>
 </div>
