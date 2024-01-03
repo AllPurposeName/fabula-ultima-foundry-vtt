@@ -26,6 +26,10 @@
   flex-wrap: wrap;
   justify-content: space-around;
   margin: 9px 0 5px;
+  & > .mind-points > h4 {
+    z-index: 2;
+    position: relative;
+  }
 }
 
 #monsterAffinities {

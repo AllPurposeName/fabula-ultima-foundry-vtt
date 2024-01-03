@@ -1,9 +1,4 @@
-/* eslint-disable no-unused-vars */
 import { FabulaUltimaActorSheet } from "../sheet.js";
-// import { FabulaUltimaCharacterGenerator } from "@components/character-generator/character-generator.js";
-// import { FBLRoll, FBLRollHandler } from "@components/roll-engine/engine.js";
-// import localizeString from "@utils/localize-string";
-// import { ActorSheetConfig } from "@utils/sheet-config.js";
 
 export class FabulaUltimaMonsterSheet extends FabulaUltimaActorSheet {
   static get defaultOptions() {
