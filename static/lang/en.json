@@ -25,6 +25,7 @@
   "BIO.IDENTITY": "Identity:",
   "BIO.IMMUNE": "IM: ",
   "BIO.INIT": "Init:",
+  "BIO.INITIATIVE_MODIFIER": "Init. Modifier:",
   "BIO.INVENTORY_POINTS": "Inventory Points ",
   "BIO.IP": "IP",
   "BIO.LEVEL": "Level:",

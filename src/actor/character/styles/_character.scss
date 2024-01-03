@@ -47,3 +47,81 @@
     cursor: pointer;
   }
 }
+
+.tooltip-top, .tooltip-bottom, .tooltip-right, .tooltip-left {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip-top .tooltip-text {
+  bottom: 100%;
+  left: 50%;
+}
+
+.tooltip-bottom .tooltip-text {
+  top: 100%;
+  left: 50%;
+}
+
+.tooltip-right .tooltip-text {
+  top: -5px;
+  left: 105%;
+}
+
+.tooltip-left .tooltip-text {
+  top: -5px;
+  right: 105%;
+}
+
+:is(.tooltip-top, .tooltip-bottom, .tooltip-right, .tooltip-left) .tooltip-text {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  padding: 5px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  width: max-content;
+  max-width: 200px;
+}
+
+:is(.tooltip-top, .tooltip-bottom, .tooltip-right, .tooltip-left):hover .tooltip-text {
+  visibility: visible;
+  font-size: 0.8em;
+}
+
+:is(.tooltip-top, .tooltip-bottom, .tooltip-right, .tooltip-left) .tooltip-text::after {
+  content: " ";
+  position: absolute;
+  border-width: 5px;
+  border-style: solid;
+}
+
+.tooltip-top .tooltip-text::after {
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-color: black transparent transparent transparent;
+}
+
+.tooltip-bottom .tooltip-text::after {
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-color: transparent transparent black transparent;
+}
+
+.tooltip-right .tooltip-text::after {
+  top: 50%;
+  right: 100%;
+  margin-top: -5px;
+  border-color: transparent black transparent transparent;
+}
+
+.tooltip-left .tooltip-text::after {
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-color: transparent transparent transparent black;
+}
