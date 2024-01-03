@@ -1,4 +1,4 @@
-#number-input {
+.number-input {
   width: 40px;
   text-align: center;
 }
@@ -6,7 +6,7 @@
   transform: rotate(90deg);
   font-size: var(--font-size-16);
 }
-#calculated-attribute-value {
+.calculated-attribute-value {
   position:relative;
   left: 20px;
   bottom: 6px;
