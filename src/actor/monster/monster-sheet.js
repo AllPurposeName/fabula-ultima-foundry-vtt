@@ -28,9 +28,5 @@ export class FabulaUltimaMonsterSheet extends FabulaUltimaActorSheet {
 
   get template() {
     return "systems/fabula-ultima/templates/actor/monster/monster-sheet.hbs";
-    // if (!game.user.isGM && this.actor.limited)
-    //   return "systems/fabula-ultima/templates/actor/character/character-limited-sheet.hbs";
-    // if (this.actorProperties.subtype?.type === "npc")
-    //   return "systems/fabula-ultima/templates/actor/character/npc-sheet.hbs";
   }
 }
