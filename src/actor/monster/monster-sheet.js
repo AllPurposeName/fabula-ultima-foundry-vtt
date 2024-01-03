@@ -29,4 +29,22 @@ export class FabulaUltimaMonsterSheet extends FabulaUltimaActorSheet {
   get template() {
     return "systems/fabula-ultima/templates/actor/monster/monster-sheet.hbs";
   }
+
+    /** override **/
+    activateListeners(html) {
+      super.activateListeners(html);
+
+      html.find('.monster-textareas textarea').each((i, el) => {
+        el.style.height = 'auto';
+        el.style.height = `${el.scrollHeight}px`
+      });
+
+      html.find('.monster-textareas').on('input', (ev) => {
+        ev.preventDefault();
+        if (ev.target.tagName.toLowerCase() === 'textarea') {
+          ev.target.style.height = 'auto';
+          ev.target.style.height = ev.target.scrollHeight + 'px';
+        }
+      })
+    }
 }
