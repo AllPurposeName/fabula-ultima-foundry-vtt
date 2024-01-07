@@ -3,7 +3,7 @@
     <div class="initiative-modifier">
       <h4>
         {{localize "BIO.INITIATIVE_MODIFIER"}}
-        <input id="number-input" type="number" name="system.baseAttribute.initiative_modifier.value" value="{{this.actor.attributes.initiative_modifier.value}}" />
+        <input class="number-input" type="number" name="system.baseAttribute.initiative_modifier.value" value="{{this.actor.attributes.initiative_modifier.value}}" />
       </h4>
     </div>
 
@@ -17,28 +17,28 @@
     <div class="defense">
       <h4>
         {{localize "BIO.DEFENSE"}}
-        <input id="number-input" type="number" name="system.baseAttribute.defense.value" value="{{this.actor.attributes.defense.value}}" />
+        <input class="number-input" type="number" name="system.baseAttribute.defense.value" value="{{this.actor.attributes.defense.value}}" />
       </h4>
     </div>
 
     <div class="magic-defense">
       <h4>
         {{localize "BIO.MAGIC_DEFENSE"}}
-        <input id="number-input" type="number" name="system.baseAttribute.magic_defense.value" value="{{this.actor.attributes.magic_defense.value}}" />
+        <input class="number-input" type="number" name="system.baseAttribute.magic_defense.value" value="{{this.actor.attributes.magic_defense.value}}" />
       </h4>
     </div>
 
     <div class="points hit-points">
       <h4>
         {{localize "BIO.HIT_POINTS"}}
-        <input id="number-input" type="number" name="system.baseAttribute.baseHitPoints.value" value="{{this.actor.attributes.baseHitPoints.value}}" /> / <input id="number-input" type="number" name="system.baseAttribute.baseHitPoints.max" value="{{this.actor.attributes.baseHitPoints.max}}" />
+        <input class="number-input" type="number" name="system.baseAttribute.baseHitPoints.value" value="{{this.actor.attributes.baseHitPoints.value}}" /> / <input class="number-input" type="number" name="system.baseAttribute.baseHitPoints.max" value="{{this.actor.attributes.baseHitPoints.max}}" />
       </h4>
     </div>
 
     <div class="points mind-points">
       <h4>
         {{localize "BIO.MIND_POINTS"}}
-        <input id="number-input" type="number" name="system.baseAttribute.baseMindPoints.value" value="{{this.actor.attributes.baseMindPoints.value}}" /> / <input id="number-input" type="number" name="system.baseAttribute.baseMindPoints.max" value="{{this.actor.attributes.baseMindPoints.max}}" />
+        <input class="number-input" type="number" name="system.baseAttribute.baseMindPoints.value" value="{{this.actor.attributes.baseMindPoints.value}}" /> / <input class="number-input" type="number" name="system.baseAttribute.baseMindPoints.max" value="{{this.actor.attributes.baseMindPoints.max}}" />
       </h4>
     </div>
 
@@ -46,10 +46,10 @@
       <h3 class="header">{{localize "BIO.ATTRIBUTES_AND_STATUS_EFFECTS"}}<i class="fas fa-hand-fist"></i></h3>
       <div class="attribute-stats dexterity">
         <p class="attribute">{{localize "ATTRIBUTE.DEXTERITY"}}</p>
-        <p id="calculated-attribute-value"> d{{this.actor.dexterity}} </p>
+        <p class="calculated-attribute-value"> d{{this.actor.dexterity}} </p>
         <i class="fas fa-slash rotated"></i>
         <div>
-          <input id="number-input" type="number" step=2 min=6 max=12 name="system.baseAttribute.baseDexterity.value" value="{{this.actor.attributes.baseDexterity.value}}" />
+          <input class="number-input" type="number" step=2 min=6 max=12 name="system.baseAttribute.baseDexterity.value" value="{{this.actor.attributes.baseDexterity.value}}" />
         </div>
         <div>
           <input type="checkbox" id="slow" data-dtype="Boolean" name="system.condition.slow.value" {{checked this.actor.conditions.slow.value}} />
@@ -58,10 +58,10 @@
       </div>
       <div class="attribute-stats insight">
         <p class="attribute">{{localize "ATTRIBUTE.INSIGHT"}}</p>
-        <p id="calculated-attribute-value"> d{{this.actor.insight}} </p>
+        <p class="calculated-attribute-value"> d{{this.actor.insight}} </p>
         <i class="fas fa-slash rotated"></i>
         <div>
-          <input id="number-input" type="number" step=2 min=6 max=12 name="system.baseAttribute.baseInsight.value" value="{{this.actor.attributes.baseInsight.value}}" />
+          <input class="number-input" type="number" step=2 min=6 max=12 name="system.baseAttribute.baseInsight.value" value="{{this.actor.attributes.baseInsight.value}}" />
         </div>
         <div>
           <input type="checkbox" id="dazed" data-dtype="Boolean" name="system.condition.dazed.value" {{checked this.actor.conditions.dazed.value}} />
@@ -70,10 +70,10 @@
       </div>
       <div class="attribute-stats might">
         <p class="attribute">{{localize "ATTRIBUTE.MIGHT"}}</p>
-        <p id="calculated-attribute-value"> d{{this.actor.might}}</p>
+        <p class="calculated-attribute-value"> d{{this.actor.might}}</p>
         <i class="fas fa-slash rotated"></i>
         <div>
-          <input id="number-input" type="number" step=2 min=6 max=12 name="system.baseAttribute.baseMight.value" value="{{this.actor.attributes.baseMight.value}}" />
+          <input class="number-input" type="number" step=2 min=6 max=12 name="system.baseAttribute.baseMight.value" value="{{this.actor.attributes.baseMight.value}}" />
         </div>
         <div>
           <input type="checkbox" id="weak" data-dtype="Boolean" name="system.condition.weak.value" {{checked this.actor.conditions.weak.value}} />
@@ -82,10 +82,10 @@
       </div>
       <div class="attribute-stats willpower">
         <p class="attribute">{{localize "ATTRIBUTE.WILLPOWER"}}</p>
-        <p id="calculated-attribute-value"> d{{this.actor.willpower}} </p>
+        <p class="calculated-attribute-value"> d{{this.actor.willpower}} </p>
         <i class="fas fa-slash rotated"></i>
         <div>
-          <input id="number-input" type="number" step=2 min=6 max=12 name="system.baseAttribute.baseWillpower.value" value="{{this.actor.attributes.baseWillpower.value}}" />
+          <input class="number-input" type="number" step=2 min=6 max=12 name="system.baseAttribute.baseWillpower.value" value="{{this.actor.attributes.baseWillpower.value}}" />
         </div>
         <div>
           <input type="checkbox" id="shaken" data-dtype="Boolean" name="system.condition.shaken.value" {{checked this.actor.conditions.shaken.value}} />
@@ -146,7 +146,7 @@
         <i class="fas fa-meteor"></i>
         <span class="tooltip-text">{{localize "FABULA_POINTS.GAIN"}}</span>
       </h3>
-      <input id="number-input" type="number" name="system.bio.fabulaPoints.value" value="{{this.actor.bio.fabulaPoints.value}}" />
+      <input class="number-input" type="number" name="system.bio.fabulaPoints.value" value="{{this.actor.bio.fabulaPoints.value}}" />
       <div class="fabula-li">
         <i class="fas fa-file-pen"></i>
         {{localize "FABULA_POINTS.ALTER_STORY"}}
@@ -173,9 +173,9 @@
       </h3>
       <div class="inventory-points-fields">
         <p class="inventory-points-header">{{localize "BIO.IP"}}</p>
-        <input id="number-input" type="number" name="system.baseAttribute.baseInventoryPoints.value" value="{{this.actor.attributes.baseInventoryPoints.value}}" />
+        <input class="number-input" type="number" name="system.baseAttribute.baseInventoryPoints.value" value="{{this.actor.attributes.baseInventoryPoints.value}}" />
         <i class="fas fa-slash rotated"></i>
-        <input id="number-input" type="number" name="system.baseAttribute.baseInventoryPoints.max" value="{{this.actor.attributes.baseInventoryPoints.max}}" />
+        <input class="number-input" type="number" name="system.baseAttribute.baseInventoryPoints.max" value="{{this.actor.attributes.baseInventoryPoints.max}}" />
       </div>
       <div class="inventory-li">
         <p> <img src="systems/fabula-ultima/assets/assorted/redpot.png" width="20" height="20" style="border: none" />{{localize "INVENTORY.REMEDY"}}</p>
@@ -198,13 +198,13 @@
     <div class="experience">
       <h3>{{localize "BIO.EXPERIENCE_AND_LEVEL"}}<i class="fas fa-seedling"></i> </h3>
       <div class="experience-fields" >
-        <div><label>{{localize "BIO.LEVEL"}}<input id="number-input" name="system.bio.level.value" type="number" value="{{this.actor.bio.level.value}}"></input></label></div>
-        <div><label>{{localize "BIO.EXPERIENCE"}}<input id="number-input" name="system.bio.experience.value" type="number" value="{{this.actor.bio.experience.value}}"></input> </label></div>
+        <div><label>{{localize "BIO.LEVEL"}}<input class="number-input" name="system.bio.level.value" type="number" value="{{this.actor.bio.level.value}}"></input></label></div>
+        <div><label>{{localize "BIO.EXPERIENCE"}}<input class="number-input" name="system.bio.experience.value" type="number" value="{{this.actor.bio.experience.value}}"></input> </label></div>
       </div>
     </div>
     <div class="zenit">
       <h3>{{localize "BIO.ZENIT"}}<i class="fas fa-coins"></i> </h3>
-      <input id="number-input" name="system.bio.zenit.value" type="number" value="{{this.actor.bio.zenit.value}}" />
+      <input class="number-input" name="system.bio.zenit.value" type="number" value="{{this.actor.bio.zenit.value}}" />
     </div>
   </footer>
 </div>
