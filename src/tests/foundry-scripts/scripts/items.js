@@ -3,6 +3,7 @@ const CLSName = "Item";
 export const individual = {
   armor: () => crudTest(CLSName, "armor", "Armor1"),
   bond: () => crudTest(CLSName, "bond", "Bond1"),
+  class: () => crudTest(CLSName, "class", "Class1"),
   weapon: () => crudTest(CLSName, "weapon", "Weapon1"),
   spell: () => crudTest(CLSName, "spell", "Spell1"),
   talent: () => crudTest(CLSName, "talent", "Talent1"),
