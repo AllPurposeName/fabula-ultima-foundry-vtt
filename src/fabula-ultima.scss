@@ -1,2 +1,7 @@
 @import "actor/character";
 @import "actor/monster";
+
+input[type="number"] {
+  width: 35px;
+  text-align: center;
+}
