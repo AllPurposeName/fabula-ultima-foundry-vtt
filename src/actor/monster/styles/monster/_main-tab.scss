@@ -1,0 +1,46 @@
+#typicalTraits {
+  width: calc(100% - 87px);
+}
+
+#monsterExperienceFields {
+  flex-direction: row;
+}
+
+.monster-main-fields {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin: 0 5px 0 15px;
+  & > p {
+    font-size: medium;
+  }
+}
+
+#monsterLevel {
+  z-index: 1;
+}
+
+#monsterPointsAndDefences {
+  display: flex;
+  width: 400px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 9px 0 5px;
+  & > .mind-points > h4 {
+    z-index: 2;
+    position: relative;
+  }
+}
+
+#monsterAffinities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 20px;
+  & > h3 {
+    width: 400px;
+  }
+  & > h4 > input {
+    width: 150px;
+  }
+}
