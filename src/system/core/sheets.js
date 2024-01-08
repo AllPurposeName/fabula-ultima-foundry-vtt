@@ -1,5 +1,5 @@
 import { FabulaUltimaCharacterSheet } from "@actor/character/sheet.js";
-// import { FabulaUltimaMonsterSheet } from "@actor/monster/monster-sheet.js";
+import { FabulaUltimaMonsterSheet } from "@actor/monster/monster-sheet.js";
 // import { FabulaUltimaStrongholdSheet } from "@actor/stronghold/stronghold-sheet.js";
 // import { FabulaUltimaPartySheet } from "@actor/party/party-sheet.js";
 import { FabulaUltimaClassSheet } from "@item/class/sheet.js";
@@ -18,7 +18,7 @@ export function registerSheets() {
   Actors.unregisterSheet("core", ActorSheet);
   Actors.registerSheet("fabula-ultima", FabulaUltimaCharacterSheet, { types: ["character"], makeDefault: true });
   Items.registerSheet("fabula-ultima", FabulaUltimaClassSheet, { types: ["class"], makeDefault: true });
-  // Actors.registerSheet("fabula-ultima", FabulaUltimaMonsterSheet, { types: ["monster"], makeDefault: true });
+  Actors.registerSheet("fabula-ultima", FabulaUltimaMonsterSheet, { types: ["monster"], makeDefault: true });
   // Actors.registerSheet("fabula-ultima", FabulaUltimaStrongholdSheet, {
   //   types: ["stronghold"],
   //   makeDefault: true,

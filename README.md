@@ -10,3 +10,8 @@
 * yarn link-project
 * Close and reopen Foundry VTT. Fabula Ultima should appear in your Game
   Systems.
+
+### Releasing
+* Run `yarn bump -r {step}`, where step is one of: [major, premajor, minor, preminor, patch, prepatch, prerelease]
+* Fill out release notes in CHANGELOG.md
+* Run `yarn release`

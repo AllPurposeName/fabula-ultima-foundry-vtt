@@ -6,7 +6,7 @@
     <div class="item-name">{{localize "BOND.RELIANCE"}}</div>
     <div class="item-name">{{localize "BOND.DISPOSITION"}}</div>
     <div class="item-controls">
-      <a class="item-control item-create" data-type="bond"><i class="fas fa-plus"></i> {{localize "BOND.ADD"}}</a>
+      <a class="item-control item-create" title="Create item" data-type="bond"><i class="fas fa-plus"></i> {{localize "BOND.ADD"}}</a>
     </div>
   </li>
   {{#each bonds as |bond id|}}
@@ -31,10 +31,7 @@
       </div>
 
       <div class="item-controls">
-        <a class="item-control item-delete tooltip-bottom">
-          <i class="fas fa-trash"></i>
-          <span class="tooltip-text">{{localize 'BOND.DELETE'}}</span>
-        </a>
+        <a class="item-control item-delete" title="{{localize 'BOND.DELETE'}}"><i class="fas fa-trash"></i></a>
       </div>
     </li>
   {{/each}}

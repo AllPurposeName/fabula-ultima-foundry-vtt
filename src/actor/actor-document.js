@@ -38,6 +38,11 @@ export class FabulaUltimaActor extends Actor {
   }
 
   modifiedAttribute({baseAttribute, possibleStatusEffects}) {
+    if (!baseAttribute || !this.attributes) {
+      console.error('Invalid baseAttribute or attributes not defined.');
+      return "6"; // Or some default value
+    }
+  
     const baseValue = this.actorProperties.baseAttribute[baseAttribute].value;
     const activeStatusEffects = possibleStatusEffects.filter((effect) => this.actorProperties.condition[effect].value).length;
     return Math.max(6, baseValue - (2 * activeStatusEffects));
