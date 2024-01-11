@@ -2,10 +2,12 @@
   width: 40px;
   text-align: center;
 }
+
 .rotated {
   transform: rotate(90deg);
   font-size: var(--font-size-16);
 }
+
 .calculated-attribute-value {
   position:relative;
   left: 20px;
