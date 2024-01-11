@@ -51,3 +51,145 @@
     'other-actions .'
     'special-rules .';
 }
+
+.hit-points > h4 > input {
+  background: maroon;
+  color: white;
+  transition: box-shadow .33s ease-out;
+  &:hover {
+    box-shadow: 0 5px 0 -4px currentColor;
+  }
+}
+.mind-points > h4 > input {
+  background: deepskyblue;
+  transition: box-shadow .33s ease-out;
+  &:hover {
+    box-shadow: 0 5px 0 -4px currentColor;
+  }
+}
+
+.left-content > .attributes-and-status-effects {
+  grid-area:attributes-and-status-effects;
+  border-bottom: 1px solid grey;
+  border-left: 1px solid grey;
+  border-top: 1px solid grey;
+  border-radius: 10px 0 0 10px;
+  background-image: linear-gradient(to right, #e5f3e5, white);
+  margin-bottom: 15px;
+  display: grid;
+  grid-template-rows: 0px repeat(8, 20px);
+  grid-gap: 2px 0px;
+  grid-template-areas:
+  'header . . '
+  'dexterity dexterity .'
+  '. . enraged'
+  'insight insight .'
+  '. . .'
+  'might might .'
+  '. . poisoned'
+  'willpower willpower .'
+  '. . .';
+}
+.attributes-and-status-effects > .attribute-stats {
+  padding: 10px;
+  display: flex;
+  // justify-content: space-between;
+  // @include flex-container-wrap-items(300px)
+}
+.attribute-stats > * {
+  position:relative;
+  flex: 1 1 0px;
+}
+.attributes-and-status-effects > .attribute-stats:nth-child(2) {
+  bottom: 5px;
+}
+.attributes-and-status-effects > .attribute-stats:nth-child(5) {
+  bottom: 5px;
+}
+.attributes-and-status-effects > .attribute-stats:nth-child(6) {
+  position: relative;
+  bottom: 11px;
+}
+.attributes-and-status-effects > .attribute-stats:nth-child(7) {
+  position: relative;
+  bottom: 11px;
+}
+.attributes-and-status-effects > .attribute-stats:nth-child(n+3):not(:nth-last-child(-n+2)) {
+  border-top: 1px dotted grey;
+}
+.attributes-and-status-effects > .attribute-stats > i {
+  position: relative;
+  top: 30px;
+}
+.attributes-and-status-effects > .header {
+  grid-area:header;
+  width: 300px;
+  height: 20px;
+  position: relative;
+  bottom: 20px;
+  border: none;
+}
+
+.attribute-stats > .attribute {
+  color: darkblue;
+}
+.attribute-stats > div {
+  width: 0;
+}
+.attribute-stats > div > input[type=checkbox] {
+  position: absolute;
+}
+.attribute-stats > div > input[type=checkbox] ~ label {
+  padding-left:30px;
+  padding-top:5px;
+  display:inline-block;
+}
+.attribute-stats > div > input[type=number] {
+  width: 30px;
+  border: none;
+  transition: box-shadow .33s ease-out;
+  &:hover {
+    box-shadow: 0 5px 0 -4px currentColor;
+  }
+}
+.attribute-stats > .attribute {
+  width:0;
+}
+
+.attributes-and-status-effects > .dexterity {
+  grid-area:dexterity;
+}
+
+.attributes-and-status-effects > .insight {
+  grid-area:insight;
+}
+
+.attributes-and-status-effects > .might {
+  grid-area:might;
+}
+
+.attributes-and-status-effects > .willpower {
+  grid-area:willpower;
+}
+
+.attributes-and-status-effects > .enraged {
+  grid-area:enraged;
+}
+.enraged > p {
+  display: flex;
+}
+
+.attributes-and-status-effects > .poisoned {
+  grid-area:poisoned;
+}
+.poisoned > p {
+  display: flex;
+}
+
+.left-content > .traits-section {
+  grid-area:traits;
+}
+
+.main-tab > .right-sidebar {
+  grid-area:right-sidebar;
+}
