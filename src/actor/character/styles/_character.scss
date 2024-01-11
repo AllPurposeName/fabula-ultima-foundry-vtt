@@ -1,127 +1,77 @@
-#dark-text {
-  color: #3f6067;
-  font-weight: bold;
-  border: none;
-}
+// .tooltip-top, .tooltip-bottom, .tooltip-right, .tooltip-left {
+//   position: relative;
+//   display: inline-block;
+//   border-bottom: 1px dotted black;
+// }
 
-.character {
-  background: white;
-}
-.character > .sheet-body {
-  display:grid;
-  grid-template-columns: 1fr;
-  grid-template-areas:
-  'header'
-  'tab-section';
-}
-.sheet-body > .header {
-  grid-area: header;
-  font-size: large;
-}
+// .tooltip-top .tooltip-text {
+//   bottom: 100%;
+//   left: 50%;
+// }
 
-.header > h1 > input {
-  height: 100%;
-  transition: box-shadow .33s ease-out;
-  &:hover {
-    box-shadow: 0 5px 0 -4px currentColor;
-  }
-}
+// .tooltip-bottom .tooltip-text {
+//   top: 100%;
+//   left: 50%;
+// }
 
-.sheet-body > .tab-section {
-}
+// .tooltip-right .tooltip-text {
+//   top: -5px;
+//   left: 105%;
+// }
 
-.tab-section > .tabs {
-  display: flex;
-  justify-content: space-around;
-  align-content: space-evenly;
-  flex-wrap: wrap;
-  flex-direction: row;
-  margin-top: 10px;
-}
-.tabs > .tab-item {
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.05);
-  z-index: 1;
-  &:hover {
-    background: rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-  }
-}
+// .tooltip-left .tooltip-text {
+//   top: -5px;
+//   right: 105%;
+// }
 
-.tooltip-top, .tooltip-bottom, .tooltip-right, .tooltip-left {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black;
-}
+// :is(.tooltip-top, .tooltip-bottom, .tooltip-right, .tooltip-left) .tooltip-text {
+//   visibility: hidden;
+//   background-color: black;
+//   color: #fff;
+//   padding: 5px;
+//   border-radius: 6px;
+//   position: absolute;
+//   z-index: 1;
+//   width: max-content;
+//   max-width: 200px;
+// }
 
-.tooltip-top .tooltip-text {
-  bottom: 100%;
-  left: 50%;
-}
+// :is(.tooltip-top, .tooltip-bottom, .tooltip-right, .tooltip-left):hover .tooltip-text {
+//   visibility: visible;
+//   font-size: 0.8em;
+// }
 
-.tooltip-bottom .tooltip-text {
-  top: 100%;
-  left: 50%;
-}
+// :is(.tooltip-top, .tooltip-bottom, .tooltip-right, .tooltip-left) .tooltip-text::after {
+//   content: " ";
+//   position: absolute;
+//   border-width: 5px;
+//   border-style: solid;
+// }
 
-.tooltip-right .tooltip-text {
-  top: -5px;
-  left: 105%;
-}
+// .tooltip-top .tooltip-text::after {
+//   top: 100%;
+//   left: 50%;
+//   margin-left: -5px;
+//   border-color: black transparent transparent transparent;
+// }
 
-.tooltip-left .tooltip-text {
-  top: -5px;
-  right: 105%;
-}
+// .tooltip-bottom .tooltip-text::after {
+//   bottom: 100%;
+//   left: 50%;
+//   margin-left: -5px;
+//   border-color: transparent transparent black transparent;
+// }
 
-:is(.tooltip-top, .tooltip-bottom, .tooltip-right, .tooltip-left) .tooltip-text {
-  visibility: hidden;
-  background-color: black;
-  color: #fff;
-  padding: 5px;
-  border-radius: 6px;
-  position: absolute;
-  z-index: 1;
-  width: max-content;
-  max-width: 200px;
-}
+// .tooltip-right .tooltip-text::after {
+//   top: 50%;
+//   right: 100%;
+//   margin-top: -5px;
+//   border-color: transparent black transparent transparent;
+// }
 
-:is(.tooltip-top, .tooltip-bottom, .tooltip-right, .tooltip-left):hover .tooltip-text {
-  visibility: visible;
-  font-size: 0.8em;
-}
-
-:is(.tooltip-top, .tooltip-bottom, .tooltip-right, .tooltip-left) .tooltip-text::after {
-  content: " ";
-  position: absolute;
-  border-width: 5px;
-  border-style: solid;
-}
-
-.tooltip-top .tooltip-text::after {
-  top: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-color: black transparent transparent transparent;
-}
-
-.tooltip-bottom .tooltip-text::after {
-  bottom: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-color: transparent transparent black transparent;
-}
-
-.tooltip-right .tooltip-text::after {
-  top: 50%;
-  right: 100%;
-  margin-top: -5px;
-  border-color: transparent black transparent transparent;
-}
-
-.tooltip-left .tooltip-text::after {
-  top: 50%;
-  left: 100%;
-  margin-top: -5px;
-  border-color: transparent transparent transparent black;
-}
+// .tooltip-left .tooltip-text::after {
+//   top: 50%;
+//   left: 100%;
+//   margin-top: -5px;
+//   border-color: transparent transparent transparent black;
+// }
