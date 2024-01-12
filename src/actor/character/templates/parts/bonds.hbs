@@ -1,41 +1,43 @@
-<h3> {{localize "BOND.PLURAL"}} <i class="fas fa-link"></i> </h3>
-<ol class="items-list items bonds">
-  <li class="item flexrow items-header">
-    <div class="item-name">{{localize "BOND.TARGET"}}</div>
-    <div class="item-name">{{localize "BOND.RESPECT"}}</div>
-    <div class="item-name">{{localize "BOND.RELIANCE"}}</div>
-    <div class="item-name">{{localize "BOND.DISPOSITION"}}</div>
-    <div class="item-controls">
-      <a class="item-control item-create" data-type="bond"><i class="fas fa-plus"></i> {{localize "BOND.ADD"}}</a>
-    </div>
-  </li>
-  {{#each bonds as |bond id|}}
-    <li class="item flexrow bond" data-item-id="{{bond._id}}">
-      <div class="item-name">
-        <h4><input class="bond.name" name="bond.who" type="text" value="{{bond.system.who}}" placeholder="Name"/></h4>
-      </div>
-
-      <div class="flexcol">
-        {{{ feelingChoice bond.system.respect "respect" "admiration" }}}
-        {{{ feelingChoice bond.system.respect "respect" "inferiority" }}}
-      </div>
-
-      <div class="flexcol">
-        {{{ feelingChoice bond.system.reliance "reliance" "loyalty" }}}
-        {{{ feelingChoice bond.system.reliance "reliance" "mistrust" }}}
-      </div>
-
-      <div class="flexcol">
-        {{{ feelingChoice bond.system.disposition "disposition" "affection" }}}
-        {{{ feelingChoice bond.system.disposition "disposition" "hatred" }}}
-      </div>
-
+<div class="bond-section">
+  <h3> {{localize "BOND.PLURAL"}} <i class="fas fa-link"></i> </h3>
+  <ol class="items-list items bonds">
+    <li class="item flexrow items-header">
+      <div class="item-name">{{localize "BOND.TARGET"}}</div>
+      <div class="item-name">{{localize "BOND.RESPECT"}}</div>
+      <div class="item-name">{{localize "BOND.RELIANCE"}}</div>
+      <div class="item-name">{{localize "BOND.DISPOSITION"}}</div>
       <div class="item-controls">
-        <a class="item-control item-delete tooltip-bottom">
-          <i class="fas fa-trash"></i>
-          <span class="tooltip-text">{{localize 'BOND.DELETE'}}</span>
-        </a>
+        <a class="item-control item-create" data-type="bond"><i class="fas fa-plus"></i> {{localize "BOND.ADD"}}</a>
       </div>
     </li>
-  {{/each}}
-</ol>
+    {{#each bonds as |bond id|}}
+      <li class="item flexrow bond" data-item-id="{{bond._id}}">
+        <div class="item-name">
+          <h4><input class="bond.name" name="bond.who" type="text" value="{{bond.system.who}}" placeholder="Name"/></h4>
+        </div>
+
+        <div class="flexcol">
+          {{{ feelingChoice bond.system.respect "respect" "admiration" }}}
+          {{{ feelingChoice bond.system.respect "respect" "inferiority" }}}
+        </div>
+
+        <div class="flexcol">
+          {{{ feelingChoice bond.system.reliance "reliance" "loyalty" }}}
+          {{{ feelingChoice bond.system.reliance "reliance" "mistrust" }}}
+        </div>
+
+        <div class="flexcol">
+          {{{ feelingChoice bond.system.disposition "disposition" "affection" }}}
+          {{{ feelingChoice bond.system.disposition "disposition" "hatred" }}}
+        </div>
+
+        <div class="item-controls">
+          <a class="item-control item-delete tooltip-bottom">
+            <i class="fas fa-trash"></i>
+            <span class="tooltip-text">{{localize 'BOND.DELETE'}}</span>
+          </a>
+        </div>
+      </li>
+    {{/each}}
+  </ol>
+</div>

@@ -1,0 +1,30 @@
+<div class="inventory-points">
+  <h3 class="tooltip-left">
+    {{localize "BIO.INVENTORY_POINTS"}}
+    <i class="fas fa-sack-xmark"></i>
+    <span class="tooltip-text">{{localize "INVENTORY.GAIN"}}</span>
+  </h3>
+  <div class="inventory-points-fields">
+    <p class="inventory-points-header">{{localize "BIO.IP"}}</p>
+    <input class="number-input" type="number" name="system.baseAttribute.baseInventoryPoints.value" value="{{this.actor.attributes.baseInventoryPoints.value}}" />
+    <i class="fas fa-slash rotated"></i>
+    <input class="number-input" type="number" name="system.baseAttribute.baseInventoryPoints.max" value="{{this.actor.attributes.baseInventoryPoints.max}}" />
+  </div>
+  <div class="inventory-li">
+    <p> <img src="systems/fabula-ultima/assets/assorted/redpot.png" width="20" height="20" style="border: none" />{{localize "INVENTORY.REMEDY"}}</p>
+  </div>
+  <div class="inventory-li">
+    <p> <img src="systems/fabula-ultima/assets/assorted/bluepot.png" width="20" height="20" style="border: none" />{{localize "INVENTORY.ELIXIR"}}</p>
+  </div>
+  <div class="inventory-li">
+    <p> <img src="systems/fabula-ultima/assets/assorted/yellowpot.png" width="20" height="20" style="border: none" />{{localize "INVENTORY.TONIC"}}</p>
+  </div>
+  <div class="inventory-li">
+    <i class="fas fa-bolt"></i>
+    {{localize "INVENTORY.ELEMENTAL_SHARD"}}
+  </div>
+  <div class="inventory-li">
+    <i class="fas fa-tent"></i>
+    {{localize "INVENTORY.MAGIC_TENT"}}
+  </div>
+</div>

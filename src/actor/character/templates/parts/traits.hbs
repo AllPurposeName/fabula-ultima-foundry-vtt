@@ -1,0 +1,28 @@
+<div class="traits-section">
+  <h3>{{localize "BIO.TRAITS"}}<i class="fas fa-fingerprint"></i> </h3>
+  <div class="traits">
+    <div class="trait-with-answer">
+      <h4>{{localize "BIO.IDENTITY"}}
+        <input name="system.bio.identity.value" type="text" value="{{this.actor.bio.identity.value}}" />
+      </h4>
+    </div>
+    <div class="trait-with-answer">
+      <h4>{{localize "BIO.THEME"}}
+        <input name="system.bio.theme.value" type="text" value="{{this.actor.bio.theme.value}}" />
+      </h4>
+      <h4>{{localize "BIO.ORIGIN"}}
+        <input name="system.bio.origin.value" type="text" value="{{this.actor.bio.origin.value}}" />
+      </h4>
+    </div>
+    <div class="trait-with-answer">
+      <p>
+      <input
+          style='font-weight: bold; font-style: italic; color: gray'
+          name="system.bio.quote.value"
+          type="text"
+          value="{{this.actor.bio.quote.value}}"
+          placeholder="{{localize "BIO.QUOTE"}}"/>
+      </p>
+    </div>
+  </div>
+</div>

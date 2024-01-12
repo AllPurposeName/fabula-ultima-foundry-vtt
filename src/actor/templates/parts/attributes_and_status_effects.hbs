@@ -1,0 +1,59 @@
+<div class="attributes-and-status-effects">
+  <h3 class="header">{{localize "BIO.ATTRIBUTES_AND_STATUS_EFFECTS"}}<i class="fas fa-hand-fist"></i></h3>
+  <div class="attribute-stats dexterity">
+    <p class="attribute">{{localize "ATTRIBUTE.DEXTERITY"}}</p>
+    <p class="calculated-attribute-value"> d{{this.actor.dexterity}} </p>
+    <i class="fas fa-slash rotated"></i>
+    <div>
+      <input class="number-input" type="number" step=2 min=6 max=12 name="system.baseAttribute.baseDexterity.value" value="{{this.actor.attributes.baseDexterity.value}}" />
+    </div>
+    <div>
+      <input type="checkbox" id="slow" data-dtype="Boolean" name="system.condition.slow.value" {{checked this.actor.conditions.slow.value}} />
+      <label for="slow">{{localize "STATUS_EFFECT.SLOW"}}</label>
+    </div>
+  </div>
+  <div class="attribute-stats insight">
+    <p class="attribute">{{localize "ATTRIBUTE.INSIGHT"}}</p>
+    <p class="calculated-attribute-value"> d{{this.actor.insight}} </p>
+    <i class="fas fa-slash rotated"></i>
+    <div>
+      <input class="number-input" type="number" step=2 min=6 max=12 name="system.baseAttribute.baseInsight.value" value="{{this.actor.attributes.baseInsight.value}}" />
+    </div>
+    <div>
+      <input type="checkbox" id="dazed" data-dtype="Boolean" name="system.condition.dazed.value" {{checked this.actor.conditions.dazed.value}} />
+      <label for="dazed">{{localize "STATUS_EFFECT.DAZED"}}</label>
+    </div>
+  </div>
+  <div class="attribute-stats might">
+    <p class="attribute">{{localize "ATTRIBUTE.MIGHT"}}</p>
+    <p class="calculated-attribute-value"> d{{this.actor.might}}</p>
+    <i class="fas fa-slash rotated"></i>
+    <div>
+      <input class="number-input" type="number" step=2 min=6 max=12 name="system.baseAttribute.baseMight.value" value="{{this.actor.attributes.baseMight.value}}" />
+    </div>
+    <div>
+      <input type="checkbox" id="weak" data-dtype="Boolean" name="system.condition.weak.value" {{checked this.actor.conditions.weak.value}} />
+      <label for="weak">{{localize "STATUS_EFFECT.WEAK"}}</label>
+    </div>
+  </div>
+  <div class="attribute-stats willpower">
+    <p class="attribute">{{localize "ATTRIBUTE.WILLPOWER"}}</p>
+    <p class="calculated-attribute-value"> d{{this.actor.willpower}} </p>
+    <i class="fas fa-slash rotated"></i>
+    <div>
+      <input class="number-input" type="number" step=2 min=6 max=12 name="system.baseAttribute.baseWillpower.value" value="{{this.actor.attributes.baseWillpower.value}}" />
+    </div>
+    <div>
+      <input type="checkbox" id="shaken" data-dtype="Boolean" name="system.condition.shaken.value" {{checked this.actor.conditions.shaken.value}} />
+      <label for="shaken">{{localize "STATUS_EFFECT.SHAKEN"}}</label>
+    </div>
+  </div>
+  <div class="attribute-stats enraged">
+    <input type="checkbox" id="enraged" data-dtype="Boolean" name="system.condition.enraged.value" {{checked this.actor.conditions.enraged.value}} />
+    <label for="enraged">{{localize "STATUS_EFFECT.ENRAGED"}}</label>
+  </div>
+  <div class="attribute-stats poisoned">
+    <input type="checkbox" id="poisoned" data-dtype="Boolean" name="system.condition.poisoned.value" {{checked this.actor.conditions.poisoned.value}} />
+    <label for="poisoned">{{localize "STATUS_EFFECT.POISONED"}}</label>
+  </div>
+</div>
