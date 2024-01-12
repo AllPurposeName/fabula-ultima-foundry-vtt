@@ -1,0 +1,54 @@
+input[type="number"] {
+  width: 35px;
+  text-align: center;
+}
+
+.dark-text {
+  color: #3f6067;
+  font-weight: bold;
+  border: none;
+}
+
+.character {
+  background: white;
+}
+
+.character > .sheet-body {
+  display:grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+  'header'
+  'tab-section';
+}
+
+.sheet-body > .header {
+  grid-area: header;
+  font-size: large;
+}
+
+.header > h1 > input {
+  height: 100%;
+  transition: box-shadow .33s ease-out;
+  &:hover {
+    box-shadow: 0 5px 0 -4px currentColor;
+  }
+}
+
+.tab-section > .tabs {
+  display: flex;
+  justify-content: space-around;
+  align-content: space-evenly;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 10px;
+}
+
+.tabs > .tab-item {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.05);
+  z-index: 1;
+  &:hover {
+    background: rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+  }
+}
