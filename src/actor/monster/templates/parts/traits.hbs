@@ -1,0 +1,21 @@
+<section class="traits-section">
+  <h3>{{localize "BIO.TRAITS"}}<i class="fas fa-fingerprint"></i> </h3>
+  <div class="traits">
+    <div class="trait-with-answer">
+      <h4>
+        {{localize "BIO.TYPICAL_TRAITS"}}
+        <input id="typicalTraits" name="system.bio.identity.value" type="text" value="{{this.actor.bio.identity.value}}" />
+      </h4>
+    </div>
+    <div class="trait-with-answer">
+      <p>
+      <input
+          style='font-weight: bold; font-style: italic; color: gray'
+          name="system.bio.quote.value"
+          type="text"
+          value="{{this.actor.bio.quote.value}}"
+          placeholder="{{localize "BIO.QUOTE"}}"/>
+      </p>
+    </div>
+  </div>
+</section>
