@@ -1,8 +1,8 @@
-#typicalTraits {
+.typical-traits {
   width: calc(100% - 87px);
 }
 
-#monsterExperienceFields {
+.monster-experience-fields {
   flex-direction: row;
 }
 
@@ -16,11 +16,11 @@
   }
 }
 
-#monsterLevel {
+.monster-level {
   z-index: 1;
 }
 
-#monsterPointsAndDefences {
+.monster-points-and-defences {
   display: flex;
   width: 400px;
   flex-wrap: wrap;
@@ -32,15 +32,22 @@
   }
 }
 
-#monsterAffinities {
+.monster-affinities {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
   margin-bottom: 20px;
   & > h3 {
     width: 400px;
   }
-  & > h4 > input {
-    width: 150px;
-  }
+}
+
+.affinity-boxes {
+  width: 400px;
+  display: flex;
+}
+
+.affinity-box {
+  height: 40px;
+  width: 50px;
+  border: black 1px solid;
 }
