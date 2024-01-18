@@ -3,7 +3,7 @@
 }
 
 .monster-experience-fields {
-  flex-direction: row;
+  flex-direction: row !important;
 }
 
 .monster-main-fields {
@@ -49,5 +49,12 @@
 .affinity-box {
   height: 40px;
   width: 50px;
-  border: black 1px solid;
+  display: flex;
+  align-items: center;
+  border: #6d6d6d 1px solid;
+  cursor: pointer;
+}
+
+.inactive-affinity {
+  color: lightgray;
 }

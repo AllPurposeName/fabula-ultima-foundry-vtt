@@ -46,5 +46,12 @@ export class FabulaUltimaMonsterSheet extends FabulaUltimaActorSheet {
           ev.target.style.height = ev.target.scrollHeight + 'px';
         }
       })
+
+      html.find('.affinity-boxes').on('click', '.affinity-box', ev => {
+        const target = ev.currentTarget;
+        console.log(target);
+        target.classList.remove('inactive-affinity');
+        // Additional logic here
+      })
     }
 }
