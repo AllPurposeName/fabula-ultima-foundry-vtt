@@ -1,20 +1,10 @@
-.left-content > .initiative-modifier {
-  grid-area:initiative-modifier;
-}
-
-.left-content > .pronouns {
-  grid-area:pronouns;
-}
-
 .left-content > .defense {
-  grid-area:defense;
   position: relative;
   bottom: 35px;
   margin-top: 34px;
 }
 
 .left-content > .magic-defense {
-  grid-area:magic-defense;
   position: relative;
   bottom: 35px;
   margin-top: 34px;
@@ -23,34 +13,6 @@
 .left-content > .points {
   position: relative;
   bottom: 25px;
-}
-
-.left-content > .hit-points {
-  grid-area:hit-points;
-}
-
-.left-content > .mind-points {
-  grid-area:mind-points;
-}
-
-.left-content > .affinities {
-  grid-area:affinities;
-}
-
-.left-content > .attacks {
-  grid-area:attacks;
-}
-
-.left-content > .spells {
-  grid-area:spells;
-}
-
-.left-content > .other-actions {
-  grid-area:other-actions;
-}
-
-.left-content > .special-rules {
-  grid-area:special-rules;
 }
 
 .traits-with-answer {
@@ -108,7 +70,6 @@
 }
 
 .main-tab > .footer {
-  grid-area:footer;
   display: grid;
   grid-gap: 20px;
   grid-template-columns: repeat(5, 1fr);
