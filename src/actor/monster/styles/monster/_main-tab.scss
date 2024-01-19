@@ -55,6 +55,22 @@
   cursor: pointer;
 }
 
-.inactive-affinity {
+.affinity-inactive {
   color: lightgray;
+}
+
+.affinity-vulnerable {
+  color: red;
+}
+
+.affinity-resistant {
+  color: blue;
+}
+
+.affinity-immune {
+  color: gold;
+}
+
+.affinity-absorbs {
+  color: green;
 }

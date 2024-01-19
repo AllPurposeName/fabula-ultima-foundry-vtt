@@ -47,11 +47,24 @@ export class FabulaUltimaMonsterSheet extends FabulaUltimaActorSheet {
         }
       })
 
+      const AFFINITY_MAP = {
+        'affinity-inactive': '-',
+        'affinity-vulnerable': 'VU',
+        'affinity-resistant': 'RS',
+        'affinity-immune': 'IM',
+        'affinity-absorbs': 'AB'
+      }
+
+      const affinityKeys = Object.keys(AFFINITY_MAP)
+
       html.find('.affinity-boxes').on('click', '.affinity-box', ev => {
         const target = ev.currentTarget;
-        console.log(target);
-        target.classList.remove('inactive-affinity');
-        // Additional logic here
+        const currentAffinityIndex = affinityKeys.indexOf(target.classList[2]);
+        const nextAffinityIndex = (currentAffinityIndex + 1) % affinityKeys.length;
+        target.classList.remove(affinityKeys[currentAffinityIndex]);
+        target.classList.add(affinityKeys[nextAffinityIndex]);
+        this.actor.affinities.physical.value = AFFINITY_MAP[affinityKeys[nextAffinityIndex]];
+        this.render();
       })
     }
 }
