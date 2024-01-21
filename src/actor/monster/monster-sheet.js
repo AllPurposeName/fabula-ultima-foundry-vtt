@@ -31,40 +31,43 @@ export class FabulaUltimaMonsterSheet extends FabulaUltimaActorSheet {
   }
 
     /** override **/
-    activateListeners(html) {
-      super.activateListeners(html);
+  activateListeners(html) {
+    super.activateListeners(html);
 
-      html.find('.monster-textareas textarea').each((i, el) => {
-        el.style.height = 'auto';
-        el.style.height = `${el.scrollHeight}px`
-      });
+    html.find('.monster-textareas textarea').each((i, el) => {
+      el.style.height = 'auto';
+      el.style.height = `${el.scrollHeight}px`
+    });
 
-      html.find('.monster-textareas').on('input', (ev) => {
-        ev.preventDefault();
-        if (ev.target.tagName.toLowerCase() === 'textarea') {
-          ev.target.style.height = 'auto';
-          ev.target.style.height = ev.target.scrollHeight + 'px';
-        }
-      })
-
-      const AFFINITY_MAP = {
-        'affinity-inactive': '-',
-        'affinity-vulnerable': 'VU',
-        'affinity-resistant': 'RS',
-        'affinity-immune': 'IM',
-        'affinity-absorbs': 'AB'
+    html.find('.monster-textareas').on('input', (ev) => {
+      ev.preventDefault();
+      if (ev.target.tagName.toLowerCase() === 'textarea') {
+        ev.target.style.height = 'auto';
+        ev.target.style.height = ev.target.scrollHeight + 'px';
       }
+    })
 
-      const affinityKeys = Object.keys(AFFINITY_MAP)
-
-      html.find('.affinity-boxes').on('click', '.affinity-box', ev => {
-        const target = ev.currentTarget;
-        const currentAffinityIndex = affinityKeys.indexOf(target.classList[2]);
-        const nextAffinityIndex = (currentAffinityIndex + 1) % affinityKeys.length;
-        target.classList.remove(affinityKeys[currentAffinityIndex]);
-        target.classList.add(affinityKeys[nextAffinityIndex]);
-        this.actor.affinities.physical.value = AFFINITY_MAP[affinityKeys[nextAffinityIndex]];
-        this.render();
-      })
+    const AFFINITY_MAP = {
+      'affinity-inactive': '-',
+      'affinity-vulnerable': 'VU',
+      'affinity-resistant': 'RS',
+      'affinity-immune': 'IM',
+      'affinity-absorbs': 'AB'
     }
+
+    const affinityKeys = Object.keys(AFFINITY_MAP)
+
+    html.find('.affinity-boxes').on('click', '.affinity-box', async ev => {
+      const target = ev.currentTarget;
+      const currentAffinityIndex = affinityKeys.indexOf(target.classList[2]);
+      const nextAffinityIndex = (currentAffinityIndex + 1) % affinityKeys.length;
+      target.classList.remove(affinityKeys[currentAffinityIndex]);
+      target.classList.add(affinityKeys[nextAffinityIndex]);
+
+      await this.actor.update({
+        'system.affinities.physical.class': affinityKeys[nextAffinityIndex],
+        'system.affinities.physical.value': AFFINITY_MAP[affinityKeys[nextAffinityIndex]],
+      });
+    })
+  }
 }

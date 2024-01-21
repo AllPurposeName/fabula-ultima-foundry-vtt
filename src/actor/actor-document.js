@@ -1,6 +1,27 @@
 import localize from "@utils/localize-string.js";
 
 export class FabulaUltimaActor extends Actor {
+  constructor(data, options) {
+    super(data, options);
+
+    // Initialize affinities if not already defined
+    if (!this.data.data.affinities) {
+      console.error('this.data.data.affinities is undefined. Initializing...');
+
+      this.update({
+        'data.affinities': {
+          physical: {
+            class: 'affinity-inactive',
+            value: '-', // Set the initial value or appropriate type
+          },
+          // ... other affinities
+        }
+      });
+
+      console.log('Initialized affinities:', this.data.data.affinities);
+    }
+  }
+
   get actorProperties() {
     return this.system;
   }
