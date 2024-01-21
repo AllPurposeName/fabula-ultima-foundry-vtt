@@ -5,11 +5,9 @@ export class FabulaUltimaActor extends Actor {
     super(data, options);
 
     // Initialize affinities if not already defined
-    if (!this.data.data.affinities) {
-      console.error('this.data.data.affinities is undefined. Initializing...');
-
+    if (!this.affinities) {
       this.update({
-        'data.affinities': {
+        'affinities': {
           physical: {
             class: 'affinity-inactive',
             value: '-', // Set the initial value or appropriate type
@@ -17,8 +15,6 @@ export class FabulaUltimaActor extends Actor {
           // ... other affinities
         }
       });
-
-      console.log('Initialized affinities:', this.data.data.affinities);
     }
   }
 
