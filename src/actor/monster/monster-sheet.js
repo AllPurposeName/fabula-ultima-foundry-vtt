@@ -64,9 +64,10 @@ export class FabulaUltimaMonsterSheet extends FabulaUltimaActorSheet {
       target.classList.remove(affinityKeys[currentAffinityIndex]);
       target.classList.add(affinityKeys[nextAffinityIndex]);
 
+      const thisAffinity = target.classList[1].split('-')[1]
       await this.actor.update({
-        'system.affinities.physical.class': affinityKeys[nextAffinityIndex],
-        'system.affinities.physical.value': AFFINITY_MAP[affinityKeys[nextAffinityIndex]],
+        [`system.affinities.${thisAffinity}.class`]: affinityKeys[nextAffinityIndex],
+        [`system.affinities.${thisAffinity}.value`]: AFFINITY_MAP[affinityKeys[nextAffinityIndex]],
       });
     })
   }

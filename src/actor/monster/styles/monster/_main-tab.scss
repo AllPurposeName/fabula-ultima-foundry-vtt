@@ -51,8 +51,14 @@
   width: 50px;
   display: flex;
   align-items: center;
+  justify-content: space-around;
   border: #6d6d6d 1px solid;
   cursor: pointer;
+}
+
+.affinity-box > span {
+  transform: scaleY(2);
+  font-family: fangsong;
 }
 
 .affinity-inactive {

@@ -10,7 +10,7 @@ export class FabulaUltimaActor extends Actor {
         'affinities': {
           physical: {
             class: 'affinity-inactive',
-            value: '-', // Set the initial value or appropriate type
+            value: '-'
           },
           // ... other affinities
         }
