@@ -48,11 +48,11 @@ export class FabulaUltimaMonsterSheet extends FabulaUltimaActorSheet {
     })
 
     const AFFINITY_MAP = {
-      'affinity-inactive': '-',
-      'affinity-vulnerable': 'VU',
-      'affinity-resistant': 'RS',
-      'affinity-immune': 'IM',
-      'affinity-absorbs': 'AB'
+      'affinity-inactive': "AFFINITY.INACTIVE",
+      'affinity-vulnerable': "AFFINITY.VULNERABLE",
+      'affinity-resistant': "AFFINITY.RESISTANT",
+      'affinity-immune': "AFFINITY.IMMUNE",
+      'affinity-absorbs': "AFFINITY.ABSORBS",
     }
 
     const affinityKeys = Object.keys(AFFINITY_MAP)

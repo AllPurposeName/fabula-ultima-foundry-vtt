@@ -1,5 +1,3 @@
-import localize from "@utils/localize-string.js";
-
 export class FabulaUltimaActor extends Actor {
   constructor(data, options) {
     super(data, options);
@@ -10,39 +8,39 @@ export class FabulaUltimaActor extends Actor {
         'data.affinities': {
           'physical': {
             class: 'affinity-inactive',
-            value: '-'
+            value: "AFFINITY.INACTIVE"
           },
           'air': {
             class: 'affinity-inactive',
-            value: '-'
+            value: "AFFINITY.INACTIVE"
           },
           'bolt': {
             class: 'affinity-inactive',
-            value: '-'
+            value: "AFFINITY.INACTIVE"
           },
           'dark': {
             class: 'affinity-inactive',
-            value: '-'
+            value: "AFFINITY.INACTIVE"
           },
           'earth': {
             class: 'affinity-inactive',
-            value: '-'
+            value: "AFFINITY.INACTIVE"
           },
           'fire': {
             class: 'affinity-inactive',
-            value: '-'
+            value: "AFFINITY.INACTIVE"
           },
           'ice': {
             class: 'affinity-inactive',
-            value: '-'
+            value: "AFFINITY.INACTIVE"
           },
           'light': {
             class: 'affinity-inactive',
-            value: '-'
+            value: "AFFINITY.INACTIVE"
           },
           'poison': {
             class: 'affinity-inactive',
-            value: '-'
+            value: "AFFINITY.INACTIVE"
           }
         }
       });
