@@ -76,12 +76,6 @@
           }
         }
       },
-      "affinities": {
-        "physical": {
-          "label": "AFFINITIES.PHYSICAL",
-          "value": "-"
-        }
-      },
       "subtype": {
         "type": ""
       }
@@ -133,7 +127,7 @@
         }
       },
       "monster": {
-        "templates": ["baseAttributes", "affinities", "conditions", "skills", "subtype"],
+        "templates": ["baseAttributes", "conditions", "skills", "subtype"],
         "initiative": {
           "max": 14,
           "min": 5,
