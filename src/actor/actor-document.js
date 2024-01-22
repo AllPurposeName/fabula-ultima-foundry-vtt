@@ -5,14 +5,45 @@ export class FabulaUltimaActor extends Actor {
     super(data, options);
 
     // Initialize affinities if not already defined
-    if (!this.affinities) {
+    if (!this.system.affinities) {
       this.update({
-        'affinities': {
-          physical: {
+        'data.affinities': {
+          'physical': {
             class: 'affinity-inactive',
             value: '-'
           },
-          // ... other affinities
+          'air': {
+            class: 'affinity-inactive',
+            value: '-'
+          },
+          'bolt': {
+            class: 'affinity-inactive',
+            value: '-'
+          },
+          'dark': {
+            class: 'affinity-inactive',
+            value: '-'
+          },
+          'earth': {
+            class: 'affinity-inactive',
+            value: '-'
+          },
+          'fire': {
+            class: 'affinity-inactive',
+            value: '-'
+          },
+          'ice': {
+            class: 'affinity-inactive',
+            value: '-'
+          },
+          'light': {
+            class: 'affinity-inactive',
+            value: '-'
+          },
+          'poison': {
+            class: 'affinity-inactive',
+            value: '-'
+          }
         }
       });
     }
