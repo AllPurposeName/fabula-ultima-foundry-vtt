@@ -116,8 +116,8 @@
   grid-template-areas:
   'bonds bonds bonds bonds bonds'
   'fabula-points fabula-points inventory-points inventory-points inventory-points'
-  'glossary glossary experience experience experience'
-  'glossary glossary zenit zenit zenit';
+  '. . experience experience experience'
+  '. . zenit zenit zenit';
 }
 
 .footer > .fabula-points {
