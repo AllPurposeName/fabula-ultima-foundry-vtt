@@ -1,0 +1,59 @@
+<section class="equipment-tab">
+  <section class="equipment-section">
+    <h2>Equipment</h2>
+    <div class="may-equips">
+      <b>May equip: </b>
+      <input class="may-equip-checkbox" type="checkbox" name="system.equipment.mayEquip.martialArmor" {{checked this.actor.system.equipment.mayEquip.martialArmor}} />
+      <label for="system.equipment.mayEquip.martialArmor">Martial Armor</label>
+      <input class="may-equip-checkbox" type="checkbox" name="system.equipment.mayEquip.martialShields" {{checked this.actor.system.equipment.mayEquip.martialShields}} />
+      <label for="system.equipment.mayEquip.martialShields">Martial Shields</label>
+      <input class="may-equip-checkbox" type="checkbox" name="system.equipment.mayEquip.martialMelee" {{checked this.actor.system.equipment.mayEquip.martialMelee}} />
+      <label for="system.equipment.mayEquip.martialMelee">Martial Melee</label>
+      <input class="may-equip-checkbox" type="checkbox" name="system.equipment.mayEquip.martialRanged" {{checked this.actor.system.equipment.mayEquip.martialRanged}} />
+      <label for="system.equipment.mayEquip.martialRanged">Martial Ranged</label>
+    </div>
+    <div class="equipped-items-and-descriptions">
+      <div class="equipment-grid-item">
+        <h3>Equipped Item</h3>
+        <div class="equipped-item-box">
+          <span>Accessory</span>
+          <input name="system.equipment.accessory" value="{{this.actor.system.equipment.accessory}}">
+        </div>
+        <div class="equipped-item-box">
+          <span>Armor</span>
+          <input name="system.equipment.armor" value="{{this.actor.system.equipment.armor}}">
+        </div>
+        <div class="equipped-item-box">
+          <span>Main Hand</span>
+          <input name="system.equipment.mainHand" value="{{this.actor.system.equipment.mainHand}}">
+        </div>
+        <div class="equipped-item-box">
+          <span>Off-Hand</span>
+          <input name="system.equipment.offHand" value="{{this.actor.system.equipment.offHand}}">
+        </div>
+      </div>
+      <div class="equipment-grid-item">
+        <h3>Description</h3>
+        <div class="equipped-item-description">
+          <textarea name="system.equipment.accessoryDescription">{{this.actor.system.equipment.accessoryDescription}}</textarea>
+        </div>
+        <div class="equipped-item-description">
+          <textarea name="system.equipment.armorDescription">{{this.actor.system.equipment.armorDescription}}</textarea>
+        </div>
+        <div class="equipped-item-description">
+          <textarea name="system.equipment.mainHandDescription">{{this.actor.system.equipment.mainHandDescription}}</textarea>
+        </div>
+        <div class="equipped-item-description">
+          <textarea name="system.equipment.offHandDescription">{{this.actor.system.equipment.offHandDescription}}</textarea>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="backpack-section">
+    <div>
+      <h2>Backpack & Notes</h2>
+      <textarea></textarea>
+    </div>
+    {{> "systems/fabula-ultima/templates/actor/character/parts/zenit.hbs" }}
+  </section>
+</section>

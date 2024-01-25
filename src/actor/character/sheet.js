@@ -131,5 +131,17 @@ export class FabulaUltimaCharacterSheet extends FabulaUltimaActorSheet {
 
       await item.update(values);
     });
+
+    html.find('.may-equip-checkbox').click(async ev => {
+      ev.preventDefault();
+      const checkbox = $(ev.currentTarget);
+      const thisMayEquip = checkbox[0].attributes.name.value.split('.')[3];
+
+      await this.actor.update({
+        [`system.equipment.mayEquip.${thisMayEquip}`]: checkbox.prop('checked')
+      });
+
+      this.render(false);
+    })
   }
 }
