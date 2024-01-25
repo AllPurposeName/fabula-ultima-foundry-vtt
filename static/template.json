@@ -125,40 +125,40 @@
           "label": "CURRENCY.ZENIT",
           "value": 0
         }
+      }
+    },
+    "monster": {
+      "templates": ["baseAttributes", "conditions", "skills", "subtype"],
+      "initiative": {
+        "max": 14,
+        "min": 5,
+        "value": 8
       },
-      "monster": {
-        "templates": ["baseAttributes", "conditions", "skills", "subtype"],
-        "initiative": {
-          "max": 14,
-          "min": 5,
-          "value": 8
+      "defenses": {
+        "defense": {
+          "label": "DEFENSES.PHYSICALDEFENSE",
+          "value": 0
         },
-        "defenses": {
-          "defense": {
-            "label": "DEFENSES.PHYSICALDEFENSE",
-            "value": 0
-          },
-          "magicDefense": {
-            "label": "DEFENSES.MAGICALDEFENSE",
-            "value": 0
-          }
-        },
-        "isFlying": false
-      },
-      "party": {
-        "description": "",
-        "members": [],
-        "projects": {
-        },
-        "travel": {
+        "magicDefense": {
+          "label": "DEFENSES.MAGICALDEFENSE",
+          "value": 0
         }
       },
-      "stronghold": {
-        "defenseRating": 0,
-        "description": "",
-        "location": "",
-        "troops": []
+      "isFlying": false
+    },
+    "party": {
+      "description": "",
+      "members": [],
+      "projects": {
+      },
+      "travel": {
       }
+    },
+    "stronghold": {
+      "defenseRating": 0,
+      "description": "",
+      "location": "",
+      "troops": []
     }
   },
   "Item": {
