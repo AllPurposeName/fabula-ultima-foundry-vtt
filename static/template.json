@@ -120,18 +120,6 @@
           "value": ""
         }
       },
-      "equipment": {
-        "mayEquip": {
-          "martialArmor": false,
-          "martialShields": false,
-          "martialMelee": false,
-          "martialRanged": false
-        },
-        "accessory": {
-          "label": "EQUIPMENT.ACCESSORY",
-          "value": ""
-        }
-      },
       "currency": {
         "zenit": {
           "label": "CURRENCY.ZENIT",
