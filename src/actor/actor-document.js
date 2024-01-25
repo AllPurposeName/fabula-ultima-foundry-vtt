@@ -1,6 +1,52 @@
-import localize from "@utils/localize-string.js";
-
 export class FabulaUltimaActor extends Actor {
+  constructor(data, options) {
+    super(data, options);
+
+    // Initialize affinities if not already defined
+    if (!this.system.affinities) {
+      this.update({
+        'data.affinities': {
+          'physical': {
+            class: 'affinity-inactive',
+            value: "AFFINITY.INACTIVE"
+          },
+          'air': {
+            class: 'affinity-inactive',
+            value: "AFFINITY.INACTIVE"
+          },
+          'bolt': {
+            class: 'affinity-inactive',
+            value: "AFFINITY.INACTIVE"
+          },
+          'dark': {
+            class: 'affinity-inactive',
+            value: "AFFINITY.INACTIVE"
+          },
+          'earth': {
+            class: 'affinity-inactive',
+            value: "AFFINITY.INACTIVE"
+          },
+          'fire': {
+            class: 'affinity-inactive',
+            value: "AFFINITY.INACTIVE"
+          },
+          'ice': {
+            class: 'affinity-inactive',
+            value: "AFFINITY.INACTIVE"
+          },
+          'light': {
+            class: 'affinity-inactive',
+            value: "AFFINITY.INACTIVE"
+          },
+          'poison': {
+            class: 'affinity-inactive',
+            value: "AFFINITY.INACTIVE"
+          }
+        }
+      });
+    }
+  }
+
   get actorProperties() {
     return this.system;
   }

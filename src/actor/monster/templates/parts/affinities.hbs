@@ -1,19 +1,41 @@
-<section class='affinities' id="monsterAffinities">
+<section class="affinities monster-affinities">
   <h3>{{localize "BIO.AFFINITIES"}} <i class="fas fa-sparkles"></i></h3>
-  <h4>
-    {{localize "BIO.VULNERABLE"}}
-    <input name="system.bio.vulnerabilities.value" type="text" value="{{this.actor.bio.vulnerabilities.value}}" />
-  </h4>
-  <h4>
-    {{localize "BIO.RESISTANT"}}
-    <input name="system.bio.resistances.value" type="text" value="{{this.actor.bio.resistances.value}}" />
-  </h4>
-  <h4>
-    {{localize "BIO.IMMUNE"}}
-    <input name="system.bio.immunities.value" type="text" value="{{this.actor.bio.immunities.value}}" />
-  </h4>
-  <h4>
-    {{localize "BIO.ABSORBS"}}
-    <input name="system.bio.absorbs.value" type="text" value="{{this.actor.bio.absorbs.value}}" />
-  </h4>
+  <div class="affinity-boxes">
+    <div class="affinity-box affinity-physical {{this.actor.system.affinities.physical.class}}" title="{{localize "AFFINITY.PHYSICAL"}}" title="{{localize "AFFINITY.PHYSICAL"}}">
+      <i class="fa-regular fa-sword"></i>
+      <span>{{localize this.actor.system.affinities.physical.value}}</span>
+    </div>
+    <div class="affinity-box affinity-air {{this.actor.system.affinities.air.class}}" title="{{localize "AFFINITY.AIR"}}">
+      <i class="fa-light fa-wind"></i>
+      <span>{{localize this.actor.system.affinities.air.value}}</span>
+    </div>
+    <div class="affinity-box affinity-bolt {{this.actor.system.affinities.bolt.class}}" title="{{localize "AFFINITY.BOLT"}}">
+      <i class="fa-light fa-bolt"></i>
+      <span>{{localize this.actor.system.affinities.bolt.value}}</span>
+    </div>
+    <div class="affinity-box affinity-dark {{this.actor.system.affinities.dark.class}}" title="{{localize "AFFINITY.DARK"}}">
+      <i class="fa-solid fa-moon"></i>
+      <span>{{localize this.actor.system.affinities.dark.value}}</span>
+    </div>
+    <div class="affinity-box affinity-earth {{this.actor.system.affinities.earth.class}}" title="{{localize "AFFINITY.EARTH"}}">
+      <i class="fa-solid fa-leaf"></i>
+      <span>{{localize this.actor.system.affinities.earth.value}}</span>
+    </div>
+    <div class="affinity-box affinity-fire {{this.actor.system.affinities.fire.class}}" title="{{localize "AFFINITY.FIRE"}}">
+      <i class="fa-regular fa-fire"></i>
+      <span>{{localize this.actor.system.affinities.fire.value}}</span>
+    </div>
+    <div class="affinity-box affinity-ice {{this.actor.system.affinities.ice.class}}" title="{{localize "AFFINITY.ICE"}}">
+      <i class="fa-regular fa-snowflake"></i>
+      <span>{{localize this.actor.system.affinities.ice.value}}</span>
+    </div>
+    <div class="affinity-box affinity-light {{this.actor.system.affinities.light.class}}" title="{{localize "AFFINITY.LIGHT"}}">
+      <i class="fa-regular fa-sparkles"></i>
+      <span>{{localize this.actor.system.affinities.light.value}}</span>
+    </div>
+    <div class="affinity-box affinity-poison {{this.actor.system.affinities.poison.class}}" title="{{localize "AFFINITY.POISON"}}">
+      <i class="fa-regular fa-flask-round-poison"></i>
+      <span>{{localize this.actor.system.affinities.poison.value}}</span>
+    </div>
+  </div>
 </section>
