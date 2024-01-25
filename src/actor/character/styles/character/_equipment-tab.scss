@@ -50,3 +50,22 @@
     border: none;
   }
 }
+
+.backpack-section {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid darkgreen;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  & > div {
+    width: 70%;
+    & > textarea {
+      height: 200px;
+    }
+  }
+  & > .zenit {
+    width: 20%;
+    margin-top: 3px;
+  }
+}
