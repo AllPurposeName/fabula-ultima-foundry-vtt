@@ -1,39 +1,39 @@
 <section class="equipment-tab">
   <section class="equipment-section">
-    <h2>Equipment</h2>
+    <h2>{{localize "EQUIPMENT.EQUIPMENT"}}</h2>
     <div class="may-equips">
-      <b>May equip: </b>
+      <b>{{localize "EQUIPMENT.MAY_EQUIP"}}</b>
       <input class="may-equip-checkbox" type="checkbox" name="system.equipment.mayEquip.martialArmor" {{checked this.actor.system.equipment.mayEquip.martialArmor}} />
-      <label for="system.equipment.mayEquip.martialArmor">Martial Armor</label>
+      <label for="system.equipment.mayEquip.martialArmor">{{localize "EQUIPMENT.MARTIAL_ARMOR"}}</label>
       <input class="may-equip-checkbox" type="checkbox" name="system.equipment.mayEquip.martialShields" {{checked this.actor.system.equipment.mayEquip.martialShields}} />
-      <label for="system.equipment.mayEquip.martialShields">Martial Shields</label>
+      <label for="system.equipment.mayEquip.martialShields">{{localize "EQUIPMENT.MARTIAL_SHIELDS"}}</label>
       <input class="may-equip-checkbox" type="checkbox" name="system.equipment.mayEquip.martialMelee" {{checked this.actor.system.equipment.mayEquip.martialMelee}} />
-      <label for="system.equipment.mayEquip.martialMelee">Martial Melee</label>
+      <label for="system.equipment.mayEquip.martialMelee">{{localize "EQUIPMENT.MARTIAL_MELEE"}}</label>
       <input class="may-equip-checkbox" type="checkbox" name="system.equipment.mayEquip.martialRanged" {{checked this.actor.system.equipment.mayEquip.martialRanged}} />
-      <label for="system.equipment.mayEquip.martialRanged">Martial Ranged</label>
+      <label for="system.equipment.mayEquip.martialRanged">{{localize "EQUIPMENT.MARTIAL_RANGED"}}</label>
     </div>
     <div class="equipped-items-and-descriptions">
       <div class="equipment-grid-item">
-        <h3>Equipped Item</h3>
+        <h3>{{localize "EQUIPMENT.EQUIPPED_ITEM"}}</h3>
         <div class="equipped-item-box">
-          <span>Accessory</span>
+          <span>{{localize "EQUIPMENT.ACCESSORY"}}</span>
           <input name="system.equipment.accessory" value="{{this.actor.system.equipment.accessory}}">
         </div>
         <div class="equipped-item-box">
-          <span>Armor</span>
+          <span>{{localize "EQUIPMENT.ARMOR"}}</span>
           <input name="system.equipment.armor" value="{{this.actor.system.equipment.armor}}">
         </div>
         <div class="equipped-item-box">
-          <span>Main Hand</span>
+          <span>{{localize "EQUIPMENT.MAIN_HAND"}}</span>
           <input name="system.equipment.mainHand" value="{{this.actor.system.equipment.mainHand}}">
         </div>
         <div class="equipped-item-box">
-          <span>Off-Hand</span>
+          <span>{{localize "EQUIPMENT.OFF_HAND"}}</span>
           <input name="system.equipment.offHand" value="{{this.actor.system.equipment.offHand}}">
         </div>
       </div>
       <div class="equipment-grid-item">
-        <h3>Description</h3>
+        <h3>{{localize "EQUIPMENT.DESCRIPTION"}}</h3>
         <div class="equipped-item-description">
           <textarea name="system.equipment.accessoryDescription">{{this.actor.system.equipment.accessoryDescription}}</textarea>
         </div>
@@ -51,7 +51,7 @@
   </section>
   <section class="backpack-section">
     <div>
-      <h2>Backpack & Notes</h2>
+      <h2>{{localize "EQUIPMENT.BACKPACK_AND_NOTES"}}</h2>
       <textarea name="system.equipment.backpackAndNotes">{{this.actor.system.equipment.backpackAndNotes}}</textarea>
     </div>
     {{> "systems/fabula-ultima/templates/actor/character/parts/zenit.hbs" }}
