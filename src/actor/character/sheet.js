@@ -140,8 +140,6 @@ export class FabulaUltimaCharacterSheet extends FabulaUltimaActorSheet {
       await this.actor.update({
         [`system.equipment.mayEquip.${thisMayEquip}`]: checkbox.prop('checked')
       });
-
-      this.render(false);
     })
   }
 }
