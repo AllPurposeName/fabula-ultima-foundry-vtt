@@ -114,13 +114,9 @@
         "level": {
           "label": "BIO.LEVEL",
           "value": ""
-        },
-        "zenit": {
-          "label": "BIO.ZENIT",
-          "value": ""
         }
       },
-      "currency": {
+      "equipment": {
         "zenit": {
           "label": "CURRENCY.ZENIT",
           "value": 0
