@@ -1,0 +1,74 @@
+.equipment-section {
+  margin-top: 20px;
+}
+
+.may-equips {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+.equipped-items-and-descriptions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid darkgreen;
+  border-radius: 10px;
+}
+
+.equipment-grid-item > h3 {
+  text-align: center;
+}
+
+.equipped-item-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 50px;
+  margin-bottom: 4px;
+  border-right: darkgreen 1px dashed;
+  & > span {
+    position: absolute;
+    top: 35px;
+    left: 5px;
+    pointer-events: none;
+    font-family: 'Modesto Condensed';
+    color: slategray;
+    text-transform: uppercase;
+  }
+  & > input {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.equipped-item-description {
+  & > textarea {
+    resize: none;
+    border: none;
+  }
+}
+
+.backpack-section {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid darkgreen;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+  & > div {
+    width: 70%;
+    & > textarea {
+      height: 200px;
+    }
+  }
+  & > .zenit {
+    width: 20%;
+    margin-top: 3px;
+  }
+}

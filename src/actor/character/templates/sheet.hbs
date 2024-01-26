@@ -8,6 +8,7 @@
         <div class="sheet-tabs tabs row" data-group="primary">
           <b class="tab-item" data-tab="main">{{localize "TAB.MAIN"}}</b>
           <b class="tab-item" data-tab="classes">{{localize "TAB.CLASSES"}}</b>
+          <b class="tab-item" data-tab="equipment">{{localize "TAB.EQUIPMENT"}}</b>
           <b class="tab-item" data-tab="cheat-sheet">{{localize "TAB.CHEAT_SHEET"}}</b>
         </div>
         <div class="tab" data-group="primary" data-tab="main">
@@ -15,6 +16,9 @@
         </div>
         <div class="tab" data-group="primary" data-tab="classes">
           {{> systems/fabula-ultima/templates/actor/character/sheets-tabs/classes-tab.hbs}}
+        </div>
+        <div class="tab" data-group="primary" data-tab="equipment">
+          {{> systems/fabula-ultima/templates/actor/character/sheets-tabs/equipment-tab.hbs}}
         </div>
         <div class="tab" data-group="primary" data-tab="cheat-sheet">
           {{> systems/fabula-ultima/templates/actor/sheets-tabs/cheat-sheet.hbs}}
